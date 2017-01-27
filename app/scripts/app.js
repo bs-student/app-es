@@ -212,6 +212,13 @@ var app = angular
                 templateUrl: 'views/web/howItWorks.html'
             })
 
+            //concept Video page Spanish
+            .state('app.conceptVideoSpanish', {
+                url: '^/conceptVideoSpanish',
+                controller: 'ConceptVideoSpanishCtrl',
+                templateUrl: 'views/web/conceptVideoSpanish.html'
+            })
+
             //concept Video page
             .state('app.conceptVideo', {
                 url: '^/conceptVideo',

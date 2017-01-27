@@ -66,7 +66,7 @@
                 $scope.amazonBook = response.data.success.successData.books[0];
                 $scope.bookOfferId = response.data.success.successData.books[0].bookOfferId;
 
-                checkAndSetLowestPrice(parseFloat($scope.amazonBook.bookPriceAmazon.substring(1)));
+                checkAndSetLowestPrice(parseFloat($scope.amazonBook.bookAmazonPrice));
 
                 setCarousel();
 

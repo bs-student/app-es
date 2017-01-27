@@ -1,32 +1,31 @@
 ﻿(function () {
 
     'use strict';
-    app.directive("valEmail",valEmail);
+    app.directive("valSellingPrice",valSellingPrice);
 
-    valEmail.$inject=['$q','$timeout','securityService'];
+    valSellingPrice.$inject=['$q','$timeout','securityService'];
 
-    function valEmail ($q, $timeout, securityService) {
+    function valSellingPrice ($q, $timeout, securityService) {
         return {
             restrict: "A",
             require: "ngModel",
             link: function($scope, $element, $attrs, ctrl) {
 
-                ctrl.$asyncValidators.valEmail = function(modelValue, viewValue) {
+                ctrl.$validators.valSellingPrice = function(modelValue, viewValue) {
 
                     if (ctrl.$isEmpty(modelValue)) {
                         // consider empty model valid
-                        return $q.when();
+                        return true;
+                    }
+                    var originalPrice = parseFloat($attrs.originalPrice);
+                    var enteredPrice = parseFloat(modelValue.replace(",", "."));
+
+                    if(enteredPrice<=originalPrice){
+                        return true;
+                    }else{
+                        return false;
                     }
 
-                    var def = $q.defer();
-
-                    securityService.checkIfEmailExist({'query':modelValue}).then(function(response){
-                        if(response.data.success.emailExist)def.reject();
-                            else def.resolve();
-                    });
-
-
-                    return def.promise;
                 };
             }
         };

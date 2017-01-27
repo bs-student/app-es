@@ -492,23 +492,25 @@
 
                                 <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
                                     <div class="vertical-align-middle">
-                                    <text class="px-16 lato uppercase"><strong>Selling Price (EX: 15.00) :</strong></text>
+                                    <text class="px-16 lato uppercase"><strong>Selling Price (EX: 15,00) :</strong></text>
                                         </div>
                                 </div>
 
                                 <div class="col-md-4 col-sm-4 col-xs-4 min-height-125">
                                     <div class="vertical-align-middle">
-                                    <input type="number" string-to-number name="bookPriceSell" ng-model="book.bookPriceSell" ui-validate=" '$value <= {{bookPriceSell}}' " class="form-control"  required/>
+                                        <input data-original-price="{{bookPriceSellOriginal}}" val-selling-price ng-pattern="/^[0-9,]+$/" placeholder="1234,00" type="text" name="bookPriceSell" ng-model="book.bookPriceSell" class="form-control"  required/>
+                                        <!--<input type="number" string-to-number name="bookPriceSell" ng-model="book.bookPriceSell" ui-validate=" '$value <= {{bookPriceSellOriginal}}' " class="form-control"  required/>-->
                                     <p class="help-block">
                                         <span  ng-show="step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine">You have to set the selling price.</span><br/>
-                                        <span ng-if="step3.bookPriceSell.$error.validator">Your Price cannot be greater than {{bookPriceSell}}</span>
+                                        <span ng-show="step3.bookPriceSell.$error.valSellingPrice">Your Price cannot be greater than {{bookPriceSell}}</span>
+                                        <!--<span ng-if="step3.bookPriceSell.$error.validator">Your Price cannot be greater than {{bookPriceSell}}</span>-->
 
                                     </p>
 </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 min-height-125">
                                     <div class="vertical-align-middle">
-                                    <text ng-show="foundCampusLowestPrice"><text  class="px-16 lato uppercase"><strong>In US $</strong></text> &nbsp;&nbsp;&nbsp;&nbsp;<text class="grey-text">Cheapest price on-campus: US {{campusLowestPrice}}</text></text>
+                                    <text ng-show="foundCampusLowestPrice"><text  class="px-16 lato uppercase"><strong>In Spain €</strong></text> &nbsp;&nbsp;&nbsp;&nbsp;<text class="grey-text">Cheapest price on-campus: Spain {{campusLowestPrice}}</text></text>
                                     <text ng-show="!foundCampusLowestPrice" class="px-16 lato grey-text">You are first who is selling this book on-campus "{{universityName}}"</text>
                                         </div>
                                 </div>
@@ -816,7 +818,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Selling Price</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>${{book.bookPriceSell}}</strong></text></div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>€{{book.bookPriceSell}}</strong></text></div>
                                         </div>
 
                                         <div class="row">

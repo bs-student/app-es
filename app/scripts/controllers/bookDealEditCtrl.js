@@ -18,6 +18,7 @@
             $scope.email = $scope.book.sellerEmail;
             $scope.book.bookAvailableDate = new Date($scope.book.bookAvailableDate);
             $scope.bookPriceSell = $scope.book.bookPriceSell;
+            $scope.bookPriceSellOriginal = $scope.book.bookPriceSellOriginal;
             $scope.universityName =identityService.getAuthorizedUserData().universityName;
             getLowestCampusDealPrice();
 

@@ -134,6 +134,7 @@ var assets = {
         "app/scripts/controllers/universityMergeCtrl.js",
         "app/scripts/controllers/logCtrl.js",
         "app/scripts/controllers/databaseCtrl.js",
+        "app/scripts/controllers/conceptVideoSpanishCtrl.js",
 
 
 
@@ -195,6 +196,7 @@ var assets = {
         "app/scripts/validators/valEmail.js",
         "app/scripts/validators/valUsername.js",
         "app/scripts/validators/valUsernameSpecialChar.js",
+        "app/scripts/validators/valSellingPrice.js",
 
         "app/scripts/filters/sanitizeHtml.js"
     ],
