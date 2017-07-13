@@ -37,12 +37,18 @@ var assets = {
         "bower_components/satellizer/dist/satellizer.js",
 
         "bower_components/angular-socialshare/dist/angular-socialshare.js",
-        "bower_components/ngSlimscroll/src/js/ngSlimscroll.js"
+        "bower_components/ngSlimscroll/src/js/ngSlimscroll.js",
+        "bower_components/chart.js/dist/Chart.js",
+        "bower_components/angular-chart.js/dist/angular-chart.js"
 
 
 
     ],
     js_library_2: [
+
+        "bower_components/moment/moment.js",
+        "bower_components/angular-momentjs/angular-momentjs.js",
+        "bower_components/bootstrap-daterangepicker/daterangepicker.js",
 
         "bower_components/firebase/firebase.js",
         "bower_components/angularfire/dist/angularfire.js",
@@ -70,6 +76,7 @@ var assets = {
         "vendor/ng-parallax-master/js/ngParallax.js",
         "vendor/filestyle/bootstrap-filestyle.min.js",
         "vendor/jquery-simscroll/jquery.slimscroll.js",
+        "vendor/google/analytics/embed-api-active-users.js",
 
         "app/assets/js/global.js"
     ],
@@ -77,7 +84,8 @@ var assets = {
 
         "app/scripts/app.js",
 
-        "app/scripts/constants/constants.js",
+        "app/scripts/constants/configConstants.js",
+        "app/scripts/constants/routeConstants.js",
 
         "app/scripts/controllers/mainCtrl.js",
         "app/scripts/controllers/bookBuyFromAmazonCtrl.js",
@@ -135,7 +143,10 @@ var assets = {
         "app/scripts/controllers/logCtrl.js",
         "app/scripts/controllers/databaseCtrl.js",
         "app/scripts/controllers/conceptVideoSpanishCtrl.js",
-
+        "app/scripts/controllers/adminUserReportCtrl.js",
+        "app/scripts/controllers/adminUniversityReportCtrl.js",
+        "app/scripts/controllers/adminBookDealReportCtrl.js",
+        "app/scripts/controllers/googleAnalyticsReportCtrl.js",
 
 
         "app/scripts/directives/anchor-scroll.js",
@@ -158,7 +169,7 @@ var assets = {
         "app/scripts/directives/textOverflow.js",
         "app/scripts/directives/singleImageInput.js",
         "app/scripts/directives/stringToNumber.js",
-
+        "app/scripts/directives/daterangepicker.js",
 
         "app/scripts/services/apiService.js",
         "app/scripts/services/bookService.js",
@@ -192,6 +203,7 @@ var assets = {
         "app/scripts/services/adminUniversityService.js",
         "app/scripts/services/adminLogService.js",
         "app/scripts/services/adminDatabaseService.js",
+        "app/scripts/services/adminReportService.js",
 
         "app/scripts/validators/valEmail.js",
         "app/scripts/validators/valUsername.js",
@@ -219,7 +231,8 @@ var assets = {
         "bower_components/ng-table/dist/ng-table.css",
 
         "bower_components/angular-busy/dist/angular-busy.css",
-        "bower_components/textAngular/dist/textAngular.css"
+        "bower_components/textAngular/dist/textAngular.css",
+        "bower_components/bootstrap-daterangepicker/daterangepicker.css"
 
 
     ],
@@ -258,7 +271,7 @@ gulp.task("js_library_1", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app.library1-2.1.min.js'))
+        .pipe(plugins.concat('app-es.library1-0.1.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 
@@ -270,7 +283,7 @@ gulp.task("js_library_2", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app.library2-2.1.min.js'))
+        .pipe(plugins.concat('app-es.library2-0.1.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 
@@ -283,7 +296,7 @@ gulp.task("js_app", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app-2.5.min.js'))
+        .pipe(plugins.concat('app-es-0.1.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 gulp.task("css_website", function (done) {
@@ -292,7 +305,7 @@ gulp.task("css_website", function (done) {
     return gulp.src(assets.css_website)
         .pipe(plugins.print())
         .pipe(plugins.cssmin())
-        .pipe(plugins.concat('app-2.8.min.css'))
+        .pipe(plugins.concat('app-es-0.1.min.css'))
         .pipe(gulp.dest('app/dist/css'));
 });
 
@@ -302,7 +315,7 @@ gulp.task("css_library", function (done) {
     return gulp.src(assets.css_library)
         .pipe(plugins.print())
         .pipe(plugins.cssmin())
-        .pipe(plugins.concat('app.library-2.1.min.css'))
+        .pipe(plugins.concat('app-es.library-0.1.min.css'))
         .pipe(gulp.dest('app/dist/css'));
 });
 

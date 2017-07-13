@@ -8,8 +8,8 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header search-page-big-text">Search your books by<br/>
-                    title / Author / isbn / keywords</p>
+                <p class="text-white mid-two-header search-page-big-text">BUSQUEDA DE LIBROS POR<br/>
+                    TITULO / AUTOR / ISBN / PALABRAS CLAVE</p>
             </div>
             <form name="bookSearchForm" submit-validate ng-submit="searchBook(bookSearchForm.$valid)" role="form"
                   novalidate>
@@ -19,24 +19,24 @@
                             <span class="input-group-addon"><i class="fa fa-search fa-2x"></i></span>
                             <input  required name="searchText" id="searchText" ng-model="searchText"
                                     type="text" class="form-control search-page-input"
-                                    placeholder="Principles of Marketing By Philip Kotler...">
+                                    placeholder="Principios del Marketing…">
 
                            <span class="input-group-btn" >
                               <button id="search-result-button" class="btn btn-default" type="submit">
-                                  go
+                                  Ir
                               </button>
                            </span>
 
                         </div>
                         <p class="help-block">
                         <span class="orange-text"
-                              ng-show="bookSearchForm.searchText.$invalid && !bookSearchForm.searchText.$pristine">This Field is required.</span>
+                              ng-show="bookSearchForm.searchText.$invalid && !bookSearchForm.searchText.$pristine">Este campo es requerido.</span>
 
                         </p>
 
 
                         <div ng-show="!$parent.loggedIn">
-                            <p class="grey-text px-18 lato">University: <text ng-show="!noUniversitySelected">{{selectedCampus.display}}</text><text ng-show="noUniversitySelected">You have not selected any university yet.</text> &nbsp; <a href="" ng-click="changeUniversity=!changeUniversity">Choice University</a></p>
+                            <p class="grey-text px-18 lato">Universidad: <text ng-show="!noUniversitySelected">{{selectedCampus.display}}</text><text ng-show="noUniversitySelected">Todavía no has seleccionado ninguna universidad.</text> &nbsp; <a href="" ng-click="changeUniversity=!changeUniversity">Elección de universidad</a></p>
                         </div>
 
 
@@ -46,7 +46,7 @@
                                     name="campus"
                                     ng-model="campus"
                                     id="search-university-search-page"
-                                    placeholder="What is your University Campus?"
+                                    placeholder="¿Cuál es su Campus Universitario?"
                                     ng-change="onCampusChange()"
                                     typeahead-on-select="onCampusSelect($item, $model, $label)"
                                     ng-model-options="modelOptions"
@@ -57,9 +57,9 @@
                                     typeahead-loading="loadingCampuses"
                                     typeahead-no-results="noResults"
                                     class="form-control input-style">
-                            <text ng-show="loadingCampuses"  class="white-text"><i class="fa fa-cog fa-spin fa-fw"></i> Getting University Information...</text>
+                            <text ng-show="loadingCampuses"  class="white-text"><i class="fa fa-cog fa-spin fa-fw"></i> Obtener información sobre la universidad...</text>
                             <div ng-show="noResults" class="text-danger">
-                                <i class="fa fa-times"></i> No Results Found
+                                <i class="fa fa-times"></i> No se han encontrado resultados
                             </div>
 
 
@@ -103,35 +103,35 @@
             <div class="col-md-9 mid-three-people-quote-col">
                 <div class="">
                     <p class="mid-three-header text-center">
-                        <text class="orange-text uppercase lato italic">Search</text>
-                        <text class="blue-text uppercase lato italic">Result</text>
+                        <text class="orange-text uppercase lato italic">BUSQUEDA DE</text>
+                        <text class="blue-text uppercase lato italic">RESULTADOS</text>
                     </p>
                 </div>
                 <div class="search-result-bar-info-div">
 
                     <div class="col-md-4 text-center">
-                        <text class="orange-text lato">Total Results:</text>
+                        <text class="orange-text lato">Total de resultados:</text>
                         <text class="blue-text lato">{{totalSearchResultsText}}</text>
                         <br/>
 
                     </div>
                     <div class="col-md-4 text-center">
-                        <text class="orange-text lato">Pages:</text>
+                        <text class="orange-text lato">Páginas:</text>
                         <text class="blue-text lato">{{numPages}}</text>
                         <br/>
 
                     </div>
                     <div class="col-md-4 text-center">
-                        <text class="orange-text lato">Showing Page:</text>
+                        <text class="orange-text lato">Mostrando Página:</text>
                         <text class="blue-text lato">{{currentPage}} of {{numPages}}</text>
                     </div>
 
                     <div class="col-md-6 text-center">
-                        <div class="search-page-options">Sort By:
+                        <div class="search-page-options">Clasificar por:
 
                             <select ng-model="sortType">
-                                <option value="bookTitle" ng-selected="true">Title</option>
-                                <option value="bookDirectorAuthorArtist">Author</option>
+                                <option value="bookTitle" ng-selected="true">Título</option>
+                                <option value="bookDirectorAuthorArtist">Autor</option>
                                 <option value="bookIsbn">ISBN</option>
                             </select>
 
@@ -139,7 +139,7 @@
                     </div>
                     <div class="col-md-6 text-center">
                         <div class="search-page-options">
-                            <span>Select View:</span>
+                            <span>Seleccionar Ver:</span>
                                 <span class="btn-group">
 
                                     <label class="btn btn-default" ng-model="viewType" uib-btn-radio="'List'"><i
@@ -180,10 +180,10 @@
     <div ng-show="searchingProgress" class="searching-on-progress-div"></div>
     <div ng-show="searchingError" class="searching-error-div text-center">
         <h3>
-            Sorry No Textbooks Were Found
+            Lo siento, no se encontraron libros de texto
         </h3>
         <h4>
-            Please refine your search query and try again.
+            Refina tu consulta de búsqueda e inténtalo de nuevo.
         </h4>
     </div>
 

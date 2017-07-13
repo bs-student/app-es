@@ -26,14 +26,14 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="lato form-page-header">Contact Us</h1>
-                            <h4 class="lato">Tell student 2 student what is on your mind...</h4>
+                            <h1 class="lato form-page-header">Contáctenos</h1>
+                            <h4 class="lato">Díle a Student 2 Student lo que necesita...</h4>
                         </div>
                         <div class="col-md-12">
                             <p class="grey-text lato">
-                                Student 2 Student is happy to hear about any suggestions, ideas or anything that you might feel is important.<br/>
-                                Our goal is to help every student to safe money on textbooks.<br/>
-                                Or... We are depending on the students so if you have a quote for us, we would love to publish it.<br/>
+                                Student 2 Student  agradece cualquier comentario que pueda mejoras nuestro servicio.<br/>
+                                Nuestro objetivo es ayudar a los estudiantes ahorrar dinero en los libros de texto.<br/>
+                                O ayudarle a vender  aquellos libros que ya no necesite<br/>
 
                             </p>
 
@@ -45,16 +45,16 @@
 
 
                             <div class="col-md-6">
-                                <text class="lato px-18">Full Name *</text>
+                                <text class="lato px-18">Nombre Completo *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.fullName.$invalid && !contactUsForm.fullName.$pristine, 'has-success' : contactUsForm.fullName.$valid && !contactUsForm.fullName.$pristine}">
 
-                                    <input type="text" class="form-control" name="fullName" ng-model="fullName" placeholder="Your Full Name"
+                                    <input type="text" class="form-control" name="fullName" ng-model="fullName" placeholder="Tu nombre completo"
                                            required/>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.fullName.$invalid && !contactUsForm.fullName.$pristine">Full Name is required.</span>
+                                        <span ng-show="contactUsForm.fullName.$invalid && !contactUsForm.fullName.$pristine">Nombre completo es obligatorio.</span>
 
                                     </p>
                                 </div>
@@ -70,7 +70,7 @@
                                            required/>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.email.$invalid && !contactUsForm.email.$pristine">Email is required.</span>
+                                        <span ng-show="contactUsForm.email.$invalid && !contactUsForm.email.$pristine">Se requiere Email.</span>
 
                                     </p>
                                 </div>
@@ -81,16 +81,16 @@
 
 
                             <div class="col-md-12">
-                                <text class="lato px-18">Subject *</text>
+                                <text class="lato px-18">Asunto *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.subject.$invalid && !contactUsForm.subject.$pristine, 'has-success' : contactUsForm.subject.$valid && !contactUsForm.subject.$pristine}">
 
-                                    <input type="text" class="form-control" name="subject" ng-model="subject" placeholder="Give Subject of your query"
+                                    <input type="text" class="form-control" name="subject" ng-model="subject" placeholder="Asunto de la consulta"
                                            required/>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.subject.$invalid && !contactUsForm.subject.$pristine">Subject is required.</span>
+                                        <span ng-show="contactUsForm.subject.$invalid && !contactUsForm.subject.$pristine">Se requiere Asunto.</span>
 
                                     </p>
                                 </div>
@@ -102,16 +102,16 @@
 
 
                             <div class="col-md-12">
-                                <text class="lato px-18">Your Message *</text>
+                                <text class="lato px-18">Tu Mensaje *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.message.$invalid && !contactUsForm.message.$pristine, 'has-success' : contactUsForm.message.$valid && !contactUsForm.message.$pristine}">
 
-                                    <textarea type="text" class="form-control" name="message" placeholder="Write the message..."
+                                    <textarea type="text" class="form-control" name="message" placeholder="Escribe el mensaje..."
                                               ng-model="message" required></textarea>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.message.$invalid && !contactUsForm.message.$pristine">Your Message is required.</span>
+                                        <span ng-show="contactUsForm.message.$invalid && !contactUsForm.message.$pristine">Su mensaje es obligatorio.</span>
 
                                     </p>
                                 </div>
@@ -123,34 +123,34 @@
 
 
                             <div class="col-md-12">
-                                <text class="lato px-18">I want :</text>
+                                <text class="lato px-18">Yo quiero :</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.want.$invalid && !contactUsForm.want.$pristine, 'has-success' : contactUsForm.want.$valid && !contactUsForm.want.$pristine}">
 
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Feedback" required><i></i> Feedback
+                                               value="Feedback" required><i></i> Respuesta
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Administrative Support" required><i></i> Administrative Support
+                                               value="Administrative Support" required><i></i> Ayuda Administrativa
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Technical Support" required><i></i> Technical Support
+                                               value="Technical Support" required><i></i> Soporte Técnico
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Suggestion" required><i></i> Suggestion
+                                               value="Suggestion" required><i></i> Sugerencia
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Question" required><i></i> Question ?
+                                               value="Question" required><i></i> Alguna otra pregunta?
                                     </label>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.want.$invalid && !contactUsForm.want.$pristine">Your have to select what you want.</span>
+                                        <span ng-show="contactUsForm.want.$invalid && !contactUsForm.want.$pristine">Tienes que seleccionar lo que quieres.</span>
 
                                     </p>
                                 </div>
@@ -170,7 +170,7 @@
                                             required
                                             ></div>
                                     <p class="help-block">
-                                        <span  ng-show="contactUsForm.recaptcha.$invalid && !contactUsForm.recaptcha.$pristine">Captcha is required.</span>
+                                        <span  ng-show="contactUsForm.recaptcha.$invalid && !contactUsForm.recaptcha.$pristine">Se requiere Captcha.</span>
                                     </p>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@
 
 
                             <div class="col-md-12">
-                                <button type="submit" class="myBtn orange-btn contact-form-submit-button">Send</button>
+                                <button type="submit" class="myBtn orange-btn contact-form-submit-button">Enviar</button>
 
                             </div>
 
@@ -199,15 +199,14 @@
                 <div class="blue-background right-head-text">
                     <p class="white-text lato px-16">
                         <iframe style=" border-radius: 4px;" width="100%" height="120" src="https://www.youtube.com/embed/lXvwHtAXAXQ" frameborder="0" allowfullscreen></iframe>
-                        <a ui-sref="app.conceptVideo">This</a> is the easiest thing you’ll do all semester. No, really.<br/>
-                        Here’s how the simple, fast, Student 2 Student system works to make your life easier.
+                        <a ui-sref="app.conceptVideo">Esta</a> es la cosa más fácil que harás durante todo el semestre. No realmente.<br/>
+                        Aquí está cómo el sistema simple, rápido, del student 2 student trabaja para hacer su vida más fácil.
 
                     </p>
                 </div>
                 <div class="white-background right-head-text text-center right-white-div">
                     <div class="follow-us-head-text">
-                        <span class="follow-us-header lato orange-text uppercase px-16"><strong>Follow
-                            us</strong></span><br/>
+                        <span class="follow-us-header lato orange-text uppercase px-16"><strong>Síguenos</strong></span><br/>
                     </div>
 
                     <div class="follow-us-logos-div-contact-us text-center">
@@ -216,29 +215,28 @@
 
                     </div>
                     <div class="follow-us-head-text">
-                        <span class=" follow-us-header lato orange-text uppercase px-16"><strong>quick
-                            links</strong></span>
+                        <span class=" follow-us-header lato orange-text uppercase px-16"><strong>ENLACES RÁPIDOS</strong></span>
                     </div>
 
                     <div class="quick-links">
                         <ul class="footer-useful-links-ul lato grey-text">
                             <li>
-                                <a ui-sref="app.howItWorks">&nbsp;How it works</a>
+                                <a ui-sref="app.howItWorks">&nbsp;Cómo funciona</a>
                             </li>
                             <li>
-                                <a ui-sref="app.news">&nbsp;News</a>
+                                <a ui-sref="app.news">&nbsp;Noticias</a>
                             </li>
                             <li>
-                                <a ui-sref="app.signup">&nbsp;Join</a>
+                                <a ui-sref="app.signup">&nbsp;Unirse</a>
                             </li>
                             <li>
-                                <a ui-sref="app.bookBuy">&nbsp;Search</a>
+                                <a ui-sref="app.bookBuy">&nbsp;Buscar</a>
                             </li>
                             <li>
-                                <a ui-sref="app.addUniversity">&nbsp;Add a new University</a>
+                                <a ui-sref="app.addUniversity">&nbsp;Añadir una nueva universidad</a>
                             </li>
                             <li>
-                                <a ui-sref="app.faq">&nbsp;FAQ</a>
+                                <a ui-sref="app.faq">&nbsp;PMF</a>
                             </li>
 
                         </ul>

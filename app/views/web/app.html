@@ -30,29 +30,29 @@
             <nav id="main-navbar">
 
                 <ul>
-                    <li ng-class="{home:'active'}[activePage]"><a ui-sref="app.dashboard">Home</a></li>
-                    <li ng-class="{howItWorks:'active'}[activePage]"><a ui-sref="app.howItWorks">How It Works</a>
+                    <li ng-class="{home:'active'}[activePage]"><a ui-sref="app.dashboard">Casa</a></li>
+                    <li ng-class="{howItWorks:'active'}[activePage]"><a ui-sref="app.howItWorks">Cómo funciona</a>
                         <ul class="menu-right-position">
-                            <li><a ui-sref="app.conceptVideoSpanish"><i class="fa fa-video-camera"></i>&nbsp;&nbsp;&nbsp;Concept Video</a></li>
-                            <li ng-show="!loggedIn"><a ui-sref="app.tellFriends"><i class="fa  fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Tell A Friend</a></li>
-                            <li ng-show="loggedIn && !adminUser"><a ui-sref="app.promoteMyStore"><i class="fa  fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Tell A Friend</a></li>
+                            <li><a ui-sref="app.conceptVideoSpanish"><i class="fa fa-video-camera"></i>&nbsp;&nbsp;&nbsp;Vídeo Conceptual</a></li>
+                            <li ng-show="!loggedIn"><a ui-sref="app.tellFriends"><i class="fa  fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Dile a un amigo</a></li>
+                            <li ng-show="loggedIn && !adminUser"><a ui-sref="app.promoteMyStore"><i class="fa  fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Dile a un amigo</a></li>
 
                         </ul>
                     </li>
-                    <li ng-hide="loggedIn && adminUser" ng-class="{sellBook:'active'}[activePage]"><a ui-sref="app.sellBook">Sell Books</a>
-                    <li ng-hide="loggedIn && adminUser" ng-class="{buyBook:'active'}[activePage]"><a ui-sref="app.bookBuy">Buy Books</a>
+                    <li ng-hide="loggedIn && adminUser" ng-class="{sellBook:'active'}[activePage]"><a ui-sref="app.sellBook">Vender Libros</a>
+                    <li ng-hide="loggedIn && adminUser" ng-class="{buyBook:'active'}[activePage]"><a ui-sref="app.bookBuy">Comprar libros</a>
 
 
-                    <li ng-show="!loggedIn" ng-class="{signup:'active'}[activePage]"><a ui-sref="app.signup">Join</a>
-                    <li ng-show="!loggedIn" ng-class="{login:'active'}[activePage]"><a ui-sref="app.login">Sign In</a>
-                    <li ng-class="{news:'active'}[activePage]"><a ui-sref="app.news">News</a></li>
+                    <li ng-show="!loggedIn" ng-class="{signup:'active'}[activePage]"><a ui-sref="app.signup">Regístrate</a>
+                    <li ng-show="!loggedIn" ng-class="{login:'active'}[activePage]"><a ui-sref="app.login">iniciar sesión</a>
+                    <li ng-class="{news:'active'}[activePage]"><a ui-sref="app.news">Noticias</a></li>
 
-                    <li ng-class="{helpAndSafety:'active'}[activePage]"><a ui-sref="app.safetyFirst">Help & Safety</a>
+                    <li ng-class="{helpAndSafety:'active'}[activePage]"><a ui-sref="app.safetyFirst">Ayuda y Seguridad</a>
                         <ul class="menu-right-position">
-                            <li><a ui-sref="app.contactUs"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Contact Us</a></li>
-                            <li><a ui-sref="app.scamAndFraud"><i class="fa  fa-user-times"></i>&nbsp;&nbsp;&nbsp;Scam & Fraud</a></li>
-                            <li><a ui-sref="app.faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;FAQ</a></li>
-                            <li><a ui-sref="app.safetyFirst"><i class="fa  fa-check-square-o"></i>&nbsp;&nbsp;&nbsp;Safety First</a></li>
+                            <li><a ui-sref="app.contactUs"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Contáctenos</a></li>
+                            <li><a ui-sref="app.scamAndFraud"><i class="fa  fa-user-times"></i>&nbsp;&nbsp;&nbsp;Estafa y fraude</a></li>
+                            <li><a ui-sref="app.faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;PMF</a></li>
+                            <li><a ui-sref="app.safetyFirst"><i class="fa  fa-check-square-o"></i>&nbsp;&nbsp;&nbsp;Seguridad primero</a></li>
                         </ul>
                     </li>
 
@@ -106,6 +106,10 @@
                     </li>
                     <li ng-show="loggedIn && adminUser" ng-class="{user:'active'}[activePage]"><a href="#">Hi, {{username}}</a>
                         <ul  class="menu-right-position">
+                            <li><a ui-sref="app.adminUserReport"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;User Report</a></li>
+                            <li><a ui-sref="app.adminUniversityReport"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;University Report</a></li>
+                            <li><a ui-sref="app.adminBookDealReport"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;Book Report</a></li>
+                            <li><a ui-sref="app.googleAnalyticsReport"><i class="fa fa-google"></i>&nbsp;&nbsp;&nbsp;Google Report</a></li>
                             <li><a ui-sref="app.userList"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;User Management</a></li>
                             <li><a ui-sref="app.universityManagement"><i class="fa fa-university"></i>&nbsp;&nbsp;&nbsp;Manage University</a></li>
                             <li><a ui-sref="app.allBookDeals"><i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;Book Deals</a></li>

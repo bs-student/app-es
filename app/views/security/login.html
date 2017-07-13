@@ -8,7 +8,7 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header">Sign In</p>
+                <p class="text-white mid-two-header">Registrarse</p>
 
 
             </div>
@@ -27,41 +27,41 @@
 
                         <div class="form-group"
                              ng-class="{ 'has-error' : loginForm._username.$invalid && !loginForm._username.$pristine, 'has-success' : loginForm._username.$valid && !contactForm._username.$pristine}">
-                            <p class="white-text ">Email or Username :</p>
+                            <p class="white-text ">Email o Usuario :</p>
 
                             <input name="_username" type="text" class="form-control input-style"
-                                   placeholder="Username / Email" ng-model="user._username" required>
+                                   placeholder="Email / Usuario" ng-model="user._username" required>
 
                             <p class="help-block">
-                                <span ng-show="loginForm._username.$invalid && !loginForm._username.$pristine">Username or Email is required.</span>
+                                <span ng-show="loginForm._username.$invalid && !loginForm._username.$pristine">Se requiere Email o Usuario.</span>
                             </p>
                         </div>
 
 
                         <div class="form-group"
                              ng-class="{ 'has-error' : loginForm._password.$invalid && !loginForm._password.$pristine, 'has-success' : loginForm._password.$valid && !contactForm._password.$pristine}">
-                            <p class="white-text ">Password :</p>
+                            <p class="white-text ">Contraseña :</p>
 
                             <input name="_password" type="password" class="form-control input-style"
-                                   placeholder="Password" ng-model="user._password" required>
+                                   placeholder="Contraseña" ng-model="user._password" required>
 
                             <p class="help-block">
-                                <span ng-show="loginForm._password.$invalid && !loginForm._password.$pristine">Password is required.</span>
+                                <span ng-show="loginForm._password.$invalid && !loginForm._password.$pristine">se requiere contraseña.</span>
                             </p>
                         </div>
 
 
                         <div class="form-group text-left mt-20">
-                            <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Login</button>
+                            <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Iniciar Sesión</button>
                             <label class="checkbox checkbox-custom checkbox-custom-sm inline-block white-text">
-                                <input type="checkbox"><i></i> Remember me
+                                <input type="checkbox"><i></i> RECUÉRDAME
                             </label>
-                            <a ui-sref="app.forgotPassword" class="pull-right mt-10">Forgot Password?</a>
+                            <a ui-sref="app.forgotPassword" class="pull-right mt-10">¿Ha olvidado tu contraseña?</a>
                         </div>
 
 
                         <div class="form-group text-left mt-20">
-                            <p class="white-text lato">Or Login with</p>
+                            <p class="white-text lato">Iniciar sesión con</p>
 
                             <button ng-click="loginSocial('facebook')" type="button" class="myBtn orange-btn facebook-btn"><i class="fa fa-facebook"></i></button>
                             <button ng-click="loginSocial('google')" type="button" class="myBtn orange-btn google-btn"><i class="fa fa-google-plus"></i></button>
@@ -71,7 +71,8 @@
                     </form>
 
                     <div class="text-center white-text">
-                        Not a member yet ? <a ui-sref="app.signup">Join Now</a>
+                        <a ui-sref="app.signup">Regístrate ahora</a>. Aún no eres socio?
+
                     </div>
                 </div>
 

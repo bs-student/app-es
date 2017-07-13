@@ -6,12 +6,12 @@
 
             <div class="col-md-7">
                 <div class="concept-page-banner-text"><p
-                        class=" open-sans concept-page-banner-first-text  text-white uppercase"><strong>Message</strong>
+                        class=" open-sans concept-page-banner-first-text  text-white uppercase"><strong>Tablón de</strong>
                 </p>
 
                     <p class="open-sans concept-page-banner-second-text text-left"><strong>
 
-                        <text class="uppercase navy-blue-text ">Board</text>
+                        <text class="uppercase navy-blue-text ">mensajes</text>
 
                     </strong></p>
                 </div>
@@ -46,17 +46,17 @@
 
                     <div class="btn-group">
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'All'"
-                               uncheckable>All</label>
+                               uncheckable>Todo</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Unread'"
-                               uncheckable>Unread</label>
+                               uncheckable>No Leído</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Starred'"
-                               uncheckable>Starred</label>
-                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'SellingDeal'" uncheckable>I am Selling</label>
-                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'ContactedDeal'" uncheckable>I am Buying</label>
+                               uncheckable>Destacado</label>
+                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'SellingDeal'" uncheckable>Vendo</label>
+                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'ContactedDeal'" uncheckable>Comprado</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Sold'"
-                               uncheckable>Sold</label>
+                               uncheckable>Vendido</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Bought'"
-                               uncheckable>Bought</label>
+                               uncheckable>Comprado</label>
                     </div>
 
                 </div>
@@ -65,11 +65,11 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-                <div class="search-page-options message-board-type-options">Sort By:
+                <div class="search-page-options message-board-type-options">Clasificar por:
 
                     <select ng-change="changeSortType()" ng-model="sortType">
-                        <option value="bookTitle" ng-selected="true">Title</option>
-                        <option value="bookDirectorAuthorArtist">Author</option>
+                        <option value="bookTitle" ng-selected="true">Título</option>
+                        <option value="bookDirectorAuthorArtist">Autor</option>
                         <option value="bookIsbn">ISBN</option>
                     </select>
 
@@ -97,7 +97,7 @@
                                ng-model="searchQuery"
                                 ng-change="search(searchQuery)"
 
-                               placeholder="search your book"
+                               placeholder="Busca tu libro"
                                class="form-control">
 
                     </div>
@@ -115,7 +115,7 @@
             <div class="row">
                 <div class="col-md-3 message-board-column-header-checkbox text-center">
                     <text class="all-checkbox-text">
-                        All
+                        TODO
                         <label  class="checkbox checkbox-custom-alt checkbox-white white-text">
                             <input type="checkbox" name="agree" id="agree" ng-model="user.agree"><i></i>
                         </label>
@@ -123,7 +123,7 @@
 
                 </div>
                 <div class="col-md-9 message-board-column-header text-center white-border-left-1">
-                    <text class="uppercase ">&nbsp;&nbsp; Text book deals</text>
+                    <text class="uppercase ">&nbsp;&nbsp; ACUERDO PARA LIBROS DE TEXTO</text>
                 </div>
             </div>
 
@@ -164,8 +164,8 @@
                                                 <text class="grey-text">ISBN:</text> <text class="blue-text convert-to-white-text">{{deal.bookIsbn}}</text><br/>
                                                 <!--{{deal.dealType}}-->
 
-                                                <button ng-show="deal.dealType=='contactedDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.contactedBookList">Go to Deal</button>
-                                                <button ng-show="deal.dealType=='sellingDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.sellingBookList">Go to Deal</button>
+                                                <button ng-show="deal.dealType=='contactedDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.contactedBookList">Ir al Acuerdo</button>
+                                                <button ng-show="deal.dealType=='sellingDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.sellingBookList">Ir al Acuerdo</button>
 
                                                 <text  class="price-text convert-to-white-text orange-text float-right">€{{deal.bookPriceSell}}</text>
                                             </dd>
@@ -183,7 +183,7 @@
         </div>
         <div class="col-md-8 col-sm-8">
             <div class="message-board-column-header text-center">
-                <text class="uppercase text-center "><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; Contact</text>
+                <text class="uppercase text-center "><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; Contacto</text>
             </div>
 
             <div class="message-board-all-contacts">
@@ -218,7 +218,7 @@
                                     </div>
                                     <div class="col-md-2 col-sm-2 col-xs-2 no-left-padding no-right-padding book-price-message-board">
                                         <div class="item-price">
-                                            <text class="text-white lato">Price: €{{deal.bookPriceSell}}</text>
+                                            <text class="text-white lato">Precio: €{{deal.bookPriceSell}}</text>
                                         </div>
                                     </div>
 
@@ -248,7 +248,7 @@
 
 
                                             <li  class="list-group-item" style="background: #E9E9E9">
-                                                <h5 class="lato px-18 ">Contact Details</h5>
+                                                <h5 class="lato px-18 ">Detalles de contacto</h5>
                                                 <div class="row" ng-show="deal.dealType=='sellingDeal'">
                                                     <div class="col-md-4">
                                                         <span ng-show="contact.buyerEmail!=undefined"><i class="contact-details-circle fa fa-envelope-o"></i> {{contact.buyerEmail}}</span>
@@ -339,13 +339,13 @@
                                                   ng-submit="sendMessage(sendMessageForm.$valid,contact,deal)"
                                                   role="form" novalidate>
                                                 <div ng-class="{ 'has-error' : sendMessageForm.message.$invalid && !sendMessageForm.message.$pristine, 'has-success' : sendMessageForm.message.$valid && !sendMessageForm.message.$pristine}">
-                                                    <textarea rows="5" class="form-control" placeholder="Type your message here.." ng-model="contact.message" name="message" required
+                                                    <textarea rows="5" class="form-control" placeholder="Inserta aquí tu mensaje.." ng-model="contact.message" name="message" required
                                                               type="text"></textarea>
                                                 </div>
 
 
                                                 <div class="box-div-for-message-board-input">
-                                                    <input class="send-message-button myBtn orange-btn" type="submit" value="Send"/>
+                                                    <input class="send-message-button myBtn orange-btn" type="submit" value="Enviar"/>
                                                 </div>
 
                                             </form>

@@ -6,7 +6,7 @@
 
             <div class="col-md-7">
                 <div class="concept-page-banner-text"><p
-                        class=" open-sans concept-page-banner-first-text  text-white uppercase"><strong>profile</strong>
+                        class=" open-sans concept-page-banner-first-text  text-white uppercase"><strong>Perfil</strong>
                 </p>
 
 
@@ -46,23 +46,23 @@
 
         <div class="row">
             <div class="col-lg-8 col-md-6">
-                <h1 ng-show="!updatingProfile" class="lato form-page-header">Profile</h1>
+                <h1 ng-show="!updatingProfile" class="lato form-page-header">Perfil</h1>
 
-                <h1 ng-show="updatingProfile" class="lato form-page-header">Update Profile</h1>
+                <h1 ng-show="updatingProfile" class="lato form-page-header">Actualizar Perfil</h1>
 
             </div>
             <div class="col-lg-4 col-md-6">
                 <a ng-show="!updatingProfile" ui-sref="app.changePassword" class="myBtn orange-btn max-large-btn"><i
-                        class="fa fa-cog"></i> Change Password</a>
+                        class="fa fa-cog"></i> Cambiar Contraseña</a>
                 <button type="button" ng-show="!updatingProfile" ng-click="editProfile()"
-                        class="myBtn orange-btn max-large-btn"><i class="fa fa-pencil-square-o"></i> Update Profile Info
+                        class="myBtn orange-btn max-large-btn"><i class="fa fa-pencil-square-o"></i> Actualizar Perfil
                 </button>
 
                 <button type="submit" ng-show="updatingProfile" class="myBtn orange-btn max-large-btn"><i class="fa fa-check"></i>
-                    Save Profile Info
+                    Salvar
                 </button>
                 <button type="button" ng-show="updatingProfile" ng-click="cancelEditProfile()"
-                        class="myBtn orange-btn max-large-btn"><i class="fa fa-times"></i> Cancel
+                        class="myBtn orange-btn max-large-btn"><i class="fa fa-times"></i> Cancelar
                 </button>
 
 
@@ -79,25 +79,25 @@
                     <img data-ng-src="{{imageHostPath}}{{user.profilePicture}}"/>
                 </div>
 
-                <text class="lato px-18">Full Name :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Nombre Completo :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.fullName}}</text>
                 <br/>
-                <text class="lato px-18">Username :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Nombre de usuario :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.username}}</text>
                 <br/>
                 <text class="lato px-18">Email :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.email}}</text>
                 <br/>
-                <text class="lato px-18">Email Notification:&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Notificación de email:&nbsp;&nbsp;&nbsp;</text>
                 <text class="all-checkbox-text">
 
                     <label  class="checkbox checkbox-custom-alt checkbox-black">
                         <input ng-change="changeEmailNotification(emailNotification)" type="checkbox" name="emailNotification" id="emailNotification" ng-model="emailNotification"><i></i>
                     </label>
                 </text>
-                <text class="lato px-18">( Turned {{user.emailNotification}} )</text>
+                <text class="lato px-18">( {{user.emailNotification}} )</text>
                 <br/>
-                <text ng-show="updatingProfile" class="lato px-18">University :&nbsp;&nbsp;&nbsp;</text>
+                <text ng-show="updatingProfile" class="lato px-18">Universidad :&nbsp;&nbsp;&nbsp;</text>
                 <text ng-show="updatingProfile" class="blue-text lato px-18">{{user.universityName}}, {{user.campusName}},
                     {{user.stateShortName}}({{user.stateName}}), {{user.countryName}}
                 </text>
@@ -110,18 +110,18 @@
 
 
             <div class="col-md-12">
-                <text class="lato px-18">Select University :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Seleccionar Universidad :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.universityName}}, {{user.campusName}},
                     {{user.stateShortName}}({{user.stateName}}), {{user.countryName}}
                 </text>
                 <br/>
-                <text class="lato px-18">Standard Home Phone:&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Teléfono de Casa:&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.standardHomePhone}}</text>
                 <br/>
-                <text class="lato px-18">Standard Cell Phone for Contact :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Teléfono Móvil :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.standardCellPhone}}</text>
                 <br/>
-                <text class="lato px-18">Standard Email for Contact :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">Email de contacto :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.standardEmail}}</text>
             </div>
 
@@ -134,10 +134,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div ng-show="!singleFile" class="form-group">
-                        <text>Select Profile Picture : (Recommended dimension: 200px/200px & Recommended Size : less than 200KB)</text>
+                        <text>Seleccionar imagen de perfil : (Dimensión recomendada: 200px/200px & Tamaño recomendado : Menos de 200KB)</text>
 
                         <input  single-file="singleFile" single-image-input="files" file-data="fileData" file-identifier="fileId" ui-jq="filestyle" type="file" class="filestyle" ui-options="{
-            buttonText: 'Select file',
+            buttonText: 'Seleccione Archivo',
             iconName: 'fa fa-inbox'
           }" >
 
@@ -146,16 +146,16 @@
                         <div class="tcol">
 
                             <div class="bg-white">
-                                <text class="custom-font text-default m-0 lato">Profile Picture</text>
+                                <text class="custom-font text-default m-0 lato">Foto de perfil</text>
                             </div>
 
                                 <table class="table b-a b-solid bg-white">
                                     <thead>
                                     <tr >
-                                        <th class="text-center">Image</th>
+                                        <th class="text-center">Imagen</th>
 
-                                        <th class="text-center">Size</th>
-                                        <th class="text-center">Actions</th>
+                                        <th class="text-center">Tamaño</th>
+                                        <th class="text-center">Comportamiento</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -168,7 +168,7 @@
 
 
                                             <button type="button" class="myBtn orange-btn" ng-click="removeFile(file)">
-                                                <span class="fa fa-trash"></span> Remove
+                                                <span class="fa fa-trash"></span> Retirar
                                             </button>
                                         </td>
                                     </tr>
@@ -186,7 +186,7 @@
 
 
             <div class="col-md-12">
-                <text class="lato px-18">Full Name :</text>
+                <text class="lato px-18">Nombre Completo :</text>
 
 
 
@@ -262,7 +262,7 @@
 
 
                     <div class="col-md-12">
-                        <text class="lato px-18">Standard Home Phone :</text>
+                        <text class="lato px-18">Teléfono de Casa :</text>
                         <br/>
 
                         <div>
@@ -278,7 +278,7 @@
 
 
                     <div class="col-md-12">
-                        <text class="lato px-18">Standard Cell Phone for Contact :</text>
+                        <text class="lato px-18">Teléfono Móvil :</text>
                         <br/>
 
                         <div>
@@ -296,7 +296,7 @@
 
 
                     <div class="col-md-12">
-                        <text class="lato px-18">Standard Email For Contact :</text>
+                        <text class="lato px-18">Email de contacto :</text>
                         <br/>
 
                         <div>
@@ -312,10 +312,10 @@
                 <div class="row contact-form-start-div">
                     <div class="col-md-12 text-center">
                         <button type="submit" class="myBtn orange-btn "><i class="fa fa-check"></i>
-                            Save Profile Info
+                            Salvar
                         </button>
                         <button type="button" ng-show="updatingProfile" ng-click="cancelEditProfile()"
-                                class="myBtn orange-btn "><i class="fa fa-times"></i> Cancel
+                                class="myBtn orange-btn "><i class="fa fa-times"></i> Cancelar
                         </button>
                     </div>
                 </div>
@@ -338,8 +338,7 @@
 
     <div class="white-background right-head-text text-center right-white-div profile-page">
         <div class="follow-us-head-text">
-                        <span class="follow-us-header lato orange-text uppercase px-16"><strong>Follow
-                            us</strong></span><br/>
+                        <span class="follow-us-header lato orange-text uppercase px-16"><strong>SIGANOS</strong></span><br/>
         </div>
 
         <div class="follow-us-logos-div text-center">
@@ -347,26 +346,25 @@
             <div class="follow-facebook  white-text"><i class="fa fa-facebook fa-2x"></i></div>
         </div>
         <div class="follow-us-head-text">
-                        <span class=" follow-us-header lato orange-text uppercase px-16"><strong>quick
-                            links</strong></span>
+                        <span class=" follow-us-header lato orange-text uppercase px-16"><strong>ENLACES RAPIDOS</strong></span>
         </div>
 
         <div class="quick-links">
             <ul class="footer-useful-links-ul lato grey-text">
                 <li>
-                    <a ui-sref="app.sellBook">&nbsp;Sell Books</a>
+                    <a ui-sref="app.sellBook">&nbsp;Vender Libros</a>
                 </li>
                 <li>
-                    <a ui-sref="app.bookBuy">&nbsp;Buy Books</a>
+                    <a ui-sref="app.bookBuy">&nbsp;Comprar Libros</a>
                 </li>
                 <li>
-                    <a ui-sref="app.howItWorks">&nbsp;How It Works</a>
+                    <a ui-sref="app.howItWorks">&nbsp;¿Cómo funciona?</a>
                 </li>
                 <li>
-                    <a ui-sref="app.news">&nbsp;News</a>
+                    <a ui-sref="app.news">&nbsp;Novedades</a>
                 </li>
                 <li>
-                    <a ui-sref="app.faq">&nbsp;FAQ</a>
+                    <a ui-sref="app.faq">&nbsp;Preguntas Frecuentes</a>
                 </li>
 
             </ul>

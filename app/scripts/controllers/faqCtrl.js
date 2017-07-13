@@ -5,9 +5,9 @@
     app
         .controller('FaqCtrl', FaqCtrl);
 
-    FaqCtrl.$inject = ['$scope', '$sce','SERVER_CONSTANT'];
+    FaqCtrl.$inject = ['$scope', '$sce', 'SERVER_CONSTANT'];
 
-    function FaqCtrl($scope, $sce,SERVER_CONSTANT) {
+    function FaqCtrl($scope, $sce, SERVER_CONSTANT) {
 
         $scope.appHostPath = SERVER_CONSTANT.HOST_APP;
         $scope.$parent.main.title = "FAQ";
@@ -22,66 +22,66 @@
 
             {
                 tabId: "tab_1",
-                linkText: "student2student.com",
+                linkText: "student2student.es",
                 active: true,
                 faqs: [
                     {
-                        question: "How does Student2Student work?",
-                        answer: $sce.trustAsHtml('<iframe style="border:3px solid #FF530D !important; border-radius: 4px;" width="100%" height="315" src="https://www.youtube.com/embed/lXvwHtAXAXQ" frameborder="0" allowfullscreen></iframe>')
+                        question: "¿Cómo funciona Student2Student?",
+                        answer: $sce.trustAsHtml('<iframe style="border:3px solid #FF530D !important; border-radius: 4px;" width="100%" height="315" src="https://www.youtube.com/embed/uja55f5sCbA" frameborder="0" allowfullscreen></iframe>')
                     },
                     {
-                        question: "Is Student2Student really free?",
-                        answer: "Yes, Student 2 Student is absolutely free to all students. Buying, selling, comparing, contacting others is available to you at no charge! We want you to save big money!"
+                        question: "¿Es Student2Student realmente gratis?",
+                        answer: "Sí, estudiante 2 El estudiante es absolutamente gratis para todos los estudiantes. Puedes comprar, vender, comparar, ponerte en contacto con otros estudiantes está disponible para ti sin ningún coste! ¡Queremos que ahorres tiempo y dinero!"
                     },
                     {
-                        question: "Why do I need to Sign Up at my University?",
-                        answer: "Yes and No. You can search, compare and buy textbooks without an account on Student 2 Student. Some sellers may not make the textbook available for non-members. In this case you will need an account. To sell a textbook you will need an account on Student 2 Student. You will need to sign up for you University location / campus."
+                        question: "¿Por qué debes inscribirte en tu Universidad?",
+                        answer: " Puedes buscar, comparar y comprar libros de texto sin una cuenta en Student 2 Student. Algunos vendedores solo venden a miembros, por lo que recomendamos inscribirse para poder acceder a todas las opciones. Para poder vender un libro de texto necesitará una cuenta en Student 2 Student. Necesitarás inscribirte en su ubicación de la Universidad / campus."
                     },
                     {
-                        question: "Do I need a credit card?",
-                        answer: $sce.trustAsHtml("No! You do not need a credit card for anything on Student 2 Student. Never provide your credit card information to anyone. If someone claims he/she needs the credit card information, please contact Student 2 Student <a href='http://www.student2student.com/contactUs'>here</a>. Never give out your credit card information. Student 2 Student doesn't need it, and neither do members of Student 2 Student.")
+                        question: "¿Necesito una tarjeta de crédito?",
+                        answer: $sce.trustAsHtml("¡No! No necesitas tarjeta de crédito para ninguna operación en Student2Student. Nunca proporcione  información de su tarjeta de crédito a nadie. Student2Student no lo requiere, y tampoco sus miembros del Student2Student.")
                     }
 
                     ,
                     {
-                        question: "What is the COE (Cash on Exchange) concept?",
-                        answer: "The Cash on Exchange (COE) concept is very simple. It means you only give out the textbook when the buyer gives you the money. Exchange on the spot. Buyer gets the textbooks :: Seller gets the money."
+                        question: "¿Qué es el concepto de COE (Cash on Exchange)?",
+                        answer: "El concepto de efectivo en intercambio (COE) es muy simple. Significa que sólo da el libro de texto cuando el comprador le da el dinero. Intercambio in situ. El comprador consigue los libros de textos :: El vendedor consigue el dinero."
                     }
                 ]
             },
 
             {
                 tabId: "tab_3",
-                linkText: "seller's handbook",
+                linkText: "Manual del vendedor",
                 faqs: [
                     {
-                        question: "How do I sell my textbooks?",
-                        answer: "It couldn't be easier! Sign In or Sign Up, go to \"Sell Books\", enter the ISBN, and define the deal (price, date available, etc.). You do not need to enter any textbook information. We do it all for you!"
+                        question: "¿Cómo puedo vender mis libros de texto?",
+                        answer: "¡No podría ser más fácil! Inicia sesión o Regístrate, ves a \"Vender libros\", inserta el ISBN y define el acuerdo (precio, fecha disponible, etc.). No necesitas insertar ninguna información de libros de texto. ¡Lo hacemos todo por ti!"
                     },
 
                     {
-                        question: "Do I need an account to sell textbooks?",
-                        answer: "Yes you will need an account in order to sell your textbooks to other student on campus."
+                        question: "¿Necesito una cuenta para vender libros de texto?",
+                        answer: "Sí, necesitarás una cuenta para vender tus libros de texto a otro estudiante en el campus."
                     },
                     {
-                        question: "Can I post my textbooks on Facebook and Twitter?",
-                        answer: "Of course! Talk about increasing your chances to sell the textbook. When you Sell the textbook, you can post the the deal on Facebook or Twitter."
+                        question: "¿Puedo publicar mis libros de texto en Facebook y Twitter?",
+                        answer: "¡Por supuesto! Puedes aumentar tus posibilidades de vender el libro de texto. Cuando vendas el libro de texto, publica el acuerdo en Facebook o Twitter."
                     },
                     {
-                        question: 'Does the seller see my name and contact information?',
-                        answer: "When you sign up, you have to define a Nickname to protect your real name. Buyers will see your Nickname when looking up textbooks. Depending upon your deal settings, either Buyer contacts Seller or Seller contacts Buyer, the buyer will get your contact information you defined in the deal through email. The buyer must request the information. The contact information is not published publicly on Student 2 Student."
+                        question: '¿El vendedor ve mi nombre e información de contacto?',
+                        answer: "Cuando te registras, tienes que definir un apodo para proteger tu nombre real. Los compradores verán tu apodo al buscar libros de texto. Dependiendo de la configuración de tu acuerdo, y de los contactos de Comprador y el Vendedor,  o el Vendedor contacta con el Comprador, y el comprador obtendrá su información de contacto definida en el acuerdo a través de un correo electrónico. El comprador debe solicitar la información. La información de contacto no se publica en Student 2 Student."
                     },
                     {
-                        question: "Do I need to ship the textbooks?",
-                        answer: "Absolutely not. The concept is to exchange money and the textbook at your local campus. You meet each other without sending anything upfront. If a buyer asks you to ship the textbook, it is up to you if you want to take the risk or not. Student 2 Student does not recommend shipping textbooks."
+                        question: "¿Necesito enviar los libros de texto?",
+                        answer: "Absolutamente no. Nuestra intención es que se  intercambie el dinero y el libro de texto en el campus de tu universidad. Si un comprador te pide que envíes el libro de texto, depende de ti, si deseas correr el riesgo o no. Student2Student no aconseja el envío de libros de texto."
                     },
                     {
-                        question: "Can I sell textbooks to students at other Universities?",
-                        answer: "No. Textbooks get traded locally on campus. This provides the hassle-free experience of buying and selling textbooks."
+                        question: "¿Puedo vender libros de texto a estudiantes de otras universidades?",
+                        answer: "No. Los libros de texto se negocian localmente en el campus. Esto nos proporciona una experiencia sin problemas de compra y venta de libros de texto."
                     },
                     {
-                        question: 'What is the "My Sell Page"?',
-                        answer: $sce.trustAsHtml("The \"My Sell Page\" is your personalized page on Student 2 Student. This page can be shared with anyone in the internet. It only lists the textbook you are selling right now. This way you can advertise your own textbooks on Facebook or Twitter, where ever you like. The only thing you need to do is share the URL.<br><br>You have your own URL for the Personal Selling Page: <strong>www.student2student.com/[nickname]</strong><br/>(Ex: Nickname is kittoo12. The Page would then be: <strong>www.student2student.com/kittoo12</strong>")
+                        question: '¿Qué es "Mi página de venta"?',
+                        answer: $sce.trustAsHtml("La página \"Mi página de venta\" es su página personalizada en Student 2 Student. Esta página puede ser compartida con cualquier persona en Internet. Sólo muestras el libro de texto que estás vendiendo ahora. De esta manera puedes anunciar tus propios libros de texto en Facebook o Twitter, donde tu prefieras. Lo único que tienes que hacer es compartir la URL.<br><br>Tienes tu propia URL para la página de venta personal: <strong>www.student2student.es/[nickname]</strong><br/>(Ejemplo: Nickname es kittoo12. La página sería entonces: <strong>www.student2student.es/kittoo12</strong>")
                     }
 
 
@@ -89,39 +89,39 @@
             },
             {
                 tabId: "tab_4",
-                linkText: "buyer's handbook",
+                linkText: "Manual del comprador",
                 faqs: [
                     {
-                        question: "Do I need an account to buy textbooks?",
-                        answer: "Not necessarily. You can search, compare and buy textbooks without an account on Student 2 Student. Some sellers may not make the textbook available for non-members. In this case, you will need an account."
+                        question: "¿Necesito una cuenta para comprar libros de texto?",
+                        answer: "No necesariamente. Puedes buscar, comparar y comprar libros de texto sin una cuenta en Student 2 Student. Algunos vendedores no venden sus libros de texto a los no miembros. En este caso, necesitarás una cuenta."
                     },
                     {
-                        question: "Can I look up pricing from Amazon and other textbook shops?",
-                        answer: "We wouldn't be awesome if we didn't help you save money. So the answer is Yes. When you search for a textbook, you will see a comparison that tells you where the textbooks is available for the lowest price. We told you we will save you money!"
+                        question: "¿Puedo consultar los precios de Amazon y otras tiendas de libros de texto?",
+                        answer: "Por Supuesto!  Cuando buscas un libro de texto, verás una comparativa que te indica dónde puedes encontrar tus libros de texto, al mejor precio. ¡Te ayudamos a ahorrar dinero!"
                     },
                     {
-                        question: "How do I pay for the textbook?",
-                        answer: "Textbooks are locally (on-campus) traded and need to be paid when you meet the seller in person. Cash on Exchange (COE) is the concept."
+                        question: "¿Cómo pago el libro de texto?",
+                        answer: "Los libros de texto se venden localmente (en el campus) y deben pagarse en efectivo a la entrega del libro El concepto con el que trabajamos es Cash on Exchange (COE)."
                     },
                     {
-                        question: "I can’t find the textbook at my University. What can I do?",
-                        answer: "In the rare case where you can't find your textbook locally, we will give you a comparison where to get the textbook the cheapest. Just search for the textbook, and the comparison will come up right away."
+                        question: "No puedo encontrar el libro de texto en mi Universidad. ¿Que puedo hacer?",
+                        answer: "En el caso raro en el que no pueda encontrar su libro de texto localmente, le daremos una comparación donde obtener el libro de texto más barato. Sólo busque el libro de texto, y la comparación surgirá de inmediato."
                     }
 
                     ,
                     {
-                        question: "Why can't I change the textbook deal after someone contacted me?",
-                        answer: "It is not a bug, it is a feature. You cannot change certain values of the deal such as pricing, when the book is available, and textbook usage (notes, highlights) when someone already contacted you. This protects the buyer from sellers changing the price and information after they contacted the seller."
+                        question: "¿Por qué no puedo cambiar el acuerdo de libros de texto después de que alguien me contactó?",
+                        answer: "No es un error, es una característica. No puedes cambiar ciertos valores del acuerdo, como los precios, cuando el comprador ya ha contactado con el vendedor para adquirir el libro, no se puede modificar el precio. Esta norma protege al comprador de los vendedores que cambian el precio y la información después de cerrado el acuerdo."
                     }
                     ,
                     {
-                        question: "Does the seller see my name and contact information?",
-                        answer: "This depends if the seller chose \"Buyer contacts Seller\" or \"Seller contact Buyer\". In the case of \"Seller contacts Buyer\", you will need to provide the information to the seller so he/she can contact you. Otherwise the seller will not see anything else than your Nickname."
+                        question: "¿El vendedor ve mi nombre e información de contacto?",
+                        answer: "Esto depende si el vendedor eligió \"Comprador contacta al Vendedor\" o \"Vendedor contacta al Comprador\". En el caso de \"Vendedor contacta al Comprador\", deberás proporcionar la información al vendedor para que pueda ponerse en contacto contigo. De lo contrario el vendedor no verá nada más que tu apodo."
                     }
                     ,
                     {
-                        question: "What is \"My Watchlist\"?",
-                        answer: "The \"My Watchlist\" is a list of all textbooks you are interested in. It only shows the textbooks deals which you contacted the seller by either sending your contact information or by requesting the seller's information."
+                        question: "¿Qué es \"Mi Lista de Seguimiento\"?",
+                        answer: "El \"My Watchlist\" es una lista de todos los libros de texto que te interesan. Sólo muestra las ofertas de libros de texto en las que se ha intercambiado información entre comprador y vendedor."
                     }
                 ]
             },
@@ -130,85 +130,84 @@
                 linkText: "general",
                 faqs: [
                     {
-                        question: "What is an ISBN?",
-                        answer: $sce.trustAsHtml('The International Standard Book Number (ISBN) is a 10-digit number that uniquely identifies books and book-like products published internationally. <a href="http://www.isbn.org/faqs_general_questions">More Information</a>')
+                        question: "¿Qué es un ISBN?",
+                        answer: $sce.trustAsHtml('El Número Estándar Internacional de Libros (ISBN) es un número de 10 dígitos que identifica de forma exclusiva los libros y productos similares a libros publicados internacionalmente. <a href="http://www.isbn.org/faqs_general_questions">Más información</a>')
                     }
                     ,
                     {
-                        question: "What is an EAN?",
-                        answer: $sce.trustAsHtml('Every ISBN will consist of thirteen digits in 2007. The thirteen digit number is divided into five parts of variable length, each part separated by a hyphen. Also called ISBN-13. <a href="http://www.isbn.org/faqs_general_questions">More Information</a>')
+                        question: "¿Qué es un EAN?",
+                        answer: $sce.trustAsHtml('Cada ISBN consta de trece dígitos en 2007. El número de trece dígitos se divide en cinco partes de longitud variable, cada parte separada por un guión. También se llama ISBN-13. <a href="http://www.isbn.org/faqs_general_questions">Más información</a>')
                     }
                 ]
 
             },
             {
                 tabId: "tab_5",
-                linkText: "how to's",
+                linkText: "Cómo",
                 faqs: [
                     {
-                        question: "Create an Account",
-                        answer: $sce.trustAsHtml('Nothing is easier than creating your personal account on Student 2 Student. Student 2 Student does not require you to enter personal information such as phone number, birthday, etc. You only need a valid Email address. Click on the picture to see an example of how to create an account.<br>' +
+                        question: "Crea una cuenta",
+                        answer: $sce.trustAsHtml('Nada es más fácil que crear su cuenta personal en Student 2 Student. Student 2 Student no requiere que ingrese información personal como número de teléfono, cumpleaños, etc. Sólo necesita una dirección de correo electrónico válida. Haga clic en la imagen para ver un ejemplo de cómo crear una cuenta.<br>' +
                             '<img src="dist/images/faq/signup.png" width="100%"><br/><br/>' +
-                            '1. Enter Your Full Name <b>(Ex: Joe Miller)</b><br>' +
-                            '2. Enter Your Nickname <b>(Ex: Joe.Miller12)</b>. This is the Name other Users on Student 2 Student will see.<br>' +
-                            '3. Enter a valid Email address. <b>(Ex: Joe.Miller12@student2student.com)</b><br>' +
-                            ' 4. Enter a strong password. It must be a minimum of 6 characters long.<br>' +
-                            '5. This is the most important entry. You have to choose the University Campus where you are going to school.<br>' +
-                            'Find the University by typing in the <b>University Name, Location, Stateor University URL</b>. When you start typing in the letters, the system will pull a list of' +
-                            'Universities that already exists on Student 2 Student. Choose your University.<br>' +
-                            '<b>(Ex: Typed in Osh and chose University of Wisconsin Oshkosh, Oshkosh (WI), United States)</b></<br>' +
-                            '6. Tell us how you found out about Student 2 Student. <b>(Ex: Facebook)</b><br>' +
-                            '7. Complete the captcha<br><br>' +
+                            '1. Escribe tu nombre completo <b>(Ej: Joe Miller)</b><br>' +
+                            '2. Inserta tu apodo <b>(Ej: Joe.Miller12)</b>. Este es el nombre de otros usuarios del Student 2 Student verá.<br>' +
+                            '3. Introduce una dirección de correo electrónico válida. <b>(Ej: Joe.Miller12@student2student.es)</b><br>' +
+                            '4. Introduce una contraseña segura. Debe tener un mínimo de 6 caracteres.<br>' +
+                            '5. Esta es la entrada más importante. Tienes que elegir el Campus Universitario donde vas a la escuela.<br>' +
+                            'Encuentra la universidad escribiendo el nombre de la universidad, la ubicación, la URL de la universidad o la universidad. Cuando empieces a escribir las letras, el sistema extraerá una lista de universidades que ya existen en Student 2 Student. Elige tu Universidad.<br>' +
+                            '<b>(Ej:Se escribió en Osh y eligió la Universidad de Wisconsin Oshkosh, Oshkosh (WI), Estados Unidos)</b></<br>' +
+                            '6. Dínos cómo has conocido de Student 2 Student. <b>(Ej: Facebook)</b><br>' +
+                            '7. Completa el captcha<br><br>' +
 
 
-                            'Click on \"Create My Account\" to finish the process. The last thing you have to do is activate your account. Go to the email account you entered and click on the link in the verification email we sent you.<br>' +
+                            'Haga clic en "Crear mi cuenta" para finalizar el proceso. Lo último que tienes que hacer es activar tu cuenta. Vaya a la cuenta de correo electrónico que ingresó y haga clic en el enlace del correo electrónico de verificación que le enviamos.<br>' +
 
-                            '<br>You are all done and ready to buy, sell and save!')
+                            '<br>Todos están listos para comprar, vender y ahorrar!')
                     },
                     {
-                        question: "Reset my Password",
-                        answer: $sce.trustAsHtml('Did you forget your password? Absolutely no problem.'+
-                        'You can reset your password on the "Sign In - Forgot the Password" page or by <a href="http://www.student2student.com/forgotPassword">Clicking here</a>.<br/><br/>'+
+                        question: "Restablecer mi contraseña",
+                        answer: $sce.trustAsHtml('¿Olvidaste tu contraseña? Ningún problema.' +
+                            '. Puedes restablecer tu contraseña en la página "Iniciar sesión - Olvidé la contraseña" o haciendo <a href="http://www.student2student.es/forgotPassword">Clic aquí.</a>.<br/><br/>' +
 
                             '<img src="dist/images/faq/forgotPassword.png" width="100%"><br/><br/>' +
 
-                    '1. Enter the email address you used when you registered your account. <b>(Ex: joe.miller12@student2student.com)</b><br/>'+
+                            '1. Introduce la dirección de correo electrónico que utilizaste cuando registraste tu cuenta. <b>(Ej: joe.miller12@student2student.es)</b><br/>' +
 
-        '2. You will receive an email with the link to reset your password. Be aware that the link only works for a short period of time. Follow the link to Student 2 Student to reset your password.<br/><br/>'+
+                            '2. Recibirás un correo electrónico con el enlace para restablecer tu contraseña. Ten en cuenta que el enlace sólo funciona durante un corto período de tiempo. Sigue el enlace a Student 2 Student para restablecer tu contraseña.<br/><br/>' +
 
                             '<img src="dist/images/faq/resetPassword.png" width="100%"><br/><br/>' +
 
 
-        '3. Set your New Password.<br/>' +
-                            '<br><b>All Done! Use your New Password from now on.</b>')
+                            '3. Establece tu nueva contraseña.<br/>' +
+                            '<br><b>¡Todo listo! Utilice tu nueva contraseña de ahora en adelante.</b>')
                     }
                 ]
             },
             {
                 tabId: "tab_6",
-                linkText: "policies",
+                linkText: "Políticas",
                 faqs: [
                     {
-                        question: "Privacy",
-                        answer: $sce.trustAsHtml('Read our Privacy Policy <a href="http://www.student2student.com/privacyPolicy">here</a>')
+                        question: "Seguridad",
+                        answer: $sce.trustAsHtml('Lee nuestra política de privacidad <a href="http://www.student2student.es/privacyPolicy">aquí</a>')
                     },
                     {
-                        question: "Disclaimer",
-                        answer: $sce.trustAsHtml('Read Disclaimer <a href="http://www.student2student.com/disclaimer">here</a>')
+                        question: "Renuncia",
+                        answer: $sce.trustAsHtml('Leer Aviso legal <a href="http://www.student2student.es/disclaimer">aquí</a>')
                     },
                     {
-                        question: "Condition of Use",
-                        answer: $sce.trustAsHtml('Read Condition of Use <a href="http://www.student2student.com/conditionOfUse">here</a>')
+                        question: "Condición de uso",
+                        answer: $sce.trustAsHtml('Leer estado de uso <a href="http://www.student2student.es/conditionOfUse">aquí</a>')
                     }
                 ]
             },
             {
                 tabId: "tab_7",
-                linkText: "contact us",
+                linkText: "Contáctenos",
                 faqs: [
                     {
-                        question: "Still have questions?",
-                        answer: $sce.trustAsHtml('You still have questions? Contact us <a href="http://www.student2student.com/contactUs">here</a>')
+                        question: "¿Aun tienes dudas?",
+                        answer: $sce.trustAsHtml('¿Aun tienes dudas? Contáctenos <a href="http://www.student2student.es/contactUs">aquí</a>')
                     }
                 ]
             }
@@ -224,10 +223,10 @@
         }
 
 
-        function _downloadBookmarkForPrint(){
+        function _downloadBookmarkForPrint() {
             var downloadLink = angular.element('<a></a>');
-            var path = SERVER_CONSTANT.IMAGE_HOST_PATH+"/assets/images/bookmark_for_print.png";
-            downloadLink.attr('href',path);
+            var path = SERVER_CONSTANT.IMAGE_HOST_PATH + "/assets/images/bookmark_for_print.png";
+            downloadLink.attr('href', path);
             downloadLink.attr('download', 'BookmarkForPrint.png');
             downloadLink[0].click();
         }

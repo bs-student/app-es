@@ -18,7 +18,7 @@
                     <a ng-click="saveToWishList()">
                         <div class="wishlist-icon-div"></div>
 
-                        Save To Wishlist
+                        Guardar en favoritos
                     </a>
                 </div>
             </div>
@@ -28,12 +28,12 @@
                     <a ng-click="contact(cheapestCampusDeal)" ng-show="$parent.loggedIn">
                         <div class="phone-icon-div"></div>
 
-                        Contact Cheapest Seller Locally
+                        Contactar vendedor local con el precio más bajo
                     </a>
                     <a ui-sref="app.login" ng-show="!$parent.loggedIn">
                         <div class="phone-icon-div"></div>
 
-                        Sign In to Contact Cheapest Seller Locally
+                        Inicie sesión para contactar con el vendedor más barato localmente
                     </a>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="compare-page-top-button middle-button border-left-none">
                     <a target="_blank" href="{{cheapestOnlineBook.link}}">
                         <div class="cart-icon-div"></div>
-                        Go To Cheapest Online Store
+                        Ir a Tienda Online más barata
                     </a>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <div class="compare-page-top-button last-button">
                     <a target="_blank" ui-sref="app.buy_from_amazon({bookOfferId: amazonBook.bookOfferId })">
                         <div class="amazon-icon-div"></div>
-                        Buy From Amazon
+                        Comprar en Amazon
                     </a>
                 </div>
             </div>
@@ -140,7 +140,7 @@
 
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Edition</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Edición</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right">
@@ -149,7 +149,7 @@
                 </div>
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Author</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Autor</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right"><strong>{{book.bookDirectorAuthorArtist}}</strong>
@@ -176,7 +176,7 @@
                 </div>
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Publisher</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Editorial</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right">
@@ -185,7 +185,7 @@
                 </div>
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Publish Date</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Fecha de Publicación</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right">
@@ -194,7 +194,7 @@
                 </div>
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Page</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Página</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right"><strong>{{book.bookPages}}</strong>
@@ -203,7 +203,7 @@
                 </div>
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Binding</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Encuadernación</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right">
@@ -213,7 +213,7 @@
 
                 <div class="row attribute-row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>List Price</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Lista de Precios</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right">
@@ -222,7 +222,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="orange-text lato attribute-name-field text-left"><strong>Details</strong></div>
+                        <div class="orange-text lato attribute-name-field text-left"><strong>Detalles</strong></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="blue-text lato attribute-name-field text-right">
@@ -263,26 +263,26 @@
 <uib-tab class="first-tab">
     <uib-tab-heading>
         <div class="people-icon-div"></div>
-        <text>Student On Campus</text>
+        <text>Estudiante del campus</text>
     </uib-tab-heading>
     <div cg-busy="{promise:campusPromise}">
         <div class="table-responsive ">
         <table class="table table-striped campus-result-table">
             <thead>
             <tr>
-                <th style="width: 18%;">Seller (Student)</th>
-                <th style="width: 20%;">Condition / Details</th>
-                <th style="width: 18%;">Contact Method</th>
-                <th style="width: 10%;">Available</th>
-                <th style="width: 10%;">Payment</th>
-                <th style="width: 12%;">Price</th>
-                <th style="width: 12%;">Contact</th>
+                <th style="width: 18%;">Vendedor (Estudiante)</th>
+                <th style="width: 20%;">Condiciones / Detalles</th>
+                <th style="width: 18%;">Tipo de contacto</th>
+                <th style="width: 10%;">Disponible</th>
+                <th style="width: 10%;">Pago</th>
+                <th style="width: 12%;">Precio</th>
+                <th style="width: 12%;">Contacto</th>
             </tr>
             </thead>
             <tbody ng-show="noUniversitySelected && !$parent.loggedIn">
             <tr>
                 <td colspan="7" class="text text-danger">
-                    You need to choose your University here before you can see on-campus textbooks
+                    Debes elegir tu Universidad aquí antes de que puedas ver libros de texto en el campus
                 </td>
             </tr>
             </tbody>
@@ -297,47 +297,47 @@
                         {{deal.username}}
                     </div>
                     <div ng-show="!$parent.loggedIn">
-                        Seller(Student)
+                        Vendedor (Estudiante)
                     </div>
                 </td>
                 <td>{{deal.bookCondition}}
                     <div class="transition-view">
-                        Highlights in textbook: {{deal.bookIsHighlighted}}<br/>
-                        Notes in textbook: {{deal.bookHasNotes}}<br/>
+                        Aspectos destacados del libro de texto: {{deal.bookIsHighlighted}}<br/>
+                        Notas en el libro de texto: {{deal.bookHasNotes}}<br/>
                     </div>
                     <div ng-show="deal.bookComment!=undefined">
                         <button class="myBtn app-btn buy-now-button view-more-button"
                                 ng-click="deal.showDetails=!deal.showDetails"><i
                                 class="fa fa-angle-down"></i></button>
                         <div class="transition-view" ng-show="deal.showDetails">
-                            Comment by Seller: {{deal.bookComment}}
+                            Comentario del Vendedor: {{deal.bookComment}}
                         </div>
                     </div>
 
                 </td>
-                <td>Buyer Contacts Seller</td>
+                <td>Comprador Contactos Vendedor</td>
 
                 <td>{{deal.bookAvailableDate}}</td>
                 <td ng-show="deal.bookPaymentMethodCashOnExchange && !deal.bookPaymentMethodCheque">
-                    Cash
+                    Efectivo
                 </td>
                 <td ng-show="!deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
                     Cheque
                 </td>
                 <td ng-show="deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
-                    Cash, Cheque
+                    Efectivo, Cheque
                 </td>
                 <td>€{{deal.bookPriceSell.replace(".",",")}}</td>
                 <td>
                     <div ng-show="$parent.loggedIn">
                         <button ng-click="contact(deal)" class="myBtn app-btn buy-now-button ">
-                            Contact
+                            Contacto
                         </button>
                     </div>
                     <div ng-show="!$parent.loggedIn">
 
                         <a ui-sref="app.login"
-                           class="myBtn app-btn buy-now-button ">Sign In</a>
+                           class="myBtn app-btn buy-now-button ">Registrarse</a>
 
 
                     </div>
@@ -350,43 +350,43 @@
                 <td>{{deal.username}}</td>
                 <td>{{deal.bookCondition}}
                     <div class="transition-view">
-                        Highlights in textbook: {{deal.bookIsHighlighted}}<br/>
-                        Notes in textbook: {{deal.bookHasNotes}}<br/>
+                        Aspectos destacados del libro de texto: {{deal.bookIsHighlighted}}<br/>
+                        Notas en el libro de texto: {{deal.bookHasNotes}}<br/>
                     </div>
                     <div ng-show="deal.bookComment!=undefined">
                         <button class="myBtn app-btn buy-now-button view-more-button"
                                 ng-click="deal.showDetails=!deal.showDetails"><i
                                 class="fa fa-angle-down"></i></button>
                         <div class="transition-view" ng-show="deal.showDetails">
-                            Comment by Seller: {{deal.bookComment}}
+                            Comentario del Vendedor: {{deal.bookComment}}
                         </div>
                     </div>
 
                 </td>
-                <td>Seller Contacts Buyer</td>
+                <td>Vendedor Contactos Comprador</td>
                 <td>{{deal.bookAvailableDate}}</td>
                 <td ng-show="deal.bookPaymentMethodCashOnExchange && !deal.bookPaymentMethodCheque">
-                    Cash
+                    Efectivo
                 </td>
                 <td ng-show="!deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
                     Cheque
                 </td>
                 <td ng-show="deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
-                    Cash, Cheque
+                    Efectivo, Cheque
                 </td>
-                <td>${{deal.bookPriceSell}}</td>
+                <td>€{{deal.bookPriceSell.replace(".",",")}}</td>
                 <td>
                     <div ng-show="$parent.loggedIn">
                         <button ng-click="contact(deal)" class="myBtn app-btn buy-now-button ">
-                            Contact
+                            Contacto
                         </button>
                     </div>
                     <div ng-show="!$parent.loggedIn">
 
                         <a ui-sref="app.login" ng-if="deal.bookIsAvailablePublic=='No'"
-                           class="myBtn app-btn buy-now-button ">Sign In</a>
+                           class="myBtn app-btn buy-now-button ">Registrarse</a>
                         <button ng-click="contact(deal)" ng-if="deal.bookIsAvailablePublic=='Yes'"
-                                class="myBtn app-btn buy-now-button ">Contact
+                                class="myBtn app-btn buy-now-button ">Contacto
                         </button>
                     </div>
                 </td>
@@ -397,8 +397,8 @@
                 <td>{{deal.username}}</td>
                 <td>{{deal.bookCondition}}
                     <div class="transition-view">
-                        Highlights in textbook: {{deal.bookIsHighlighted}}<br/>
-                        Notes in textbook: {{deal.bookHasNotes}}<br/>
+                        Aspectos destacados del libro de texto: {{deal.bookIsHighlighted}}<br/>
+                        Notas en el libro de texto: {{deal.bookHasNotes}}<br/>
                     </div>
 
                     <div ng-show="deal.bookComment!=undefined">
@@ -406,36 +406,36 @@
                                 ng-click="deal.showDetails=!deal.showDetails"><i
                                 class="fa fa-angle-down"></i></button>
                         <div class="transition-view" ng-show="deal.showDetails">
-                            Comment by Seller: {{deal.bookComment}}
+                            Comentario del Vendedor: {{deal.bookComment}}
                         </div>
                     </div>
 
 
                 </td>
-                <td>Contact Through Message Board</td>
+                <td>Contacto a través del tablero de mensajes</td>
 
                 <td>{{deal.bookAvailableDate}}</td>
                 <td ng-show="deal.bookPaymentMethodCashOnExchange && !deal.bookPaymentMethodCheque">
-                    Cash
+                    Efectivo
                 </td>
                 <td ng-show="!deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
                     Cheque
                 </td>
                 <td ng-show="deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
-                    Cash, Cheque
+                    Efectivo, Cheque
                 </td>
-                <td>${{deal.bookPriceSell}}</td>
+                <td>€{{deal.bookPriceSell.replace(".",",")}}</td>
                 <td>
                     <div ng-show="$parent.loggedIn">
                         <button ng-click="contact(deal)" class="myBtn app-btn buy-now-button ">
-                            Contact
+                            Contacto
                         </button>
                     </div>
                     <div ng-show="!$parent.loggedIn">
 
                         <a ui-sref="app.login"
 
-                           class="myBtn app-btn buy-now-button ">Sign In</a>
+                           class="myBtn app-btn buy-now-button ">Registrarse</a>
 
                     </div>
 
@@ -444,7 +444,7 @@
             </tr>
 
             <tr ng-if="noDeals">
-                <td class="text text-danger" colspan="7">There is no deal on-campus at the moment.
+                <td class="text text-danger" colspan="7">Actualmente no hay ningún acuerdo en el campus.
                 </td>
             </tr>
 
@@ -456,7 +456,7 @@
 <uib-tab class="mid-tab">
     <uib-tab-heading>
         <div class="book-close-icon-div"></div>
-        <text>Online Stores: New</text>
+        <text>Tiendas Online: Nuevas</text>
     </uib-tab-heading>
     <div cg-busy="{promise:onlinePromise}">
         <div class="table-responsive ">
@@ -464,50 +464,26 @@
         <table class="table table-striped campus-result-table">
             <thead>
             <tr>
-                <th style="width: 15%;">Online Store</th>
-                <th style="width: 15%;">Available</th>
-                <th style="width: 23%;">Comments</th>
-                <th style="width: 12%;">Shipping</th>
-                <th style="width: 12%;">Price</th>
-                <th style="width: 46%;">Total</th>
+                <th style="width: 15%;">Tiendas Online</th>
+
+                <th style="width: 15%;">Datos de envío</th>
+                <th style="width: 20%;">Precio de envío</th>
+                <th style="width: 20%;">Precio</th>
+                <th style="width: 30%;">Total</th>
             </tr>
             </thead>
             <tbody>
             <tr data-ng-repeat="book in newBooks">
-                <td class="store-image-td"><img ng-src="{{book.merchant_image}}"
-                                                alt="{{book.merchant_name}}"></td>
-                <td>{{book.availability_text}}</td>
-                <td>
-                    <div ng-show="book.comments.length<=100"
-                         class="">{{book.comments}}
-                    </div>
-                    <div ng-show="book.comments.length>100" class="">
+                <td class="store-image-td"><img ng-src="{{book.storeImage}}"
+                        ></td>
 
-
-                        <div ng-show="book.showComments"
-                             class="">{{book.comments}}
-                            <button ng-click="book.showComments=!book.showComments"
-                                    class="myBtn app-btn buy-now-button view-more-button compare-page"><i
-                                    class="fa fa-angle-up"></i></button>
-                        </div>
-                        <div ng-show="!book.showComments"
-                             class="">
-                            {{book.comments.substring(0, 100)}} ...
-                            <button ng-click="book.showComments=!book.showComments"
-                                    class="myBtn app-btn buy-now-button view-more-button compare-page"><i
-                                    class="fa fa-angle-down"></i></button>
-                        </div>
-                    </div>
-
-
-                </td>
-                <td>${{book.shipping_ground}}</td>
-                <td>${{book.price}}</td>
+                <td>{{book.shippingInfo}}</td>
+                <td>€{{book.shippingPrice.replace(".",",")}}</td>
+                <td>€{{book.price.replace(".",",")}}</td>
 
                 <td>
-                    ${{book.total_price}} &nbsp;
-                    <a target="_blank" href="{{book.link}}" class="myBtn app-btn buy-now-button ">Buy
-                        Now</a>
+                    €{{book.totalPrice.toString().replace(".",",")}} &nbsp;
+                    <a target="_blank" href="{{book.buyLink}}" class="myBtn app-btn buy-now-button ">Compra Ahora</a>
                 </td>
             </tr>
 
@@ -519,58 +495,35 @@
 <uib-tab class="last-tab">
     <uib-tab-heading>
         <div class="book-open-icon-div"></div>
-        <text>Online Stores: Used</text>
+        <text>Tiendas Online: Utilizadas</text>
     </uib-tab-heading>
     <div cg-busy="{promise:onlinePromise}">
         <div class="table-responsive ">
         <table class="table table-striped campus-result-table">
             <thead>
             <tr>
-                <th style="width: 15%;">Online Store</th>
-                <th style="width: 15%;">Available</th>
-                <th style="width: 23%;">Comments</th>
-                <th style="width: 12%;">Shipping</th>
-                <th style="width: 12%;">Price</th>
-                <th style="width: 46%;">Total</th>
+                <th style="width: 15%;">Tiendas Online</th>
+
+                <th style="width: 15%;">Datos de envío</th>
+                <th style="width: 20%;">Precio de envío</th>
+                <th style="width: 20%;">Precio</th>
+                <th style="width: 30%;">Total</th>
             </tr>
             </thead>
             <tbody>
             <tr data-ng-repeat="book in usedBooks">
-                <td class="store-image-td"><img ng-src="{{book.merchant_image}}"
-                                                alt="{{book.merchant_name}}"></td>
-                <td>{{book.availability_text}}</td>
-                <td>
-                    <div ng-show="book.comments.length<80"
-                         class="">{{book.comments}}
-                    </div>
-                    <div ng-show="book.comments.length>80" class="">
+                <td class="store-image-td"><img ng-src="{{book.storeImage}}"
+                        ></td>
 
-
-                        <div ng-show="book.showComments"
-                             class="">{{book.comments}}
-                            <button ng-click="book.showComments=!book.showComments"
-                                    class="myBtn app-btn buy-now-button view-less-button compare-page"><i
-                                    class="fa fa-angle-up"></i></button>
-                        </div>
-                        <div ng-show="!book.showComments"
-                             class="">
-                            {{book.comments.substring(0, 80)}} ...
-                            <button ng-click="book.showComments=!book.showComments"
-                                    class="myBtn app-btn buy-now-button view-more-button compare-page"><i
-                                    class="fa fa-angle-down"></i></button>
-                        </div>
-                    </div>
-                </td>
-                <td>${{book.shipping_ground}}</td>
-                <td>${{book.price}}</td>
+                <td>{{book.shippingInfo}}</td>
+                <td>€{{book.shippingPrice.replace(".",",")}}</td>
+                <td>€{{book.price.replace(".",",")}}</td>
 
                 <td>
-                    ${{book.total_price}} &nbsp;
-                    <a target="_blank" href="{{book.link}}" class="myBtn app-btn buy-now-button ">Buy
-                        Now</a>
+                    €{{book.totalPrice.toString().replace(".",",")}} &nbsp;
+                    <a target="_blank" href="{{book.buyLink}}" class="myBtn app-btn buy-now-button ">Compra Ahora</a>
                 </td>
             </tr>
-
 
             </tbody>
         </table>

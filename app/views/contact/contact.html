@@ -12,57 +12,56 @@
 
                     <div ng-if="deal.bookContactMethod=='buyerToSeller'" class="col-md-10">
                         <div class="book-title-header">
-                            <h1 class="uppercase"><strong>You (Buyer) need to contact Seller
-                                ({{deal.username}})</strong></h1>
+                            <h1 class="uppercase"><strong>DEBES (Comprador) DE CONTACTAR CON EL VENDEDOR({{deal.username}})
+                                </strong></h1>
                             <hr/>
                         </div>
                         <div>
-                            <p class="book-subtitle-header">Buying Textbooks directly from other Students can be so
-                                simple</p>
+                            <p class="book-subtitle-header">¡Comprar libros de otros estudiantes, puede ser tan sencillo!</p>
 
                             <p>
-                                The Seller ({{deal.username}}) of this textbook wants <strong>You to contact
-                                him/her</strong>.
-                                Please provide your Email below so we can send you the Seller's Contact Information.
-                                You also have the option to send a message to the Seller.
+                                El vendedor ({{deal.username}}) de este libro de texto <b>quiere que le contactes</b>.
+
+                                Por favor, envía tu email para que podamos enviarte los datos de contacto del vendedor.
+
+                                Existe igualmente la opción para enviar un mensaje al Vendedor.
+
                             </p>
                         </div>
                     </div>
 
                     <div ng-if="deal.bookContactMethod=='sellerToBuyer'" class="col-md-10">
                         <div class="book-title-header">
-                            <h1 class="uppercase"><strong>Seller ({{deal.username}}) will contact You (Buyer)</strong>
+                            <h1 class="uppercase"><strong>
+                                EL VENDEDOR ({{deal.username}}) SE PONDRA ENC CONTACTO CON USTED (COMPRADOR)</strong>
                             </h1>
                             <hr/>
                         </div>
                         <div>
-                            <p class="book-subtitle-header">Buying Textbooks directly from other Students can be so
-                                simple</p>
+                            <p class="book-subtitle-header">¡Puede ser tan sencillo comprar libros de otros estudiantes!</p>
 
                             <p>
-                                The Seller ({{deal.username}}) of this textbook wants to contact you. Please provide
-                                your Contact information below.
-                                We will send the information to the seller who then will contact you.
-                                You also have the option to send a message to the Seller.
+                                El vendedor ({{deal.username}}) de este libro de texto quiere ponerse en contacto con usted.
+                                A continuación proporcione su información de contacto.
+                                Nosotros se la enviaremos al vendedor para que posteriormente se ponga en contacto con usted. También tiene la opción de enviar un mensaje al Vendedor.
                             </p>
                         </div>
                     </div>
 
                     <div ng-if="deal.bookContactMethod=='student2studentBoard'" class="col-md-10">
                         <div class="book-title-header">
-                            <h1 class="uppercase"><strong>Send Messages to ({{deal.username}}) via Student2Student
-                                Message Board</strong></h1>
+                            <h1 class="uppercase"><strong>
+                                ENVIAR MENSAJES A ({{deal.username}}) TRAVES DEL TABLERO DE MENSAJES DE STUDENT2STUDENT.</strong></h1>
                             <hr/>
                         </div>
                         <div>
-                            <p class="book-subtitle-header">Buying Textbooks directly from other Students can be so
-                                simple</p>
+                            <p class="book-subtitle-header">¡Puede ser tan sencillo comprar libros de otros estudiantes!</p>
 
                             <p>
-                                In this method you and the seller can send messages to each other over the
-                                Student2Student message board. You can share a location, time, etc. to do the exchange
-                                with the seller without sharing any personal information such as phone number or email
-                                address.
+                                Con este método, usted y el vendedor pueden enviarse mensajes reciprocamente través del tablero de mensajes de Student2Student.
+
+                                Para realizar el intercambio con el vendedor sin necesidad de proporcionar ninguna información personal como número de teléfono o dirección de correo electrónico comparta ubicación, hora, etc..
+
                             </p>
                         </div>
                     </div>
@@ -95,7 +94,7 @@
 
                                 <div ng-show="!$parent.loggedIn" class="form-group">
 
-                                    <p class="" for="username">Name: </p>
+                                    <p class="" for="username">Nombre: </p>
                                     <input type="text" name="username" id="username" class="form-control "
                                            ng-model="contact.buyerNickName">
 
@@ -110,13 +109,13 @@
                                            ng-model="contact.buyerEmail" required>
 
                                     <p class="help-block">
-                                        <span ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">Email is required.</span>
+                                        <span ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">Email Obligatorio.</span>
                                     </p>
                                 </div>
 
                                 <div ng-if="deal.bookContactMethod=='sellerToBuyer'" class="form-group">
 
-                                    <p class="" for="cellNumber">Cell Number: </p>
+                                    <p class="" for="cellNumber">Numero de celular: </p>
                                     <input type="text" name="cellNumber" id="cellNumber" class="form-control "
                                            ng-model="contact.buyerCellPhone">
 
@@ -124,25 +123,25 @@
 
                                 <div ng-if="deal.bookContactMethod=='sellerToBuyer'" class="form-group">
 
-                                    <p class="" for="homeNumber">Home Number: </p>
+                                    <p class="" for="homeNumber">Número de casa: </p>
                                     <input type="text" name="homeNumber" id="homeNumber" class="form-control "
                                            ng-model="contact.buyerHomePhone">
 
                                 </div>
 
                                 <div ng-if="deal.bookContactMethod=='student2studentBoard'" class="form-group">
-                                    <p class="lato px-16" >To: <strong>{{deal.username}}</strong></p>
+                                    <p class="lato px-16" >A: <strong>{{deal.username}}</strong></p>
                                 </div>
 
                                 <div class="form-group"
                                      ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine, 'has-success' : contactForm.message.$valid && !contactForm.message.$pristine}">
 
-                                    <p class="" for="message">Message: </p>
+                                    <p class="" for="message">Mensaje: </p>
                                     <textarea rows="5" type="text" name="message" id="message" class="form-control "
                                               ng-model="contact.messages[0].messageBody" required></textarea>
 
                                     <p class="help-block">
-                                        <span ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">Message is required.</span>
+                                        <span ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">Mensaje Requerido.</span>
 
                                     </p>
                                 </div>
@@ -152,8 +151,7 @@
                                 <div ng-if="deal.bookContactMethod=='sellerToBuyer'" class="form-group">
 
                                     <div class="form-group text-left mt-20">
-                                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Send Seller
-                                            Your Details
+                                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Envíele al vendedor su información
                                         </button>
                                     </div>
 
@@ -161,8 +159,7 @@
                                 <div ng-if="deal.bookContactMethod=='buyerToSeller'" class="form-group">
 
                                     <div class="form-group text-left mt-20">
-                                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Get Seller
-                                            Details
+                                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">OBTENER DETALLES DEL VENDEDOR
                                         </button>
                                     </div>
 
@@ -171,8 +168,7 @@
                                 <div ng-if="deal.bookContactMethod=='student2studentBoard'" class="form-group">
 
                                     <div class="form-group text-left mt-20">
-                                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Send
-                                            Message to Seller
+                                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Enviar mensaje al vendedor
                                         </button>
                                     </div>
 

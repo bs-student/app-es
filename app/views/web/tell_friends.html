@@ -8,7 +8,7 @@
     <div class="col-md-12">
 
 
-        <p class="text-white mid-two-header">Tell Your Friends</p>
+        <p class="text-white mid-two-header">Dile a tus amigos</p>
 
         <div class="text-center tell-friends-share-div">
             <a class="facebook" href="" socialshare
@@ -39,15 +39,15 @@
                 <div class="col-md-12">
                     <div class="form-group"
                          ng-class="{ 'has-error' : sendEmail.fullName.$invalid && !sendEmail.fullName.$pristine, 'has-success' : sendEmail.fullName.$valid && !contactForm.fullName.$pristine}">
-                        <p class="white-text ">Your Full Name:
+                        <p class="white-text ">Tu nombre completo:
                             <text ng-show="$parent.loggedIn"><strong>{{user.fullName}}</strong></text>
                         </p>
 
                         <input ng-show="!$parent.loggedIn" name="fullName" type="text" class="form-control input-style"
-                               placeholder="Your Full Name" ng-model="user.fullName" ng-required="!$parent.loggedIn">
+                               placeholder="Tu nombre completo" ng-model="user.fullName" ng-required="!$parent.loggedIn">
 
                         <p class="help-block">
-                            <span ng-show="sendEmail.fullName.$invalid && !sendEmail.fullName.$pristine">Your Full Name is required.</span>
+                            <span ng-show="sendEmail.fullName.$invalid && !sendEmail.fullName.$pristine">Su nombre completo es obligatorio.</span>
                         </p>
                     </div>
                 </div>
@@ -57,15 +57,15 @@
                 <div class="col-md-12">
                     <div class="form-group"
                          ng-class="{ 'has-error' : sendEmail.email.$invalid && !sendEmail.email.$pristine, 'has-success' : sendEmail.email.$valid && !contactForm.email.$pristine}">
-                        <p class="white-text ">Your Email:
+                        <p class="white-text ">Tu correo electrónico:
                             <text ng-show="$parent.loggedIn"><strong>{{user.email}}</strong></text>
                         </p>
 
                         <input ng-show="!$parent.loggedIn" name="email" type="email" class="form-control input-style"
-                               placeholder="Your Email" ng-model="user.email" ng-required="!$parent.loggedIn">
+                               placeholder="Tu correo electrónico" ng-model="user.email" ng-required="!$parent.loggedIn">
 
                         <p class="help-block">
-                            <span ng-show="sendEmail.email.$invalid && !sendEmail.email.$pristine">Your Email is required.</span>
+                            <span ng-show="sendEmail.email.$invalid && !sendEmail.email.$pristine">Su correo electrónico es obligatorio.</span>
                         </p>
                     </div>
                 </div>
@@ -83,14 +83,14 @@
                                                         (addRowForm.email.$invalid && !addRowForm.email.$pristine),
                                                    'has-success' :
                                                         addRowForm.email.$valid && !addRowForm.email.$pristine}">
-                                <p class="white-text">Friend Email: </p>
+                                <p class="white-text">Correo electrónico de tu amigo:</p>
 
                                 <input type="email" class="form-control input-style" name="email"
 
                                        ng-model="friendEmail.email" required>
 
                                 <p class="help-block">
-                                    <span ng-show="(sendEmail.$submitted && addRowForm.email.$invalid && addRowForm.email.$pristine)||(addRowForm.email.$invalid && !addRowForm.email.$pristine)">Email is required.</span>
+                                    <span ng-show="(sendEmail.$submitted && addRowForm.email.$invalid && addRowForm.email.$pristine)||(addRowForm.email.$invalid && !addRowForm.email.$pristine)">Correo electronico es requerido.</span>
 
                                 </p>
                             </div>
@@ -102,7 +102,7 @@
                             <button type="button"
                                     class="btn btn-danger btn-rounded btn-ef btn-ef-5 btn-ef-5b mb-10 functional-btn"
                                     ng-click="removeFriendEmail(friendEmail)"><i class="fa fa-trash"></i>
-                                <span>Remove Email</span>
+                                <span>Eliminar Email</span>
                             </button>
                         </div>
                     </div>
@@ -115,19 +115,19 @@
             <div class="form-group ">
                 <button type="button" class="btn btn-success btn-rounded btn-ef btn-ef-5 btn-ef-5b mb-10 functional-btn"
                         ng-click="addNewFriendEmail()"><i
-                        class="fa fa-plus"></i> <span>Add New Email</span></button>
+                        class="fa fa-plus"></i> <span>Añadir nuevo correo electrónico</span></button>
             </div>
 
 
             <div ng-show="!$parent.loggedIn" class="form-group"
                  ng-class="{ 'has-error' : sendEmail.message.$invalid && !sendEmail.message.$pristine, 'has-success' : sendEmail.message.$valid && !contactForm.message.$pristine}">
-                <p class="white-text ">Your Message:</p>
+                <p class="white-text ">Tu mensaje:</p>
 
                 <textarea rows="5" name="message" type="text" class="form-control input-style"
-                          placeholder="Your Message" ng-model="user.message" ng-required="!$parent.loggedIn"></textarea>
+                          placeholder="Tu mensaje" ng-model="user.message" ng-required="!$parent.loggedIn"></textarea>
 
                 <p class="help-block">
-                    <span ng-show="sendEmail.message.$invalid && !sendEmail.message.$pristine">Your Message is required.</span>
+                    <span ng-show="sendEmail.message.$invalid && !sendEmail.message.$pristine">Su mensaje es obligatorio.</span>
                 </p>
             </div>
 
@@ -139,13 +139,13 @@
                      required="!$parent.loggedIn"
                         ></div>
                 <p class="help-block">
-                    <span ng-show="sendEmail.captcha.$invalid && !sendEmail.captcha.$pristine">Captcha is required.</span>
+                    <span ng-show="sendEmail.captcha.$invalid && !sendEmail.captcha.$pristine">Se requiere Captcha.</span>
                 </p>
             </div>
 
 
             <div class="form-group text-left mt-20">
-                <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Send Email</button>
+                <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Enviar correo electrónico</button>
 
             </div>
 
@@ -165,59 +165,54 @@
 
             <div class="row email-template-text">
                 <div class="col-md-8">
-                    <h4 class="blue-text lato header-text">Hello my Friend,</h4>
+                    <h4 class="blue-text lato header-text">Hola mi amigo,</h4>
 
                     <div ng-show="!$parent.loggedIn">
-                        <p class="blue-text">Check out this service... just for students!</p>
+                        <p class="blue-text">Echa un vistazo a este servicio ... sólo para los estudiantes!</p>
 
-                        <p class="blue-text">No! This is not another bookstore trying to get your used textbooks for
-                            almost nothing!</p>
+                        <p class="blue-text">¡No! Esta no es otra librería de recompra de libros usados!</p>
 
-                        <p class="blue-text">I am sick of getting ripped-off by the bookstores, so I decided to sell my
-                            textbooks directly to all the students on-campus.</p>
+                        <p class="blue-text">He decidido vender mis libros de texto directamente a otros estudiantes en el campus.</p>
                         <ul class="blue-text">
-                            <li>List books you want to sell, find books you need.</li>
-                            <li>Promote your own textbook Selling Page.</li>
-                            <li>Meet on-campus to do the deal.</li>
-                            <li>Interact directly with students. Pay cash.</li>
-                            <li>No shipping. No credit cards.</li>
-                            <li>Use the online textbook price comparison.</li>
-                            <li>IT'S TOTALLY FREE!</li>
-                            <li>Check out the 2 minute "How it Works":<br/>
-                                <a ui-sref="app.conceptVideo">Watch Now!</a></li>
+                            <li>Vende los libros que ya no necesitas, y encuentra los libros que quieres.</li>
+                            <li>Promueve tu propia página de venta de libros de texto.</li>
+                            <li>Encuentrate en el campus para hacer el intercambio.</li>
+                            <li>Interactuar directamente con los estudiantes. Pagar en efectivo.</li>
+                            <li>Sin envío. No hay tarjetas de crédito.</li>
+                            <li>Utiliza la comparación de precios de libros de texto en línea.</li>
+                            <li>ES TOTALMENTE GRATIS!</li>
+                            <li>Echa un vistazo en 2 minutos "Cómo funciona":<br/>
+                                <a ui-sref="app.conceptVideo">Ver Ahora</a></li>
                         </ul>
-                        <p class="blue-text">Don't waste money, buy directly from students.</p>
+                        <p class="blue-text">No pierda dinero, compre directamente a los estudiantes.</p>
 
-                        <p class="blue-text">... tell your friends, tell your classmates, tell the world... the more
-                            members we get, the more everyone will SAVE!</p>
+                        <p class="blue-text">... cuéntale a tus amigos, dile a tus compañeros, dile al mundo ... cuantos más miembros tengamos, más  ahorraremos!</p>
 
-                        <p class="blue-text">It's time to take back the bookstore! Cutout the middleman and spend your
-                            money on something better!!! Or do you like to get ripped-off?</p>
+                        <p class="blue-text">¡Es hora de recuperar la librería! Cortar al intermediario y gastar su dinero en algo mejor! ¿O te gusta que te timen?</p>
 
                         <text class="blue-text">
-                            Cheers,<br/>
+                            Saludos,<br/>
                             {{user.fullName}}<br/>
                             {{user.email}}
                         </text>
                     </div>
 
                     <div ng-show="$parent.loggedIn">
-                        <p class="blue-text">Check out the textbooks I am selling.</p>
+                        <p class="blue-text">Echa un vistazo a los libros de texto que estoy vendiendo.</p>
 
-                        <p class="blue-text">I am sick of getting ripped-off by the bookstores, so I decided to sell my
-                            textbooks directly to all the students on-campus.</p>
+                        <p class="blue-text">Estoy harto de ser arrancado por las librerías, así que decidí vender mis libros de texto directamente a todos los estudiantes en el campus.</p>
 
-                        <p class="blue-text">Don't waste money, buy directly from me.</p>
+                        <p class="blue-text">No pierda dinero, compre directamente de mí.</p>
 
-                        <p class="blue-text">I am sure there is a textbook for you too!</p>
+                        <p class="blue-text">¡Estoy seguro que hay un libro de texto para usted también!</p>
                         <a target="_blank" href="{{shareUrl}}"><img alt="student2student textbooks" style="width: 264px;"
                                                                     data-ng-src="{{appHostPath}}/dist/images/tell_friend/buy_my_textbooks.jpg"/></a><br/><br/>
 
-                        <p class="blue-text">Cheers,<br/>
+                        <p class="blue-text">Saludos,<br/>
                             {{user.fullName}}</p>
 
-                        <p class="blue-text">Go to my <a class="share-my-sell-page-url" target="_blank"
-                                                         href="{{shareUrl}}">Personal Sell Page</a>
+                        <p class="blue-text">Ir a mi <a class="share-my-sell-page-url" target="_blank"
+                                                         href="{{shareUrl}}">Página de venta personal</a>
 
                     </div>
 
@@ -226,7 +221,7 @@
                     <div ng-show="!$parent.loggedIn">
                         <a target="_blank" ui-sref="app.signup"><img alt="join student2student" width="100%"
                                                                      data-ng-src="{{appHostPath}}/dist/images/tell_friend/joinButton.jpg"/></a><br/><br/>
-                        <text class="lato italic blue-text">Personal Message for you:</text>
+                        <text class="lato italic blue-text">Mensaje personal para usted:</text>
                         <br/>
                         <text class="lato blue-text">{{user.message}}</text>
                     </div>
@@ -244,7 +239,7 @@
             <img alt="tell friends about student2student" width="100%" data-ng-src="{{appHostPath}}/dist/images/tell_friend/footer.jpg"/>
 
             <div class="text-center footer-text">
-                <text>2007-2016 Student 2 Student, All Rights Reserved</text>
+                <text>2007-2016 Student 2 Student, Todos los derechos reservados</text>
             </div>
         </div>
     </div>

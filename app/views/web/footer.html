@@ -7,32 +7,38 @@
                 <div class="col-md-4 text-center-samll-device">
 
                     <div class="widget widget-about">
-                        <img alt="student2student" class="img-responsive footer-main-image" src="{{appHostPath}}/dist/images/logo_and_text.png"/>
+                        <img alt="student2student" class="img-responsive footer-main-image"
+                             src="{{appHostPath}}/dist/images/logo_and_text.png"/>
 
-
-
-                        <p>Buy and sell textbooks directly with students at your university. Meet on-campus
-                            to the deal. No shipping, no credit cards, no hassles... All Free!</p>
+                        <p>Compre y venda libros de texto directamente con los estudiantes de su universidad. Reunirse
+                            en el campus para el acuerdo. Sin envío, sin tarjetas de crédito, sin molestias ... ¡Todo
+                            gratis!</p>
 
                         <a
-                            ui-sref="app.howItWorks">
-                        <div class="badge"><i class="fa fa-angle-right"></i></div>
-                        Read more</a>
+                                ui-sref="app.howItWorks">
+                            <div class="badge"><i class="fa fa-angle-right"></i></div>
+                            Lee mas</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <a style="float: right;"
-                                ui-sref="app.conceptVideo">
+                           ui-sref="app.conceptVideo">
                             <div class="badge"><i class="fa fa-angle-right"></i></div>
-                            Watch the Concept</a>
+                            Ver el Concepto</a>
 
                     </div>
 
                     <div class="social-div">
-                        <div class="social_icon"><img alt="student2student facebook url" src="{{appHostPath}}/dist/images/footer/facebook_logo.png"/></div>
-                        <div class="social_connect"><a target="_blank" href="https://www.facebook.com/student2student"><strong>Find Us</strong><br/>
-                            on Facebook</a></div>
-                        <div class="social_icon"><img alt="student2student twitter url" src="{{appHostPath}}/dist/images/footer/twitter_logo.png"/></div>
-                        <div class="social_connect"><a target="_blank" href="https://www.twitter.com/St2StTextbook"><strong>Find Us</strong><br/>
-                            on Twitter</a></div>
+                        <div class="social_icon"><img alt="student2student facebook url"
+                                                      src="{{appHostPath}}/dist/images/footer/facebook_logo.png"/></div>
+                        <div class="social_connect"><a target="_blank"
+                                                       href="https://www.facebook.com/student2student"><strong>
+                            Encuentranos
+                            </strong><br/>
+                            en Facebook</a></div>
+                        <div class="social_icon"><img alt="student2student twitter url"
+                                                      src="{{appHostPath}}/dist/images/footer/twitter_logo.png"/></div>
+                        <div class="social_connect"><a target="_blank"
+                                                       href="https://www.twitter.com/St2StTextbook"><strong>Encontrarnos</strong><br/>
+                            en Twitter</a></div>
 
 
                     </div>
@@ -41,17 +47,19 @@
 
                 <div class="col-md-4 text-center">
                     <div class="widget widget-contact mt-20-md">
-                        <h4><strong>search amongst hundreds of booksellers and get the best price</strong></h4>
+                        <h4><strong>BÚSCA ENTRE CIENTOS DE LIBRERÍAS Y OBTEN EL MEJOR PRECIO</strong></h4>
 
                         <div class="fslider" data-animation="slide" data-arrows="false">
                             <div class="flexslider reference-slider footer-silder">
                                 <div class="slider-wrap">
-                                    <flex-slider slide="brandImage in brandImages track by $index" animation="slide" direction="vertical" controlNav="false" directionNav="false">
+                                    <flex-slider slide="brandImage in brandImages track by $index" animation="slide"
+                                                 direction="vertical" controlNav="false" directionNav="false">
                                         <li>
                                             <div class="slide">
                                                 <ul class="footer-brands-ul">
                                                     <li data-ng-repeat="brand in brandImage.brands">
-                                                        <img alt="{{brand.image}}" ng-src="{{appHostPath}}/{{brand.image}}"/>
+                                                        <img alt="{{brand.image}}"
+                                                             ng-src="{{appHostPath}}/{{brand.image}}"/>
                                                     </li>
 
                                                 </ul>
@@ -64,15 +72,13 @@
                         </div>
 
 
-
-
                     </div>
                 </div>
 
                 <div class="col-md-4">
 
                     <div class="widget widget-contact mt-20-md">
-                        <h4><strong>Subscribe to our Newsletter</strong></h4>
+                        <h4><strong>Suscríbete a nuestro boletín</strong></h4>
 
                         <form cg-busy="{promise:newsletterPromise}" name="newsletterForm" submit-validate
                               ng-submit="addToNewsletter(newsletterForm.$valid)" role="form"
@@ -81,14 +87,14 @@
                                  ng-class="{ 'has-error' : newsletterForm.email.$invalid && !newsletterForm.email.$pristine, 'has-success' : newsletterForm.email.$valid && !newsletterForm.email.$pristine}">
 
                                 <input ng-model="user.newsLetterEmail" name="email" type="email"
-                                       class="form-control subscribe-input" placeholder="Enter your Email"
+                                       class="form-control subscribe-input" placeholder="Tu correo electrónico"
                                        required="">
 
                                 <p class="help-block">
 
                                 </p>
                                 <button class="myBtn myBtn-rounded search-homepage-btn subscribe-btn" type="submit">
-                                    Subscribe Now
+                                    Suscríbase ahora
                                 </button>
 
                             </div>
@@ -99,32 +105,32 @@
 
                     <div class="widget widget-newsletter mb-0">
 
-                        <h4><strong>Useful Links</strong></h4>
+                        <h4><strong>ENLACES ÚTILES</strong></h4>
 
                         <ul class="footer-useful-links-ul">
                             <li>
-                                &nbsp;<a ui-sref="app.howItWorks">How Student 2 Student works</a>
+                                &nbsp;<a ui-sref="app.howItWorks">Cómo funciona el Student 2 Student</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.conceptVideo">Watch the Video</a>
+                                &nbsp;<a ui-sref="app.conceptVideoSpanish">Ver el vídeo</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.news">News</a>
+                                &nbsp;<a ui-sref="app.news">Noticias</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.signup">Join</a>
+                                &nbsp;<a ui-sref="app.signup">Unirse</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.login">Sign In</a>
+                                &nbsp;<a ui-sref="app.login">Registrarse</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.universityMap">University Map</a>
+                                &nbsp;<a ui-sref="app.universityMap">Mapa de la Universidad</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.faq">FAQ</a>
+                                &nbsp;<a ui-sref="app.faq">PMF</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.contactUs">Contact Us</a>
+                                &nbsp;<a ui-sref="app.contactUs">Contáctenos</a>
                             </li>
                         </ul>
 
@@ -143,13 +149,13 @@
             <div class="row">
 
                 <div class="col-md-5 copyright">
-                    <p class="mb-0">Copyright &copy; 2007-2017, Student2Student.com. All Rights Reserved.</p>
+                    <p class="mb-0">Copyright &copy; 2007-2017, Student2Student.com. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-7 copyright">
                     <p>
-                        <a ui-sref="app.privacyPolicy">Privacy Policy :: </a>
-                        <a ui-sref="app.disclaimer"> Disclaimer </a>
-                        <a ui-sref="app.conditionOfUse">:: Condition of Use</a>
+                        <a ui-sref="app.privacyPolicy">Política de privacidad :: </a>
+                        <a ui-sref="app.disclaimer"> Renuncia </a>
+                        <a ui-sref="app.conditionOfUse">:: Condición de uso</a>
                     </p>
                 </div>
 

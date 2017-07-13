@@ -5,9 +5,9 @@
             <text-overflow text="book.bookTitle" element-type="'h3'" words="false" limit="50"></text-overflow>
             <text-overflow text="book.bookSubTitle" element-type="'h4'" words="false" limit="100"></text-overflow>
 
-            <h5 class="lato grey-text">By
+            <h5 class="lato grey-text">Por
                 <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text>
-                : Published by {{book.bookPublisher}} {{boo.bookPublishDate}} ::
+                : Publicado por {{book.bookPublisher}} {{boo.bookPublishDate}} ::
                 ({{book.bookBinding}}) :: ISBN:
                 <text class="blue-text">{{book.bookIsbn}}</text> ::
                 ISBN-13:
@@ -51,9 +51,9 @@
                 <div ng-show="viewType=='List'">
                     <h3 class="orange-text lato uppercase item-box-header">{{book.bookTitle}}</h3>
                     <h4 class="blue-text lato item-box-sub-header">{{book.bookSubTitle}}</h4>
-                    <h5 class="lato grey-text">By
+                    <h5 class="lato grey-text">Por
                         <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text>
-                        : Published by {{book.bookPublisher}} {{boo.bookPublishDate}} ::
+                        : Publicado por {{book.bookPublisher}} {{boo.bookPublishDate}} ::
                         ({{book.bookBinding}}) :: ISBN:
                         <text class="blue-text">{{book.bookIsbn}}</text> ::
                         ISBN-13:
@@ -66,30 +66,29 @@
 
                     <div class="price-details border-right-grey"
                          ng-class="{Grid:'', List:'col-md-4 col-sm-4 listing-price'}[viewType]">
-                        <p class="orange-text italic lato price-title">New By Amazon</p>
+                        <p class="orange-text italic lato price-title">Nuevo de Amazon</p>
 
                         <h3 class="orange-text small-price lato">{{book.bookPriceAmazon}}</h3>
                     </div>
 
                     <div class="price-details" ng-class="{Grid:'', List:'col-md-4 col-sm-4'}[viewType]">
-                        <p class="orange-text italic lato price-title">Lowest Price Online</p>
+                        <p class="orange-text italic lato price-title">Precios online más bajos</p>
 
                         <h3 cg-busy="{promise:book.lowestOnlinePricePromise}" class="orange-text small-price lato">{{book.bookPriceOnlineLowest}}</h3>
                     </div>
                     <div class="price-details border-left-grey"
                          ng-class="{Grid:'', List:'col-md-4 col-sm-4 listing-price'}[viewType]">
-                        <p class="orange-text italic lato price-title">Local Campus Prices</p>
+                        <p class="orange-text italic lato price-title">Precios de Campus Local</p>
 
 
                         <p ng-if="!universitySelectedOrLoggedIn" class="lato grey-text no-price-found">
-                            <text>'You have to choice university or login to see local campus prices'</text>
+                            <text>'Tienes que elegir la universidad o iniciar sesión para ver los precios del campus local'</text>
                         </p>
                         <p ng-if="universitySelectedOrLoggedIn" class="lato grey-text no-price-found">
                             <h3 ng-show="universitySelectedOrLoggedIn && book.bookPriceStudentLowestFound" class="lato orange-text small-price student-price">{{book.bookPriceStudentLowest}}
                             </h3>
-                            <text ng-show="universitySelectedOrLoggedIn && !book.bookPriceStudentLowestFound" class="grey-text">'No student at
-                                "{{university}}" is selling this
-                                textbook on-campus. '</text>
+                            <text ng-show="universitySelectedOrLoggedIn && !book.bookPriceStudentLowestFound" class="grey-text">'Ningún estudiante en
+                                "{{university}}" está vendiendo este libro de texto en el campus.'</text>
                         </p>
 
 
@@ -101,7 +100,7 @@
                 <div ng-show="viewType=='List'" class="row lowest-price-row">
 
                     <div class="col-md-12 text-center">
-                        <button ng-click="goToComparePage(book)" class="myBtn blue-btn details-view-button">View Book Deal Details</button>
+                        <button ng-click="goToComparePage(book)" class="myBtn blue-btn details-view-button">Ver detalles del libro</button>
                     </div>
                 </div>
 
@@ -112,7 +111,7 @@
         <div ng-show="viewType=='Grid'" class="row lowest-price-row">
 
             <div class="col-md-12 text-center">
-                <button ng-click="goToComparePage(book)" class="myBtn blue-btn details-view-button">View Book Deal Details</button>
+                <button ng-click="goToComparePage(book)" class="myBtn blue-btn details-view-button">Ver detalles del libro</button>
             </div>
         </div>
 
