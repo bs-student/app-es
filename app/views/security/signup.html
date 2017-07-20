@@ -8,7 +8,7 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header">Unirse</p>
+                <p class="text-white mid-two-header">Regístrate</p>
 
             </div>
 
@@ -41,7 +41,7 @@
 
                             <div class="form-group" ng-class="{ 'has-error' :  userForm.username.$invalid && !userForm.username.$pristine, 'has-success' : userForm.username.$valid && !userForm.username.$pristine}">
 
-                                <p class="white-text" for="fullName">Username: <text uib-tooltip="El nombre de usuario debe tener una longitud mínima de 3 caracteres y un máximo de 20 caracteres. El nombre de usuario puede contener valores alfanuméricos, pero no hay caracteres especiales excepto '-' o '_'" class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
+                                <p class="white-text" for="fullName">Usuario: <text uib-tooltip="El nombre de usuario debe tener una longitud mínima de 3 caracteres y un máximo de 20 caracteres. El nombre de usuario puede contener valores alfanuméricos, pero no hay caracteres especiales excepto '-' o '_'" class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
                                 <input data-val-username val-username-special-char type="text" name="username" id="username" class="form-control input-style" ng-model="user.username" ng-minlength="3" ng-maxlength="20" required autocomplete="off">
                                 <p class="help-block">
                                     <span ng-show="userForm.username.$invalid && !userForm.username.$pristine">Se requiere nombre de usuario.</span>
@@ -57,8 +57,8 @@
                                 <p class="white-text" for="fullName">Email: </p>
                                 <input data-val-email type="email" name="email" id="email" class="form-control input-style" ng-model="user.email" required autocomplete="off">
                                 <p class="help-block">
-                                    <span ng-show="userForm.email.$invalid && !userForm.email.$pristine">Correo electronico es requerido.</span>
-                                    <span ng-show="userForm.email.$error.valEmail">Ya existe el correo electrónico</span>
+                                    <span ng-show="userForm.email.$invalid && !userForm.email.$pristine">Email es requerido.</span>
+                                    <span ng-show="userForm.email.$error.valEmail">Ya existe el Email</span>
                                 </p>
                             </div>
 
@@ -66,7 +66,7 @@
 
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine, 'has-success' : userForm.password.$valid && !userForm.password.$pristine}">
 
-                                    <p class="white-text" for="fullName">Password: <text uib-tooltip="La contraseña debe tener una longitud mínima de 6 caracteres." class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
+                                    <p class="white-text" for="fullName">Contraseña: <text uib-tooltip="La contraseña debe tener una longitud mínima de 6 caracteres." class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
                                     <input type="password" name="password" id="password" class="form-control input-style" ng-model="user.password" ng-minlength="6" required autocomplete="off">
                                     <p class="help-block">
                                         <span ng-show="userForm.password.$invalid && !userForm.password.$pristine">Se requiere contraseña.</span>
@@ -76,7 +76,7 @@
 
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : userForm.passwordConfirm.$invalid && !userForm.passwordConfirm.$pristine, 'has-success' : userForm.passwordConfirm.$valid && !userForm.passwordConfirm.$pristine}">
 
-                                    <p class="white-text" for="fullName">Confirmación de Password: </p>
+                                    <p class="white-text" for="fullName">Confirmación de Contraseña: </p>
                                     <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control input-style" ng-model="user.passwordConfirm" ui-validate=" '$value==user.password' " ui-validate-watch=" 'user.password' " required autocomplete="off">
                                     <p class="help-block">
                                         <span ng-show='userForm.passwordConfirm.$error.validator'>¡Las contraseñas no coinciden!</span>

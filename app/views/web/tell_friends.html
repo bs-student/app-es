@@ -57,15 +57,15 @@
                 <div class="col-md-12">
                     <div class="form-group"
                          ng-class="{ 'has-error' : sendEmail.email.$invalid && !sendEmail.email.$pristine, 'has-success' : sendEmail.email.$valid && !contactForm.email.$pristine}">
-                        <p class="white-text ">Tu correo electrónico:
+                        <p class="white-text ">Tu Email:
                             <text ng-show="$parent.loggedIn"><strong>{{user.email}}</strong></text>
                         </p>
 
                         <input ng-show="!$parent.loggedIn" name="email" type="email" class="form-control input-style"
-                               placeholder="Tu correo electrónico" ng-model="user.email" ng-required="!$parent.loggedIn">
+                               placeholder="Tu Email" ng-model="user.email" ng-required="!$parent.loggedIn">
 
                         <p class="help-block">
-                            <span ng-show="sendEmail.email.$invalid && !sendEmail.email.$pristine">Su correo electrónico es obligatorio.</span>
+                            <span ng-show="sendEmail.email.$invalid && !sendEmail.email.$pristine">Su Email es obligatorio.</span>
                         </p>
                     </div>
                 </div>
@@ -83,14 +83,14 @@
                                                         (addRowForm.email.$invalid && !addRowForm.email.$pristine),
                                                    'has-success' :
                                                         addRowForm.email.$valid && !addRowForm.email.$pristine}">
-                                <p class="white-text">Correo electrónico de tu amigo:</p>
+                                <p class="white-text">Email de tu amigo:</p>
 
                                 <input type="email" class="form-control input-style" name="email"
 
                                        ng-model="friendEmail.email" required>
 
                                 <p class="help-block">
-                                    <span ng-show="(sendEmail.$submitted && addRowForm.email.$invalid && addRowForm.email.$pristine)||(addRowForm.email.$invalid && !addRowForm.email.$pristine)">Correo electronico es requerido.</span>
+                                    <span ng-show="(sendEmail.$submitted && addRowForm.email.$invalid && addRowForm.email.$pristine)||(addRowForm.email.$invalid && !addRowForm.email.$pristine)">Email es requerido.</span>
 
                                 </p>
                             </div>
@@ -115,7 +115,7 @@
             <div class="form-group ">
                 <button type="button" class="btn btn-success btn-rounded btn-ef btn-ef-5 btn-ef-5b mb-10 functional-btn"
                         ng-click="addNewFriendEmail()"><i
-                        class="fa fa-plus"></i> <span>Añadir nuevo correo electrónico</span></button>
+                        class="fa fa-plus"></i> <span>Añadir nuevo email</span></button>
             </div>
 
 
@@ -145,7 +145,7 @@
 
 
             <div class="form-group text-left mt-20">
-                <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Enviar correo electrónico</button>
+                <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Enviar Email</button>
 
             </div>
 

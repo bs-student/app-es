@@ -2,7 +2,10 @@
     <div class="container clearfix">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="header-title"><text class="uppercase blue-text lato">Edit</text><text class="uppercase orange-text lato"> book Deal</text></h1>
+                <h1 class="header-title">
+                    <text class="uppercase blue-text lato">Editar</text>
+                    <text class="uppercase orange-text lato"> oferta de libro</text>
+                </h1>
 
             </div>
         </div>
@@ -19,514 +22,625 @@
 <!--SELLER TO BUYER-->
 
 <div class="section m-0 pt-0 sell-book-section">
-    <div class="container clearfix quote-container-homepage sell-page-container">
-        <div class="row">
-            <div ng-show="!showHelp" class="help-div visible-lg">
-                <button ng-click="showHelp=true" class="help-button white-text lato myBtn orange-btn"><img src="{{appHostPath}}/dist/images/sell_book/help.png"/><br/>Help</button>
-            </div>
-            <div ng-show="showHelp" class="help-details-div visible-lg">
+<div class="container clearfix quote-container-homepage sell-page-container">
+<div class="row">
+<div ng-show="!showHelp" class="help-div visible-lg">
+    <button ng-click="showHelp=true" class="help-button white-text lato myBtn orange-btn"><img
+            src="{{appHostPath}}/dist/images/sell_book/help.png"/><br/>Ayuda
+    </button>
+</div>
+<div ng-show="showHelp" class="help-details-div visible-lg">
 
-                <div class="help-header">
-                    <button ng-click="showHelp=false" class="myBtn orange-btn help-back-button"><i class="fa fa-angle-left fa-2x"></i> Close
-                    <img src="{{appHostPath}}/dist/images/sell_book/help.png"/> <text class="white-text lato">Help</text></button>
-                </div>
+    <div class="help-header">
+        <button ng-click="showHelp=false" class="myBtn orange-btn help-back-button"><i
+                class="fa fa-angle-left fa-2x"></i> Cerrar
+            <img src="{{appHostPath}}/dist/images/sell_book/help.png"/>
+            <text class="white-text lato">Ayuda</text>
+        </button>
+    </div>
 
-                <div ng-slimscroll class="help-details-text-div">
-                    <p class="orange-text lato px-16">
-                        What is This?
-                    </p>
-                    <p class="lato">Define your deal now. Tell everyone what / how / cost.</p>
-                    <p class="orange-text lato px-16">
-                        Condition / Highlights / Notes
-                    </p>
-                    <p class="lato">Define the textbook's condition. Does it have notes or highlighted sections?</p>
-                    <p class="orange-text lato px-16">
-                        Comment
-                    </p>
-                    <p class="lato">Describe any special information about the deal or the
-                        textbook itself.</p>
-                    <p class="orange-text lato px-16">
-                        Contact Method
-                    </p>
-                    <p class="lato">Define the contact method.<br/>
-                        Do you want the Buyer to contact you? Or do you want to contact the Buyer in order to protect your information?<br/>
-                        You need to provide at least one Contact Information method when you choose "Buyer contacts Seller (You)" so the Buyer can contact you.
+    <div ng-slimscroll class="help-details-text-div">
+        <p class="orange-text lato px-16">
+            ¿Que es esto?
+        </p>
 
-                    </p>
-                    <p class="lato"><strong>Student 2 Student recommends the method "Seller contacts
-                        Buyer" so they can protect  their Contact Information.</strong></p>
+        <p class="lato">Defina ahora su Acuerdo. Explique a todo el mundo el qué/el cómo/el precio.</p>
 
-                    <p class="orange-text lato px-16">
-                        Textbook available to Public?
-                    </p>
-                    <p class="lato">
-                        You can choose if everyone at your University can see your textbook without being a member/signed in.<br/>
-                        <strong>Important!</strong> Even if you choose no, everyone will see your textbook but will need to Sign In to contact you.
-                    </p>
-                    <p class="orange-text lato px-16">
-                        Textbook available date?
-                    </p>
-                    <p class="lato">Do you want to post the textbook early but plan to use it until the class ends? Enter the date so everyone knows the textbook is not available till ...
-                    </p>
-                    <p class="orange-text lato px-16">
-                        Selling Price
-                    </p>
-                    <p class="lato">Enter the amount you are selling the textbook for.
+        <p class="orange-text lato px-16">
+            Estado / Subrayado / Anotaciones
+        </p>
 
-                    </p>
+        <p class="lato">Define el estado del libro de texto. ¿Tiene anotaciones o está subrayado?</p>
 
-                    <p class="orange-text lato px-16">
-                        Payment Method
-                    </p>
-                    <p class="lato">Define how the Buyer needs to pay you.
-                    </p>
-                    <p class=""><strong>We recommend using "Cash on Exchange (COE)." This means
-                        the Buyer will need to pay cash for the textbook when you
-                        meet in a public place to exchange the money and textbook.</strong>
-                    </p>
+        <p class="orange-text lato px-16">
+            Comentario
+        </p>
+
+        <p class="lato">Describe cualquier información acerca del Acuerdo o del libro de texto propiamente.</p>
+
+        <p class="orange-text lato px-16">
+            Metodo de contacto
+        </p>
+
+        <p class="lato">Defina el método de contacto.<br/>
+            ¿Quieres que el Comprador se ponga en contacto contigo? o ¿prefieres ponerte en contacto con el Comprador
+            para proteger su información?.
+
+            Cuando elija "El comprador contacta al Vendedor, debes facilitar como mínimo un método de información de
+            contacto para que el Comprador pueda ponerse en contacto contigo.
 
 
-                </div>
-            </div>
-            <div class="col-md-12">
-            <uib-tabset cg-busy="{promise:bookSellPromise}" class="tab-container tab-wizard" justified="true" set-ng-animate="true" ng-init="steps={step1:true, step2:false, step3:false, step4:false, step5: false}">
+        </p>
+
+        <p class="lato"><strong>Student 2 Student te recomienda el método "El Vendedor contacta al Comprador" para que
+            puedan proteger su Información de Contacto.</strong></p>
+
+        <p class="orange-text lato px-16">
+            ¿Libro Disponible al Público?
+        </p>
+
+        <p class="lato">
+            Puede elegir alguien de su universidad puede ver su libro de texto sin ser miembro / estar registrado.<br/>
+            <strong>¡Importante!</strong> Incluso si elige “no”, su libro de texto podrá ser visualizado públicamente
+            pero para ponerse en contacto con usted deberán Iniciar Sesión.
+        </p>
+
+        <p class="orange-text lato px-16">
+            Fecha De Disponibilidad Del Libro De Texto
+        </p>
+
+        <p class="lato">¿Desea publicar el libro de texto con antelación al inicio de la clase aunque tenga previsto
+            utilizarlo hasta el fin de ésta?.
+            Introduce la fecha para hacer saber que el libro de texto no estará disponible hasta ...
+
+        </p>
+
+        <p class="orange-text lato px-16">
+            Precio de Venta
+        </p>
+
+        <p class="lato">Introduce la cantidad por la que vendes el libro.
+
+        </p>
+
+        <p class="orange-text lato px-16">
+            Método de Pago
+        </p>
+
+        <p class="lato">Define cómo deseas que el comprador te pague.
+        </p>
+
+        <p class=""><strong>Recomendamos usar "Cash on Exchange (COE)".
+            Lo cual significa que el comprador tendrá que pagar en efectivo por la compra del libro de texto en el
+            momento de la cita en lugar público.
+        </strong>
+        </p>
 
 
-            <uib-tab  class="{{step1Completed ? 'completed':''}}"  active="steps.step1" >
-
-                <uib-tab-heading >
-                    <div class="tab-head-div" >
-                        <div class="pic-div book-info-icon-div visible-md visible-lg" ></div>
-                        <p class="tab-head-title">Book Information</p>
-                    </div>
+    </div>
+</div>
+<div class="col-md-12">
+<uib-tabset cg-busy="{promise:bookSellPromise}" class="tab-container tab-wizard" justified="true" set-ng-animate="true"
+            ng-init="steps={step1:true, step2:false, step3:false, step4:false, step5: false}">
 
 
-                </uib-tab-heading>
+<uib-tab class="{{step1Completed ? 'completed':''}}" active="steps.step1">
+
+    <uib-tab-heading>
+        <div class="tab-head-div">
+            <div class="pic-div book-info-icon-div visible-md visible-lg"></div>
+            <p class="tab-head-title">Información del Libro</p>
+        </div>
 
 
-                <div class="sell-book-form-div">
-                    <form name="step1" role="form" ng-submit="nextStep(step1.$valid,'step1')" submit-validate novalidate class="form-validation">
-                    <div class="step1">
-                        <div class="row">
-
-                            <div class="col-md-3 col-sm-3">
-                                <div class="sell-book-image">
-                                   <img  data-ng-src="{{imageHostPath}}{{book.bookImages[0].image}}">
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-9 col-sm-9">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="archive-page-headers">
-                                            <h3 class="book-title orange-text lato uppercase">{{book.bookTitle}}</h3>
-                                            <h4 class="book-sub-title blue-text lato">{{book.bookSubTitle}}</h4>
-                                            <div class="book-description ">
-                                                <p><text class="grey-text ">ISBN: </text><text class="blue-text">{{book.bookIsbn}}</text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="grey-text ">ISBN-13: </text><text class="blue-text">{{book.bookIsbn13}}</text></p>
-                                                <p class="grey-text">By <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text> :: Published by {{book.bookPublisher}} {{book.bookPublishDate}} :: ({{book.bookBinding}})</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div>
-                                            <text class="box-title uppercase orange-text lato"><strong>Information about the Condition of the book</strong></text>
-                                            <br/><br/>
-                                            <div class="deal-information-box inner-form">
-                                                <div class="row">
-
-                                                    <div class="col-md-4"><text class="blue-text uppercase"><strong>Condition of book : </strong></text></div>
-                                                    <div class="col-md-8">
-                                                        <div ng-class="{ 'has-error' : step1.bookCondition.$invalid && !step1.bookCondition.$pristine, 'has-success' : step1.bookCondition.$valid && !contactForm.bookCondition.$pristine}">
-
-                                                            <label class="checkbox-inline checkbox-custom">
-                                                                <input name="bookCondition" ng-model="book.bookCondition" value="New"  type="radio" required><i></i> New
-                                                            </label>
-                                                            <label class="checkbox-inline checkbox-custom">
-                                                                <input name="bookCondition" ng-model="book.bookCondition" value="Barely Used" type="radio" required><i></i> Barely Used
-                                                            </label>
-                                                            <label class="checkbox-inline checkbox-custom">
-                                                                <input name="bookCondition" ng-model="book.bookCondition" value="Used" type="radio" required><i></i> Used
-                                                            </label>
-                                                            <label class="checkbox-inline checkbox-custom">
-                                                                <input name="bookCondition" ng-model="book.bookCondition" value="Heavily Used"  type="radio" required><i></i> Heavily Used
-                                                            </label>
-                                                            <p class="help-block">
-                                                                <span  ng-show="step1.bookCondition.$invalid && !step1.bookCondition.$pristine">Book Condition is required.</span>
-
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-md-4"><text class="blue-text uppercase"><strong>Text highlighted : </strong></text></div>
-                                                    <div class="col-md-8">
+    </uib-tab-heading>
 
 
+    <div class="sell-book-form-div">
+        <form name="step1" role="form" ng-submit="nextStep(step1.$valid,'step1')" submit-validate novalidate
+              class="form-validation">
+            <div class="step1">
+                <div class="row">
 
-                                                            <div  ng-class="{ 'has-error' : step1.bookIsHighlighted.$invalid && !step1.bookIsHighlighted.$pristine, 'has-success' : step1.bookIsHighlighted.$valid && !contactForm.bookIsHighlighted.$pristine}">
-
-                                                                <label class="checkbox-inline checkbox-custom">
-                                                                    <input name="bookIsHighlighted" type="radio" ng-model="book.bookIsHighlighted" value="Yes" required><i></i> Yes
-                                                                </label>
-                                                                <label class="checkbox-inline checkbox-custom">
-                                                                    <input name="bookIsHighlighted" type="radio" ng-model="book.bookIsHighlighted" value="No" required><i></i> No
-                                                                </label>
-                                                                <p class="help-block">
-                                                                    <span  ng-show="step1.bookIsHighlighted.$invalid && !step1.bookIsHighlighted.$pristine">Select Text Highlighted or Not.</span>
-
-                                                                </p>
-
-                                                            </div>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <text class="blue-text uppercase"><strong>Notes in Textbook : </strong></text>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div ng-class="{ 'has-error' : step1.bookHasNotes.$invalid && !step1.bookHasNotes.$pristine, 'has-success' : step1.bookHasNotes.$valid && !contactForm.bookHasNotes.$pristine}">
-
-                                                            <label class="checkbox-inline checkbox-custom">
-                                                                <input name="bookHasNotes" type="radio" ng-model="book.bookHasNotes" value="Yes" required><i></i> Yes
-                                                            </label>
-                                                            <label class="checkbox-inline checkbox-custom">
-                                                                <input name="bookHasNotes" type="radio" ng-model="book.bookHasNotes" value="No" required><i></i> No
-                                                            </label>
-                                                            <p class="help-block">
-                                                                <span  ng-show="step1.bookHasNotes.$invalid && !step1.bookHasNotes.$pristine">Select if there are notes on textbook.</span>
-
-                                                            </p>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-
-                                                        <div class="col-md-8">
-                                                            <text class="blue-text uppercase"><strong>Comment : </strong> <text uib-tooltip="Maximum size 1200 characters allowed" class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></text>
-                                                        </div>
-                                                        <div class="col-md-4 text-right">
-                                                            <text ng-show="(step1.bookComment.$valid && !step1.bookComment.$pristine) || step1.bookComment.$pristine" class="grey-text"><strong>Remaining : {{1200-book.bookComment.length}} Characters</strong></text>
-                                                            <text ng-show="step1.bookComment.$invalid && !step1.bookComment.$pristine" class="text-danger"><strong>Character Limit Exceeded</strong></text>
-                                                        </div>
-
-
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12" ng-class="{ 'has-error' : step1.bookComment.$invalid && !step1.bookComment.$pristine, 'has-success' : step1.bookComment.$valid && !step1.bookComment.$pristine}">
-                                                        <div>
-                                                            <textarea class="form-control"
-                                                                      rows="5" name="bookComment"  ng-model="book.bookComment" ng-maxlength="1200"
-                                                                       aria-multiline="true"></textarea>
-
-
-                                                        </div>
-                                                        <p class="help-block">
-                                                            <span ng-show="step1.bookComment.$error.maxlength">Comment must be less than 1200 characters.</span>
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
+                    <div class="col-md-3 col-sm-3">
+                        <div class="sell-book-image">
+                            <img data-ng-src="{{imageHostPath}}{{book.bookImages[0].image}}">
 
                         </div>
-
                     </div>
 
+                    <div class="col-md-9 col-sm-9">
                         <div class="row">
-                            <div class="col-md-12 text-right"><button type="submit" class="myBtn step-form-next-button" >Next</button></div>
-                        </div>
+                            <div class="col-md-9">
+                                <div class="archive-page-headers">
+                                    <h3 class="book-title orange-text lato uppercase">{{book.bookTitle}}</h3>
+                                    <h4 class="book-sub-title blue-text lato">{{book.bookSubTitle}}</h4>
 
-                    </form>
-                </div>
-
-
-
-            </uib-tab>
-
-
-            <uib-tab class="{{step2Completed ? 'completed':''}}"  active="steps.step2" disable="step1.$invalid">
-
-                <uib-tab-heading>
-                    <div class="tab-head-div">
-                        <div class="pic-div contact-method-icon-div visible-md visible-lg"></div>
-                        <p class="tab-head-title">Contact Method</p>
-                    </div>
-
-                </uib-tab-heading>
-
-                <div class="sell-book-form-div">
-                    <form name="step2" role="form" ng-submit="nextStep(step2.$valid,'step2')" submit-validate novalidate class="form-validation">
-                        <div class="step1">
-                            <div class="row">
-
-                                <div class="col-md-12">
-                                    <text class="form-information lato"> Please choose one contact method and provide the necessary information. (Please be aware of who gets/sees what information)</text>
-                                </div>
-
-
-                            </div>
-                            <div class="row contact-method-step-details" ng-class="{ 'has-error' : step2.bookContactMethod.$invalid && !step2.bookContactMethod.$pristine, 'has-success' : step2.bookContactMethod.$valid && !contactForm.bookContactMethod.$pristine}">
-
-
-
-                                <div class="col-md-6 left-contact-methods">
-                                    <div class="left-side-form">
-                                        <label class="checkbox checkbox-custom">
-                                            <input name="bookContactMethod" ng-model="book.bookContactMethod" type="radio" value="sellerToBuyer" required><i></i> <strong><text class="uppercase px-16">Seller Contact Buyer</text></strong>
-                                        </label>
-
-                                        <text class="lato">
-                                            With this method, <text class="underline">the buyer will not get your information</text>. The buyer needs to send you the information when inquiring for
-                                            the book. The system will send the buyer's message to the following email address: <strong>{{email}}</strong>
-
-                                        </text>
-                                    </div>
-                                    <hr>
-                                    <div class="left-side-form margin-top-40">
-                                        <label class="checkbox checkbox-custom">
-                                            <input name="bookContactMethod" ng-model="book.bookContactMethod" type="radio" value="buyerToSeller" required><i></i> <strong><text class="uppercase px-16">Buyer Contact Seller</text></strong>
-                                        </label>
-
-                                        <text class="lato">
-                                            With this method, the buyer will get your information through email. Define which contact information the buyer can request.
-                                        </text>
-
-                                        <div class="row lower-form">
-                                            <div class="col-md-4">
-                                                <text class=""><strong>Home Phone :</strong></text>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <input type="text" name="contactInfoHomePhone" ng-model="book.contactInfoHomePhone"
-                                                       ng-required="
-
-                                                       (book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)
-
-                                                       "
-                                                       class="form-control" />
-                                            </div>
-                                        </div>
-
-                                        <div class="row lower-form-other">
-                                            <div class="col-md-4">
-                                                <text class=""><strong>Cell Phone :</strong></text>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <input type="text" name="contactInfoCellPhone" ng-model="book.contactInfoCellPhone"
-                                                       ng-required="
-
-                                                       (book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)
-
-                                                       "
-                                                       class="form-control"   />
-                                            </div>
-                                        </div>
-
-                                        <div class="row lower-form-other">
-                                            <div class="col-md-4">
-                                                <text class=""><strong>Email :</strong></text>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <input type="email" name="contactInfoEmail" ng-model="book.contactInfoEmail"
-                                                       ng-required="
-
-                                                       (book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)
-
-                                                       "
-                                                       class="form-control"/>
-                                            </div>
-                                        </div>
-
-                                        <div class="has-error">
-                                            <p >
-                                                <span class="text-danger"  ng-show="(book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)">You have to provide at least one contact information.</span>
-                                            </p>
-                                        </div>
-
-
-
-
-
-
+                                    <div class="book-description ">
+                                        <p>
+                                            <text class="grey-text ">ISBN:</text>
+                                            <text class="blue-text">{{book.bookIsbn}}</text>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <text class="grey-text ">ISBN-13:</text>
+                                            <text class="blue-text">{{book.bookIsbn13}}</text>
+                                        </p>
+                                        <p class="grey-text">De
+                                            <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text>
+                                            :: Publicado Por {{book.bookPublisher}} {{book.bookPublishDate}} ::
+                                            ({{book.bookBinding}})
+                                        </p>
                                     </div>
 
                                 </div>
-
-
-                                <div class="col-md-6">
-
-                                    <div class="right-side-form" >
-
-                                        <label class="checkbox checkbox-custom">
-                                            <input name="contactMethod" ng-model="book.bookContactMethod" type="radio" value="student2studentBoard" required><i></i> <strong><text class="uppercase px-16">Use Student2Student Message Board Only</text></strong>
-                                        </label>
-
-                                        <text class="lato">
-
-                                            With this method, <text class="underline">neither buyer nor seller receive any of the contact information of each other.</text> They can send messages to each other by only using the Student2Student Message Board.
-
-                                        </text>
-
-
-                                    </div>
-
-
-
-                                </div>
-
-
                             </div>
-                            <div class="row has-error">
-                                <div class="col-md-12">
-                                    <p class="help-block">
-                                        <span  ng-show="step2.bookContactMethod.$invalid && !step2.bookContactMethod.$pristine">Set Contact Method.</span>
-
-                                    </p>
-                                </div>
-                            </div>
-
 
                         </div>
-
                         <div class="row">
-
                             <div class="col-md-12">
-                                <div class="control-panel text-right">
-                                    <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step1')"><i class="fa fa-angle-left fa-3x"></i></button>
-                                    <button type="submit" class="myBtn step-form-next-button" >Next</button>
-                                </div>
+                                <div>
+                                    <text class="box-title uppercase orange-text lato"><strong>INFORMACION ACERCA DEL ESTADO DEL
+                                        LIBRO</strong></text>
+                                    <br/><br/>
 
+                                    <div class="deal-information-box inner-form">
+                                        <div class="row">
+
+                                            <div class="col-md-4">
+                                                <text class="blue-text uppercase"><strong>ESTADO DEL LIBRO : </strong>
+                                                </text>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div ng-class="{ 'has-error' : step1.bookCondition.$invalid && !step1.bookCondition.$pristine, 'has-success' : step1.bookCondition.$valid && !contactForm.bookCondition.$pristine}">
+
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookCondition" ng-model="book.bookCondition"
+                                                               value="New" type="radio" required><i></i> Nuevo
+                                                    </label>
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookCondition" ng-model="book.bookCondition"
+                                                               value="Barely Used" type="radio" required><i></i> Apenas Usado
+                                                    </label>
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookCondition" ng-model="book.bookCondition"
+                                                               value="Used" type="radio" required><i></i> Usado
+                                                    </label>
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookCondition" ng-model="book.bookCondition"
+                                                               value="Heavily Used" type="radio" required><i></i>
+                                                        Muy Usado
+                                                    </label>
+
+                                                    <p class="help-block">
+                                                        <span ng-show="step1.bookCondition.$invalid && !step1.bookCondition.$pristine">Se requiere el Estado del Libro.</span>
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <text class="blue-text uppercase"><strong>Texto subrayado : </strong>
+                                                </text>
+                                            </div>
+                                            <div class="col-md-8">
+
+
+                                                <div ng-class="{ 'has-error' : step1.bookIsHighlighted.$invalid && !step1.bookIsHighlighted.$pristine, 'has-success' : step1.bookIsHighlighted.$valid && !contactForm.bookIsHighlighted.$pristine}">
+
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookIsHighlighted" type="radio"
+                                                               ng-model="book.bookIsHighlighted" value="Yes"
+                                                               required><i></i> Sí
+                                                    </label>
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookIsHighlighted" type="radio"
+                                                               ng-model="book.bookIsHighlighted" value="No"
+                                                               required><i></i> No
+                                                    </label>
+
+                                                    <p class="help-block">
+                                                        <span ng-show="step1.bookIsHighlighted.$invalid && !step1.bookIsHighlighted.$pristine">Selecciona Texto Subrayado o No.</span>
+
+                                                    </p>
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <text class="blue-text uppercase"><strong>ANOTACIONES DE EL LIBRO DE TEXTO :  </strong>
+                                                </text>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div ng-class="{ 'has-error' : step1.bookHasNotes.$invalid && !step1.bookHasNotes.$pristine, 'has-success' : step1.bookHasNotes.$valid && !contactForm.bookHasNotes.$pristine}">
+
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookHasNotes" type="radio"
+                                                               ng-model="book.bookHasNotes" value="Yes" required><i></i>
+                                                        Sí
+                                                    </label>
+                                                    <label class="checkbox-inline checkbox-custom">
+                                                        <input name="bookHasNotes" type="radio"
+                                                               ng-model="book.bookHasNotes" value="No" required><i></i>
+                                                        No
+                                                    </label>
+
+                                                    <p class="help-block">
+                                                        <span ng-show="step1.bookHasNotes.$invalid && !step1.bookHasNotes.$pristine">Selecciona si el libro contiene anotaciones.</span>
+
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-8">
+                                                <text class="blue-text uppercase"><strong>Comentario : </strong>
+                                                    <text uib-tooltip="Medida máxima permitida 1.200 caracteres"
+                                                          class="orange-text"><i class="fa fa-info-circle"
+                                                                                 aria-hidden="true"></i></text>
+                                                </text>
+                                            </div>
+                                            <div class="col-md-4 text-right">
+                                                <text ng-show="(step1.bookComment.$valid && !step1.bookComment.$pristine) || step1.bookComment.$pristine"
+                                                      class="grey-text"><strong>Caracteres restantes:
+                                                    {{1200-book.bookComment.length}}</strong></text>
+                                                <text ng-show="step1.bookComment.$invalid && !step1.bookComment.$pristine"
+                                                      class="text-danger"><strong>Límite de Caracteres Excedido</strong>
+                                                </text>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12"
+                                                 ng-class="{ 'has-error' : step1.bookComment.$invalid && !step1.bookComment.$pristine, 'has-success' : step1.bookComment.$valid && !step1.bookComment.$pristine}">
+                                                <div>
+                                                    <textarea class="form-control"
+                                                              rows="5" name="bookComment" ng-model="book.bookComment"
+                                                              ng-maxlength="1200"
+                                                              aria-multiline="true"></textarea>
+
+
+                                                </div>
+                                                <p class="help-block">
+                                                    <span ng-show="step1.bookComment.$error.maxlength">El Comentario debe tener menos de 1.200 caracteres.</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                    </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</uib-tab>
+
+
+<uib-tab class="{{step2Completed ? 'completed':''}}" active="steps.step2" disable="step1.$invalid">
+
+    <uib-tab-heading>
+        <div class="tab-head-div">
+            <div class="pic-div contact-method-icon-div visible-md visible-lg"></div>
+            <p class="tab-head-title">Metodo de Contacto</p>
+        </div>
+
+    </uib-tab-heading>
+
+    <div class="sell-book-form-div">
+        <form name="step2" role="form" ng-submit="nextStep(step2.$valid,'step2')" submit-validate novalidate
+              class="form-validation">
+            <div class="step1">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <text class="form-information lato"> Por favor elige un método de contacto e introduce
+                            información necesaria.
+                        </text>
+                    </div>
+
+
+                </div>
+                <div class="row contact-method-step-details"
+                     ng-class="{ 'has-error' : step2.bookContactMethod.$invalid && !step2.bookContactMethod.$pristine, 'has-success' : step2.bookContactMethod.$valid && !contactForm.bookContactMethod.$pristine}">
+
+
+                    <div class="col-md-6 left-contact-methods">
+                        <div class="left-side-form">
+                            <label class="checkbox checkbox-custom">
+                                <input name="bookContactMethod" ng-model="book.bookContactMethod" type="radio"
+                                       value="sellerToBuyer" required><i></i> <strong>
+                                <text class="uppercase px-16">VENDEDOR CONTACTA A COMPRADOR</text>
+                            </strong>
+                            </label>
+
+                            <text class="lato">Con este método,
+                                <text class="underline">el comprador no obtendrá tu información</text>
+                                . El comprador tiene que
+                                enviarte la información al preguntar por el libro. El sistema enviará el mensaje del
+                                comprador a la siguiente dirección de correo electrónico:
+                                <strong>{{email}}</strong>
+
+                            </text>
+                        </div>
+                        <hr>
+                        <div class="left-side-form margin-top-40">
+                            <label class="checkbox checkbox-custom">
+                                <input name="bookContactMethod" ng-model="book.bookContactMethod" type="radio"
+                                       value="buyerToSeller" required><i></i> <strong>
+                                <text class="uppercase px-16">COMPRADOR CONTACTA A VENDEDOR</text>
+                            </strong>
+                            </label>
+
+                            <text class="lato">
+                                Con este método, el comprador obtendrá tu información a través de correo electrónico.
+                                Define que información de contacto el comprador puede solicitar.
+                            </text>
+
+                            <div class="row lower-form">
+                                <div class="col-md-4">
+                                    <text class=""><strong>Teléfono del Domicilio :</strong></text>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" name="contactInfoHomePhone" ng-model="book.contactInfoHomePhone"
+                                           ng-required="
+
+                                                       (book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)
+
+                                                       "
+                                           class="form-control"/>
+                                </div>
+                            </div>
+
+                            <div class="row lower-form-other">
+                                <div class="col-md-4">
+                                    <text class=""><strong>Teléfono Móvil :</strong></text>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" name="contactInfoCellPhone" ng-model="book.contactInfoCellPhone"
+                                           ng-required="
+
+                                                       (book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)
+
+                                                       "
+                                           class="form-control"/>
+                                </div>
+                            </div>
+
+                            <div class="row lower-form-other">
+                                <div class="col-md-4">
+                                    <text class=""><strong>Email :</strong></text>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="email" name="contactInfoEmail" ng-model="book.contactInfoEmail"
+                                           ng-required="
+
+                                                       (book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)
+
+                                                       "
+                                           class="form-control"/>
+                                </div>
+                            </div>
+
+                            <div class="has-error">
+                                <p>
+                                    <span class="text-danger"
+                                          ng-show="(book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)">You have to provide at least one contact information.</span>
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <div class="right-side-form">
+
+                            <label class="checkbox checkbox-custom">
+                                <input name="contactMethod" ng-model="book.bookContactMethod" type="radio"
+                                       value="student2studentBoard" required><i></i> <strong>
+                                <text class="uppercase px-16">UTILIZA UNICAMENTE EL TABLERO DE MENSAJES DE
+                                    STUDENT2STUDENT</text>
+                            </strong>
+                            </label>
+
+                            <text class="lato">
+
+                                Con este método, <text class="underline">ni el comprador ni el vendedor reciben la información de contacto de
+                                ninguno de ellos.</text>
+                                Pueden enviarse mensajes entre sí usando solamente el Tablero de Mensajes de
+                                Student2Student.
+
+                            </text>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="row has-error">
+                    <div class="col-md-12">
+                        <p class="help-block">
+                            <span ng-show="step2.bookContactMethod.$invalid && !step2.bookContactMethod.$pristine">Incluye Método de Contacto.</span>
+
+                        </p>
+                    </div>
                 </div>
 
 
+            </div>
 
-            </uib-tab>
+            <div class="row">
 
-
-            <uib-tab class="{{step3Completed ? 'completed':''}}" active="steps.step3" disable="step2.$invalid">
-
-                <uib-tab-heading >
-                    <div class="tab-head-div">
-                        <div class="pic-div deal-terms-icon-div visible-md visible-lg"></div>
-                        <p class="tab-head-title">Deal Terms</p>
+                <div class="col-md-12">
+                    <div class="control-panel text-right">
+                        <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step1')"><i
+                                class="fa fa-angle-left fa-3x"></i></button>
+                        <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
                     </div>
 
-                </uib-tab-heading>
+                </div>
+            </div>
 
-                <div class="sell-book-form-div">
-                    <form name="step3" role="form" ng-submit="nextStep(step3.$valid,'step3')" submit-validate novalidate class="form-validation">
-                        <div class="step1">
+        </form>
+    </div>
 
-                            <div class="row height-48" ng-class="{ 'has-error' : step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine, 'has-success' : step3.publicAvailable.$valid && !step3.publicAvailable.$pristine}">
 
-                                <div class="col-md-4 col-sm-4 col-xs-4 text-right min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <text class="px-16 lato uppercase"><strong>Text available to public :</strong></text>
-                                        </div>
-                                </div>
+</uib-tab>
 
-                                <div class="col-md-8 col-sm-8 col-xs-8 min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <label class="checkbox-inline checkbox-custom">
-                                        <input name="publicAvailable" ng-model="book.bookIsAvailablePublic" type="radio" value="Yes" required><i></i> Yes
-                                    </label>
-                                    <label class="checkbox-inline checkbox-custom">
-                                        <input name="publicAvailable" ng-model="book.bookIsAvailablePublic" type="radio" value="No" required><i></i> No
-                                    </label>
-                                    <p class="help-block">
-                                        <span  ng-show="step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine">Set if the book is available for public or not.</span>
 
-                                    </p>
-</div>
-                                </div>
+<uib-tab class="{{step3Completed ? 'completed':''}}" active="steps.step3" disable="step2.$invalid">
 
-                            </div>
+    <uib-tab-heading>
+        <div class="tab-head-div">
+            <div class="pic-div deal-terms-icon-div visible-md visible-lg"></div>
+            <p class="tab-head-title">Términos del Acuerdo</p>
+        </div>
 
-                            <div class="row" ng-class="{ 'has-error' : step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine, 'has-success' : step3.bookAvailableDate.$valid && !step3.bookAvailableDate.$pristine}">
+    </uib-tab-heading>
 
-                                <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <text class="px-16 lato uppercase"><strong>Textbook available Date :</strong></text>
-                                        </div>
-                                </div>
+    <div class="sell-book-form-div">
+        <form name="step3" role="form" ng-submit="nextStep(step3.$valid,'step3')" submit-validate novalidate
+              class="form-validation">
+            <div class="step1">
 
-                                <div class="col-md-4 col-sm-8 col-xs-8 date-picker min-height-125">
+                <div class="row height-48"
+                     ng-class="{ 'has-error' : step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine, 'has-success' : step3.publicAvailable.$valid && !step3.publicAvailable.$pristine}">
 
-                                    <div class="vertical-align-middle">
-                                    <p class="input-group">
-                                        <input name="bookAvailableDate" type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="book.bookAvailableDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                    <div class="col-md-4 col-sm-4 col-xs-4 text-right min-height-125">
+                        <div class="vertical-align-middle">
+                            <text class="px-16 lato uppercase"><strong>TEXTO DISPONIBLE AL PUBLICO :</strong></text>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-8 min-height-125">
+                        <div class="vertical-align-middle">
+                            <label class="checkbox-inline checkbox-custom">
+                                <input name="publicAvailable" ng-model="book.bookIsAvailablePublic" type="radio"
+                                       value="Yes" required><i></i> Si
+                            </label>
+                            <label class="checkbox-inline checkbox-custom">
+                                <input name="publicAvailable" ng-model="book.bookIsAvailablePublic" type="radio"
+                                       value="No" required><i></i> No
+                            </label>
+
+                            <p class="help-block">
+                                <span ng-show="step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine">Incluye si el libro está disponible al público o no.</span>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row"
+                     ng-class="{ 'has-error' : step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine, 'has-success' : step3.bookAvailableDate.$valid && !step3.bookAvailableDate.$pristine}">
+
+                    <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
+                        <div class="vertical-align-middle">
+                            <text class="px-16 lato uppercase"><strong>FECHA DE DISPONIBILIDAD DEL LIBRO DE TEXTO :</strong></text>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-8 col-xs-8 date-picker min-height-125">
+
+                        <div class="vertical-align-middle">
+                            <p class="input-group">
+                                <input name="bookAvailableDate" type="text" class="form-control"
+                                       uib-datepicker-popup="{{format}}" ng-model="book.bookAvailableDate"
+                                       is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"
+                                       close-text="Close"/>
                                           <span class="input-group-btn">
-                                            <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar"></i></button>
+                                            <button type="button" class="btn btn-default" ng-click="open1()"><i
+                                                    class="fa fa-calendar"></i></button>
                                           </span>
-                                    </p>
-                                    <p class="help-block">
-                                        <span  ng-show="step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine">You have to set book available date in (11-May-2016) format.</span>
-                                    </p>
+                            </p>
+                            <p class="help-block">
+                                <span ng-show="step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine">You have to set book available date in (11-May-2016) format.</span>
+                            </p>
 
-                                        </div>
-                                </div>
+                        </div>
+                    </div>
 
-                            </div>
-                            <div class="row" ng-class="{ 'has-error' : step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine, 'has-success' : step3.bookPriceSell.$valid && !step3.bookPriceSell.$pristine}">
+                </div>
+                <div class="row"
+                     ng-class="{ 'has-error' : step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine, 'has-success' : step3.bookPriceSell.$valid && !step3.bookPriceSell.$pristine}">
 
-                                <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <text class="px-16 lato uppercase"><strong>Selling Price (EX: 15,00) :</strong></text>
-                                        </div>
-                                </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
+                        <div class="vertical-align-middle">
+                            <text class="px-16 lato uppercase"><strong>PRECIO DE VENTA (EJ.: 15,00) :</strong></text>
+                        </div>
+                    </div>
 
-                                <div class="col-md-4 col-sm-4 col-xs-4 min-height-125">
-                                    <div class="vertical-align-middle">
-                                        <input data-original-price="{{bookPriceSellOriginal}}" val-selling-price ng-pattern="/^[0-9,]+$/" placeholder="1234,00" type="text" name="bookPriceSell" ng-model="book.bookPriceSell" class="form-control"  required/>
-                                        <!--<input type="number" string-to-number name="bookPriceSell" ng-model="book.bookPriceSell" ui-validate=" '$value <= {{bookPriceSellOriginal}}' " class="form-control"  required/>-->
-                                    <p class="help-block">
-                                        <span  ng-show="step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine">You have to set the selling price.</span><br/>
-                                        <span ng-show="step3.bookPriceSell.$error.valSellingPrice">Your Price cannot be greater than {{bookPriceSell}}</span>
-                                        <!--<span ng-if="step3.bookPriceSell.$error.validator">Your Price cannot be greater than {{bookPriceSell}}</span>-->
+                    <div class="col-md-4 col-sm-4 col-xs-4 min-height-125">
+                        <div class="vertical-align-middle">
+                            <input data-original-price="{{bookPriceSellOriginal}}" val-selling-price
+                                   ng-pattern="/^[0-9,]+$/" placeholder="1234,00" type="text" name="bookPriceSell"
+                                   ng-model="book.bookPriceSell" class="form-control" required/>
+                            <!--<input type="number" string-to-number name="bookPriceSell" ng-model="book.bookPriceSell" ui-validate=" '$value <= {{bookPriceSellOriginal}}' " class="form-control"  required/>-->
+                            <p class="help-block">
+                                <span ng-show="step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine">Debes incluir el precio de venta.</span><br/>
+                                <span ng-show="step3.bookPriceSell.$error.valSellingPrice">Your Price cannot be greater than {{bookPriceSell}}</span>
+                                <!--<span ng-if="step3.bookPriceSell.$error.validator">Your Price cannot be greater than {{bookPriceSell}}</span>-->
 
-                                    </p>
-</div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4 min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <text ng-show="foundCampusLowestPrice"><text  class="px-16 lato uppercase"><strong>In Spain €</strong></text> &nbsp;&nbsp;&nbsp;&nbsp;<text class="grey-text">Cheapest price on-campus: Spain {{campusLowestPrice}}</text></text>
-                                    <text ng-show="!foundCampusLowestPrice" class="px-16 lato grey-text">You are first who is selling this book on-campus "{{universityName}}"</text>
-                                        </div>
-                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 min-height-125">
+                        <div class="vertical-align-middle">
+                            <text ng-show="foundCampusLowestPrice">
+                                <text class="px-16 lato uppercase"><strong>In Spain €</strong></text>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <text class="grey-text">Cheapest price on-campus: Spain {{campusLowestPrice}}</text>
+                            </text>
+                            <text ng-show="!foundCampusLowestPrice" class="px-16 lato grey-text">You are first who is
+                                selling this book on-campus "{{universityName}}"
+                            </text>
+                        </div>
+                    </div>
 
-                            </div>
-                            <div class="row">
+                </div>
+                <div class="row">
 
-                                <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-20 min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <text class="px-16 lato uppercase"><strong>Payment Method :</strong></text>
-                                        </div>
-                                </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-20 min-height-125">
+                        <div class="vertical-align-middle">
+                            <text class="px-16 lato uppercase"><strong>METODO DE PAGO :</strong></text>
+                        </div>
+                    </div>
 
-                                <div class="col-md-8 col-sm-8 col-xs-8 min-height-125">
-                                    <div class="vertical-align-middle">
-                                    <div ng-class="{
+                    <div class="col-md-8 col-sm-8 col-xs-8 min-height-125">
+                        <div class="vertical-align-middle">
+                            <div ng-class="{
 
                                     'has-error' :   (step3.bookPaymentMethodCashOnExchange.$invalid && !step3.bookPaymentMethodCashOnExchange.$pristine) ||
                                                     (step3.bookPaymentMethodCheque.$invalid && !step3.bookPaymentMethodCheque.$pristine),
@@ -534,323 +648,396 @@
                                     'has-success' :   (step3.bookPaymentMethodCashOnExchange.$valid && !step3.bookPaymentMethodCashOnExchange.$pristine) ||
                                                       (step3.bookPaymentMethodCheque.$valid && !step3.bookPaymentMethodCheque.$pristine)}">
 
-                                        <label class="checkbox checkbox-custom">
-                                            <input type="checkbox"
-                                                   ng-required="
+                                <label class="checkbox checkbox-custom">
+                                    <input type="checkbox"
+                                           ng-required="
 
                                                        !(book.bookPaymentMethodCashOnExchange || book.bookPaymentMethodCheque)
 
                                                        "
-                                                   name="bookPaymentMethodCashOnExchange" ng-model="book.bookPaymentMethodCashOnExchange" ><i></i> Cash on Exchange
-                                        </label>
+                                           name="bookPaymentMethodCashOnExchange"
+                                           ng-model="book.bookPaymentMethodCashOnExchange"><i></i> Intercambio de Efectivo
+                                </label>
 
-                                        <label class="checkbox checkbox-custom">
-                                            <input type="checkbox" ng-required="
+                                <label class="checkbox checkbox-custom">
+                                    <input type="checkbox" ng-required="
 
                                                        !(book.bookPaymentMethodCashOnExchange || book.bookPaymentMethodCheque)
 
-                                                       " name="bookPaymentMethodCheque" ng-model="book.bookPaymentMethodCheque" ><i></i> Cheque
-                                        </label>
-                                        <p class="help-block">
+                                                       " name="bookPaymentMethodCheque"
+                                           ng-model="book.bookPaymentMethodCheque"><i></i> Cheque
+                                </label>
+
+                                <p class="help-block">
                                             <span ng-show=" (step3.bookPaymentMethodCashOnExchange.$invalid && !step3.bookPaymentMethodCashOnExchange.$pristine) ||
                                                     (step3.bookPaymentMethodCheque.$invalid && !step3.bookPaymentMethodCheque.$pristine)">You have to choose at least one payment method.</span>
 
-                                        </p>
-
-</div>
-                                    </div>
-                                    <br/>
-
-
-
-                                </div>
+                                </p>
 
                             </div>
-
-
-
                         </div>
-
-                        <div class="row">
-
-                            <div class="control-panel text-right">
-                                <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step2')"><i class="fa fa-angle-left fa-3x"></i></button>
-                                <button type="submit" class="myBtn step-form-next-button" >Next</button>
-                            </div>
+                        <br/>
 
 
-                        </div>
+                    </div>
 
-                    </form>
                 </div>
 
 
-            </uib-tab>
+            </div>
+
+            <div class="row">
+
+                <div class="control-panel text-right">
+                    <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step2')"><i
+                            class="fa fa-angle-left fa-3x"></i></button>
+                    <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                </div>
 
 
-            <uib-tab class="{{step4Completed ? 'completed':''}}" active="steps.step4" disable="step3.$invalid">
+            </div>
 
-                <uib-tab-heading >
-                    <div class="tab-head-div">
-                        <div class="pic-div add-image-icon-div visible-md visible-lg"></div>
-                        <p class="tab-head-title visible-lg">Personal Book Images</p>
-                        <p class="tab-head-title hidden-lg">Book Images</p>
+        </form>
+    </div>
+
+
+</uib-tab>
+
+
+<uib-tab class="{{step4Completed ? 'completed':''}}" active="steps.step4" disable="step3.$invalid">
+
+    <uib-tab-heading>
+        <div class="tab-head-div">
+            <div class="pic-div add-image-icon-div visible-md visible-lg"></div>
+            <p class="tab-head-title visible-lg">Imágenes Personales del Libro</p>
+
+            <p class="tab-head-title hidden-lg">Imágenes del Libro</p>
+        </div>
+
+    </uib-tab-heading>
+
+    <div class="sell-book-form-div">
+        <form name="step4" role="form" ng-submit="nextStep(step4.$valid,'step4',files)" submit-validate novalidate
+              class="form-validation">
+            <div class="step1">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <text class="form-information lato">  Puedes subir 3 imágenes del  libro de texto para mostrar su estado.<br/>
+                            (Tamaño de imagen recomendado: Menos de 300 KB.
+                            Dimensión de imagen recomendada: 350 píxeles / 500 píxeles).<br/>
+                            Extensiones de archivo de imagen permitidas: jpg / JPG, jpeg / JPEG, png / PNG.
+                        </text>
                     </div>
 
-                </uib-tab-heading>
 
-                <div class="sell-book-form-div">
-                    <form name="step4" role="form" ng-submit="nextStep(step4.$valid,'step4',files)" submit-validate novalidate class="form-validation">
-                        <div class="step1">
+                </div>
+                <br/>
 
-                            <div class="row">
+                <div class="row"
+                     ng-class="{ 'has-error' : step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine, 'has-success' : step3.publicAvailable.$valid && !step3.publicAvailable.$pristine}">
 
-                                <div class="col-md-12">
-                                    <text class="form-information lato"> You can upload 3 pictures from your textbook to show its condition. <br>(Recommended Picture Size : Less than 300KB. Recommended Picture Dimension: 350px/500px)
-                                        <br>
-                                        Allowed Image File Extensions : jpg/JPG, jpeg/JPEG, png/PNG</text>
-                                </div>
+                    <div class="col-md-12">
+                        <div class="form-group sell-page-upload-image-input">
 
 
-                            </div>
-                            <br/>
-
-                            <div class="row" ng-class="{ 'has-error' : step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine, 'has-success' : step3.publicAvailable.$valid && !step3.publicAvailable.$pristine}">
-
-                                <div class="col-md-12">
-                                    <div class="form-group sell-page-upload-image-input">
-
-
-
-                                        <input multiple-image-input="files" file-data="fileData" file-identifier="fileId" ui-jq="filestyle" type="file" class="filestyle" ui-options="{
-            buttonText: 'Select Images',
+                            <input multiple-image-input="files" file-data="fileData" file-identifier="fileId"
+                                   ui-jq="filestyle" type="file" class="filestyle" ui-options="{
+            buttonText: 'Seleccionar Imagen',
             iconName: 'fa fa-cloud-upload'
-          }"  multiple accept="image/*">
-                                    </div>
+          }" multiple accept="image/*">
+                        </div>
 
 
-                                    <div class="tcol">
-                                        <div class="bg-white">
+                        <div class="tcol">
+                            <div class="bg-white">
 
 
-                                            <h4 class="custom-font text-default m-0">Additional Images</h4>
-
-                                        </div>
-
-                                        <div class="table-responsive">
-
-                                            <table class="table b-a b-solid bg-white image-upload-table">
-                                                <thead>
-                                                <tr>
-                                                    <th>Image</th>
-                                                    <th >Size</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr ng-repeat="file in book.bookImages" class="text-sm" ng-show="!$first">
-                                                    <td style="text-align: center"><img data-options="splash-2 splash-primary splash-ef-2" ng-click="viewImage($event)" style="max-height: 100px;max-width: 100px;" ng-src="{{imageHostPath}}{{file.image}}"/></td>
-
-                                                    <td nowrap>&nbsp;</td>
-
-                                                    <td nowrap>
-                                                        <button type="button" class="myBtn orange-btn" ng-click="removeBookImageFile(file)">
-                                                            <span class="fa fa-trash"></span> Remove
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr ng-repeat="file in files" class="text-sm">
-                                                    <td style="text-align: center"><img data-options="splash-2 splash-primary splash-ef-2" ng-click="viewImage($event)" style="max-height: 100px;max-width: 100px;" ng-src="{{file.fileData}}"/></td>
-
-                                                    <td nowrap>{{ file.size/1024|number:2 }} KB</td>
-
-                                                    <td nowrap>
-                                                        <button type="button" class="myBtn orange-btn" ng-click="removeFile(file,files)">
-                                                            <span class="fa fa-trash"></span> Remove
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-
-
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
+                                <h4 class="custom-font text-default m-0">Imágenes Adicionales</h4>
 
                             </div>
 
+                            <div class="table-responsive">
+
+                                <table class="table b-a b-solid bg-white image-upload-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Medida</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="file in book.bookImages" class="text-sm" ng-show="!$first">
+                                        <td style="text-align: center"><img
+                                                data-options="splash-2 splash-primary splash-ef-2"
+                                                ng-click="viewImage($event)" style="max-height: 100px;max-width: 100px;"
+                                                ng-src="{{imageHostPath}}{{file.image}}"/></td>
+
+                                        <td nowrap>&nbsp;</td>
+
+                                        <td nowrap>
+                                            <button type="button" class="myBtn orange-btn"
+                                                    ng-click="removeBookImageFile(file)">
+                                                <span class="fa fa-trash"></span> Retirar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr ng-repeat="file in files" class="text-sm">
+                                        <td style="text-align: center"><img
+                                                data-options="splash-2 splash-primary splash-ef-2"
+                                                ng-click="viewImage($event)" style="max-height: 100px;max-width: 100px;"
+                                                ng-src="{{file.fileData}}"/></td>
+
+                                        <td nowrap>{{ file.size/1024|number:2 }} KB</td>
+
+                                        <td nowrap>
+                                            <button type="button" class="myBtn orange-btn"
+                                                    ng-click="removeFile(file,files)">
+                                                <span class="fa fa-trash"></span> Retirar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
 
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-md-12 text-right">
-                                <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step3')"><i class="fa fa-angle-left fa-3x"></i></button>
-                                <button type="submit" class="myBtn step-form-next-button" >Next</button>
                             </div>
+
                         </div>
 
-                    </form>
+
+                    </div>
+
                 </div>
 
 
+            </div>
 
-            </uib-tab>
+            <div class="row">
+
+                <div class="col-md-12 text-right">
+                    <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step3')"><i
+                            class="fa fa-angle-left fa-3x"></i></button>
+                    <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
 
 
-            <uib-tab class="{{step4Completed ? 'completed':''}}" select="previewSelected()"  active="steps.step5" disable="step3.$invalid || step4.$invalid">
+</uib-tab>
 
-                <uib-tab-heading >
-                    <div class="tab-head-div">
-                        <div class="pic-div preview-confirm-icon-div visible-md visible-lg"></div>
-                        <p class="tab-head-title">Preview & Confirm</p>
+
+<uib-tab class="{{step4Completed ? 'completed':''}}" select="previewSelected()" active="steps.step5"
+         disable="step3.$invalid || step4.$invalid">
+
+<uib-tab-heading>
+    <div class="tab-head-div">
+        <div class="pic-div preview-confirm-icon-div visible-md visible-lg"></div>
+        <p class="tab-head-title">Previsualizar y confirmar</p>
+    </div>
+
+</uib-tab-heading>
+
+
+<div class="sell-book-form-div">
+    <form name="step5" role="form" ng-submit="finalSubmit(step1.$valid,step2.$valid,step3.$valid,step5.$valid)"
+          submit-validate novalidate class="form-validation">
+        <div class="step1">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="archive-page-headers">
+                        <h3 class="book-title orange-text lato uppercase">{{book.bookTitle}}</h3>
+                        <h4 class="book-sub-title blue-text lato">{{book.bookSubTitle}}</h4>
+
+                        <p class="book-description grey-text">De
+                            <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text>
+                            :: Publicado por {{book.bookPublisher}} {{book.bookPublishDate}} :: ({{book.bookBinding}})
+                            :: ISBN:
+                            <text class="blue-text">{{book.bookIsbn}}</text>
+                            ::
+                            <text class="grey-text ">ISBN-13:</text>
+                            <text class="blue-text">{{book.bookIsbn13}}</text>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row preview-div">
+                <div class="col-md-9 col-sm-9 col-xs-12">
+
+                    <div class="step-1-info">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>ESTADO DEL LIBRO</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.bookCondition}}</strong></text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Texto subrayado</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.bookIsHighlighted}}</strong></text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>ANOTACIONES DE EL LIBRO DE TEXTO</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.bookHasNotes}}</strong></text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>COMENTARIO</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.bookComment}}</strong></text>
+                            </div>
+                        </div>
                     </div>
 
-                </uib-tab-heading>
 
+                    <div ng-show="book.bookContactMethod=='buyerToSeller'" class="step-2-info">
 
-                <div class="sell-book-form-div">
-                    <form name="step5" role="form" ng-submit="finalSubmit(step1.$valid,step2.$valid,step3.$valid,step5.$valid)" submit-validate novalidate class="form-validation">
-                        <div class="step1">
-                            <div class="row">
-
-                                <div class="col-md-12">
-                                    <div class="archive-page-headers">
-                                        <h3 class="book-title orange-text lato uppercase">{{book.bookTitle}}</h3>
-                                        <h4 class="book-sub-title blue-text lato">{{book.bookSubTitle}}</h4>
-                                        <p class="book-description grey-text">By <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text> :: Published by {{book.bookPublisher}} {{book.bookPublishDate}} :: ({{book.bookBinding}})
-                                            :: ISBN: <text class="blue-text">{{book.bookIsbn}}</text> :: <text class="grey-text ">ISBN-13: </text><text class="blue-text">{{book.bookIsbn13}}</text></p>
-                                    </div>
-                                </div>
-
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Método De Contacto</strong></text>
                             </div>
-                            <div class="row preview-div">
-                                <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>COMPRADOR CONTACTA A VENDEDOR</strong></text>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
 
-                                    <div class="step-1-info">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Condition of book</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.bookCondition}}</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Text highlighted</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.bookIsHighlighted}}</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Notes in the textbook</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.bookHasNotes}}</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Comment</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.bookComment}}</strong></text></div>
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Teléfono del Domicilio</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.contactInfoHomePhone}}&nbsp;</strong></text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Teléfono Móvil</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.contactInfoCellPhone}} &nbsp;</strong></text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Email</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.contactInfoEmail}} &nbsp;</strong></text>
+                            </div>
+                        </div>
 
+                    </div>
 
-                                    <div ng-show="book.bookContactMethod=='buyerToSeller'" class="step-2-info">
+                    <div ng-show="book.bookContactMethod=='sellerToBuyer'" class="step-2-info">
 
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                                <text  class="blue-text uppercase"><strong>Contact Method</strong></text>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>Buyer Contact Seller</strong></text></div>
-                                        </div>
-                                        <br/>
-                                        <br/>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Home phone</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.contactInfoHomePhone}}&nbsp;</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>cell phone</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.contactInfoCellPhone}} &nbsp;</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Email</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.contactInfoEmail}} &nbsp;</strong></text></div>
-                                        </div>
-
-                                    </div>
-
-                                    <div ng-show="book.bookContactMethod=='sellerToBuyer'" class="step-2-info">
-
-                                        <div class="row">
-
-                                            <div class="col-md-12">
-                                                <text  class="blue-text uppercase"><strong>Seller contact buyer</strong></text>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Método De Contacto</strong></text>
+                            </div>
+                            <div class="col-md-12">
+                                <text class="blue-text uppercase"><strong>VENDEDOR CONTACTA A COMPRADOR</strong></text>
+                            </div>
+                        </div>
 
 
+                    </div>
 
-                                    </div>
+                    <div ng-show="book.bookContactMethod=='student2studentBoard'" class="step-2-info">
 
-                                    <div ng-show="book.bookContactMethod=='student2studentBoard'" class="step-2-info">
-
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                                <text  class="blue-text uppercase"><strong>Contact Method</strong></text>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>Student2Student Message Board Only</strong></text></div>
-                                        </div>
-
-
-
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Método De Contacto</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>UTILIZA UNICAMENTE EL TABLERO DE MENSAJES DE STUDENT2STUDENT</strong></text>
+                            </div>
+                        </div>
 
 
+                    </div>
 
 
-                                    <div class="step-last-info">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>textbook available to public?</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.bookIsAvailablePublic}}</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>textbook available date</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>{{book.bookAvailableDate  | date:'dd-MMM-yyyy'}}</strong></text></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>Selling Price</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left"><text class="grey-text"><strong>€{{book.bookPriceSell}}</strong></text></div>
-                                        </div>
+                    <div class="step-last-info">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Libro Disponible al Público?</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.bookIsAvailablePublic}}</strong></text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Fecha De Disponibilidad Del Libro De Texto</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>{{book.bookAvailableDate | date:'dd-MMM-yyyy'}}</strong>
+                                </text>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Precio de Venta</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text class="grey-text"><strong>€{{book.bookPriceSell}}</strong></text>
+                            </div>
+                        </div>
 
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 col-xs-4"><text class="blue-text uppercase"><strong>payment method</strong></text></div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
-                                                <text ng-show="book.bookPaymentMethodCashOnExchange && !book.bookPaymentMethodCheque" class="grey-text"><strong>Cash</strong></text>
-                                                <text ng-show="!book.bookPaymentMethodCashOnExchange && book.bookPaymentMethodCheque" class="grey-text"><strong>Cheque</strong></text>
-                                                <text ng-show="book.bookPaymentMethodCashOnExchange && book.bookPaymentMethodCheque" class="grey-text"><strong>Cash, Cheque</strong></text>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <text class="blue-text uppercase"><strong>Método de Pago</strong></text>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 border-left">
+                                <text ng-show="book.bookPaymentMethodCashOnExchange && !book.bookPaymentMethodCheque"
+                                      class="grey-text"><strong>Cash</strong></text>
+                                <text ng-show="!book.bookPaymentMethodCashOnExchange && book.bookPaymentMethodCheque"
+                                      class="grey-text"><strong>Cheque</strong></text>
+                                <text ng-show="book.bookPaymentMethodCashOnExchange && book.bookPaymentMethodCheque"
+                                      class="grey-text"><strong>Cash, Cheque</strong></text>
+                            </div>
+                        </div>
+                    </div>
 
 
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="">
 
-                                </div>
-                                <div class="col-md-3 col-sm-3 col-xs-12">
-                                    <div class="">
 
+                        <div class="search-book-image-carousel selling-book-image-carousel">
+                            <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
 
-                                        <div class="search-book-image-carousel selling-book-image-carousel">
-                                            <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                                <uib-slide ng-repeat="slide in carouselFiles" active="slide.active">
+                                    <img ng-click="viewImage($event,book.bookTitle)"
+                                         data-options="splash-2 splash-primary splash-ef-2"
+                                         class="big-images" ng-src="{{slide.fileData}}" style="margin:auto;">
 
-                                                <uib-slide ng-repeat="slide in carouselFiles" active="slide.active">
-                                                    <img  ng-click="viewImage($event,book.bookTitle)" data-options="splash-2 splash-primary splash-ef-2"
-                                                          class="big-images" ng-src="{{slide.fileData}}" style="margin:auto;">
+                                </uib-slide>
+                            </uib-carousel>
 
-                                                </uib-slide>
-                                            </uib-carousel>
-
-                                            <div class="btn-group" ng-show="showThumb">
-                                                <div class="text-center">
-                                                    <span><a class="thumb-control-left" ng-click="prevPage(book)"><i class="fa fa-angle-left fa-3x"></i></a></span>
+                            <div class="btn-group" ng-show="showThumb">
+                                <div class="text-center">
+                                    <span><a class="thumb-control-left" ng-click="prevPage(book)"><i
+                                            class="fa fa-angle-left fa-3x"></i></a></span>
 
                                                 <span class="search-thumb-image"
                                                       ng-repeat="thumb in showThumbnails"
@@ -860,69 +1047,66 @@
 
                                                 <span><a class="thumb-control-right" ng-click="nextPage(book)"><i
                                                         class="fa fa-angle-right fa-3x"></i></a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="row agree-row">
-                                <div class="col-md-12">
-
-
-                                    <div ng-class="{ 'has-error' : step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine, 'has-success' : step5.agreedOnTermsAndConditions.$valid && !step5.agreedOnTermsAndConditions.$pristine}">
-                                        <label class="checkbox checkbox-custom checkbox-black">
-                                            <input type="checkbox" name="agreedOnTermsAndConditions" ng-model="book.agreedOnTermsAndConditions" required><i></i> I do hereby swear that I am the rightful owner of the book I am selling.
-                                            I am aware that other students may get my contact information depending
-                                            upon the contact method I chose.
-                                        </label>
-
-                                        <p class="help-block">
-                                            <span ng-show="step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine">You have to agree.</span>
-
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
-
                         </div>
 
 
-
-<br/><br/>
-                        <div class="row">
-
-                            <div class="col-md-12 text-right">
-                                <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step4')"><i class="fa fa-angle-left fa-3x"></i></button>
-                                <button type="submit" ng-disabled="!book.agreedOnTermsAndConditions" class=" myBtn  orange-btn final-step-finish-button" ><i class="fa fa-paper-plane" ></i> Save Book Deal</button>
-                            </div>
-                        </div>
-
-                    </form>
+                    </div>
                 </div>
 
 
-
-            </uib-tab>
-
-            </uib-tabset>
             </div>
+            <div class="row agree-row">
+                <div class="col-md-12">
 
+
+                    <div ng-class="{ 'has-error' : step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine, 'has-success' : step5.agreedOnTermsAndConditions.$valid && !step5.agreedOnTermsAndConditions.$pristine}">
+                        <label class="checkbox checkbox-custom checkbox-black">
+                            <input type="checkbox" name="agreedOnTermsAndConditions"
+                                   ng-model="book.agreedOnTermsAndConditions" required><i></i> Por la presente juro que soy el dueño legítimo del libro que estoy vendiendo.
+                            Soy consciente de que otros estudiantes pueden obtener mi información de contacto dependiendo del método de contacto que elija.
+                        </label>
+
+                        <p class="help-block">
+                            <span ng-show="step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine">Debes estar de acuerdo.</span>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-    </div>
+
+        <br/><br/>
+
+        <div class="row">
+
+            <div class="col-md-12 text-right">
+                <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step4')"><i
+                        class="fa fa-angle-left fa-3x"></i></button>
+                <button type="submit" ng-disabled="!book.agreedOnTermsAndConditions"
+                        class=" myBtn  orange-btn final-step-finish-button"><i class="fa fa-paper-plane"></i> Guardar libro
+                    Deal
+                </button>
+            </div>
+        </div>
+
+    </form>
 </div>
 
 
+</uib-tab>
+
+</uib-tabset>
+</div>
 
 
+</div>
+
+</div>
+</div>
 
 
 </div>

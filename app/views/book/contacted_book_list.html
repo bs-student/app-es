@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="header-title">
-                    <text class="uppercase blue-text lato">List of deals</text>
-                    <text class="uppercase orange-text lato"> I have contacts for</text>
+                    <text class="uppercase blue-text lato">LISTA DE OFERTAS</text>
+                    <text class="uppercase orange-text lato"> QUE HE CONTACTADO</text>
                 </h1>
 
             </div>
@@ -27,9 +27,11 @@
     <div class="container clearfix quote-container-homepage">
         <div class="row">
             <div class="col-md-12 text-center">
-                <p class="lato px-25 orange-text">You have no active textbook deals yet. You can start selling your
-                    textbooks within seconds <a ui-sref="app.sellBook">here</a> or buy textbooks <a
-                            ui-sref="app.bookBuy">here</a></p>
+                <p class="lato px-25 orange-text">
+                    No tienes ningún acuerdo de libros de texto activo todavía.
+                    Puedes empezar a comprar tus libros de texto desde <a
+                        ui-sref="app.bookBuy">aquí</a> en segundos.
+                </p>
             </div>
         </div>
     </div>
@@ -74,9 +76,9 @@
                     <h3 class="book-title orange-text lato uppercase">{{deal.bookTitle}}</h3>
                     <h4 class="book-sub-title blue-text lato">{{deal.bookSubTitle}}</h4>
 
-                    <p class="book-description grey-text">By
+                    <p class="book-description grey-text">De
                         <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text>
-                        :: Published by {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
+                        :: Publicado por {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
                         <br/>ISBN:
                         <text class="blue-text">{{deal.bookIsbn}}</text>
                         &nbsp;&nbsp;&nbsp;&nbsp;ISBN-13:
@@ -85,25 +87,23 @@
                 </div>
                 <div class="archive-page-deal-information">
                     <div ng-show="!deal.viewMoreInfo" class="view-more-info-btn-div">
-                        <button ng-click="deal.viewMoreInfo=true" class="view-more-info-btn myBtn app-btn blue-btn hidden-xs">View
-                            More Information
+                        <button ng-click="deal.viewMoreInfo=true" class="view-more-info-btn myBtn app-btn blue-btn hidden-xs">Ver más información
                         </button>
                     </div>
                     <div ng-show="deal.viewMoreInfo">
-                        <text class="box-title uppercase orange-text lato"><strong>Deal Information</strong></text>
+                        <text class="box-title uppercase orange-text lato"><strong>INFORMACION DEL ACUERDO</strong></text>
                         <div class="deal-information-box">
                             <div class="row">
                                 <div class="col-md-7">
                                     <p>
-                                        <text class="blue-text"><strong>Contact Method</strong></text>
-                                        <text class="grey-text" ng-if="deal.bookContactMethod=='sellerToBuyer'"> :
-                                            Seller Contact You (Buyer)
+                                        <text class="blue-text"><strong>Método de Contacto</strong></text>
+                                        <text class="grey-text" ng-if="deal.bookContactMethod=='sellerToBuyer'"> : Vendedor Contacta (Comprador) Tú
                                         </text>
-                                        <text class="grey-text" ng-if="deal.bookContactMethod=='buyerToSeller'"> : You
-                                            (Buyer) Contact Seller
+                                        <text class="grey-text" ng-if="deal.bookContactMethod=='buyerToSeller'"> :
+                                            Tú (Comprador) Contacta Vendedor
                                         </text>
                                         <text class="grey-text" ng-if="deal.bookContactMethod=='student2studentBoard'">
-                                            : Use Student2Student Message Board
+                                            : Utiliza el Tablón de anuncios de  Student2Student
                                         </text>
                                         <br/></p>
 
@@ -118,58 +118,56 @@
                                         <text class="icons"><i class="fa fa-phone 2x"></i></text>
                                         <text ng-show="deal.sellerCellNumber!=null">
                                             <strong>{{deal.sellerCellNumber}}</strong></text>
-                                        <text ng-show="deal.sellerCellNumber==null"><strong>Not Provided by
-                                            Seller</strong></text>
+                                        <text ng-show="deal.sellerCellNumber==null"><strong>No facilitado por el Vendedor</strong></text>
                                         <br/></p>
                                     <p ng-if="deal.bookContactMethod=='buyerToSeller'">
                                         <text class="icons"><i class="fa fa-phone 2x"></i></text>
                                         <text ng-show="deal.sellerHomeNumber!=null">
                                             <strong>{{deal.sellerHomeNumber}}</strong></text>
-                                        <text ng-show="deal.sellerHomeNumber==null"><strong>Not Provided by
-                                            Seller</strong></text>
+                                        <text ng-show="deal.sellerHomeNumber==null"><strong>No facilitado por el Vendedor</strong></text>
                                         <br/></p>
 
 
                                     <p>
-                                        <text class="blue-text"><strong>Comment</strong></text>
+                                        <text class="blue-text"><strong>Comentario</strong></text>
                                         <text ng-show="deal.bookComment!=undefined" class="grey-text"> :
                                             {{deal.bookComment}}
                                         </text>
-                                        <text ng-show="deal.bookComment==undefined" class="grey-text"> : No Comments
+                                        <text ng-show="deal.bookComment==undefined" class="grey-text"> : Sin comentarios
                                         </text>
                                         <br/></p>
                                 </div>
                                 <div class="col-md-5">
                                     <p>
-                                        <text class="blue-text"><strong>Payment</strong></text>
+                                        <text class="blue-text"><strong>Pago</strong></text>
                                         <text class="grey-text"> :
 
                                             <text ng-show="deal.bookPaymentMethodCashOnExchange && !deal.bookPaymentMethodCheque">
-                                                Cash
+                                                Efectivo
                                             </text>
                                             <text ng-show="!deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
                                                 Cheque
                                             </text>
                                             <text ng-show="deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
-                                                Cash, Cheque
+                                                Efectivo, Cheque
                                             </text>
 
                                         </text>
                                         <br/></p>
                                     <p>
-                                        <text class="blue-text"><strong>Available Date</strong></text>
+                                        <text class="blue-text"><strong>Fecha de Disponibilidad</strong></text>
                                         <text class="grey-text"> : {{deal.bookAvailableDate}}</text>
                                         <br/></p>
                                     <p>
-                                        <text class="blue-text"><strong>Available To Public</strong></text>
+                                        <text class="blue-text"><strong>Disponibilidad al Público</strong></text>
                                         <text class="grey-text"> : {{deal.bookIsAvailablePublic}}</text>
                                         <br/></p>
                                     <p>
-                                        <text class="blue-text"><strong>Textbook Has Notes</strong></text>
+                                        <text class="blue-text"><strong>El libro de Texto tiene anotaciones</strong></text>
                                         <text class="grey-text"> : {{deal.bookHasNotes}}</text>
                                         <br/></p>
                                     <p>
-                                        <text class="blue-text"><strong>Textbook Is Highlighted</strong></text>
+                                        <text class="blue-text"><strong>El libro de Texto está subrayado</strong></text>
                                         <text class="grey-text"> : {{deal.bookIsHighlighted}}</text>
                                         <br/></p>
                                 </div>
@@ -189,8 +187,7 @@
             </div>
         </div>
         <div ng-show="!deal.viewMoreInfo" class="view-more-info-btn-div visible-xs">
-            <button ng-click="deal.viewMoreInfo=true" class="view-more-info-btn myBtn app-btn blue-btn">View
-                More Information
+            <button ng-click="deal.viewMoreInfo=true" class="view-more-info-btn myBtn app-btn blue-btn">Ver más información
             </button>
         </div>
 
@@ -202,20 +199,20 @@
 <div class="row" ng-show="deal.viewMoreInfo">
     <div class="col-md-12">
         <div class="archive-page-contact-history">
-            <text class="box-title uppercase orange-text lato"><strong>Contact history - </strong></text>
+            <text class="box-title uppercase orange-text lato"><strong>HISTORIAL DE CONTACTO - </strong></text>
             <text class="box-title uppercase blue-text lato" ng-if="deal.bookContactMethod=='sellerToBuyer'"><strong>
-                Seller Contact You (Buyer)
-                <text uib-tooltip="You as Buyer will not receiving any of Seller's information. Seller will contact buyer"
+                Vendedor Contacta (Comprador) Tú
+                <text uib-tooltip="Usted como Comprador no recibe ninguna de la información del Vendedor. El vendedor contactará al comprador"
                       class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text>
             </strong></text>
             <text class="box-title uppercase blue-text lato" ng-if="deal.bookContactMethod=='buyerToSeller'"><strong>
-                You (Buyer) Contact Seller
-                <text uib-tooltip="You as Buyer will receive Seller information and will contact Seller. Buyer can also provide information to the seller."
+                Tú (Comprador) Contacta Vendedor
+                <text uib-tooltip="Usted como Comprador recibe información del Vendedor y se pondrá en contacto con el Vendedor. El comprador también puede proporcionar información al vendedor."
                       class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text>
             </strong></text>
             <text class="box-title uppercase blue-text lato" ng-if="deal.bookContactMethod=='student2studentBoard'">
-                <strong> Use Student2Student Message Board
-                    <text uib-tooltip="You can chat with the buyer on Student2Student Message Board."
+                <strong> Utiliza el Tablón de anuncios de  Student2Student
+                    <text uib-tooltip="Puedes chatear con el vendedor en  el Tablón de Anuncios de Student2Student."
                           class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text>
                 </strong></text>
             <div class="contact-history-box">
@@ -225,10 +222,10 @@
                 <table class="table contact-history-table" cg-busy="{promise:messagePromise}">
                     <thead>
                     <tr>
-                        <th style="width: 20%;">Date</th>
-                        <th style="width: 20%;">Seller Nickname</th>
+                        <th style="width: 20%;">Fecha</th>
+                        <th style="width: 20%;">Nombre de usuario vendedor</th>
 
-                        <th style="width: 60%;">Action</th>
+                        <th style="width: 60%;">Acción</th>
                     </tr>
                     </thead>
 
@@ -241,22 +238,20 @@
 
                             <text ng-show="!contact.showingMessages">
                                 <button ng-click="getMessages(contact)" class="myBtn app-btn orange-btn contact-btn"><i
-                                        class="fa fa-envelope-o"></i> Messages
+                                        class="fa fa-envelope-o"></i> Mensajes
                                 </button>
                                 <br/></text>
                             <text ng-show="contact.showingMessages">
                                 <button ng-click="contact.showingMessages=false"
                                         class="myBtn app-btn green-btn contact-btn"><i class="fa fa-envelope-o"></i>
-                                    Messages
+                                    Mensajes
                                 </button>
                                 <br/></text>
                             <button ng-show="contact.sendingMessages" ng-click="contact.sendingMessages=false"
-                                    class="myBtn app-btn  green-btn contact-btn"><i class="fa fa-paper-plane"></i> Send
-                                Messages
+                                    class="myBtn app-btn  green-btn contact-btn"><i class="fa fa-paper-plane"></i> Enviar Mensajes
                             </button>
                             <button ng-show="!contact.sendingMessages" ng-click="contact.sendingMessages=true"
-                                    class="myBtn app-btn  orange-btn contact-btn"><i class="fa fa-paper-plane"></i> Send
-                                Messages
+                                    class="myBtn app-btn  orange-btn contact-btn"><i class="fa fa-paper-plane"></i> Enviar Mensajes
                             </button>
                             <br/>
 
@@ -266,9 +261,9 @@
 
 
                     <tr ng-show="contact.showingMessages" class="message-header-tr">
-                        <th>Date</th>
-                        <th>Nickname</th>
-                        <th>Message</th>
+                        <th>Fecha</th>
+                        <th>Usario</th>
+                        <th>Mensajes</th>
                     </tr>
 
                     <tr ng-show="contact.showingMessages" class="message-header-tr"
@@ -288,19 +283,19 @@
                                   novalidate>
 
 
-                                <textarea name="message" class="form-control" placeholder="Write Your Message"
+                                <textarea name="message" class="form-control" placeholder="Escribe tu mensaje"
                                           ng-model="contact.message" required></textarea>
 
                                 <p class="help-block">
-                                    <span ng-show="messageForm.message.$invalid && !messageForm.message.$pristine">Message is required.</span>
+                                    <span ng-show="messageForm.message.$invalid && !messageForm.message.$pristine">Se Require Mmensaje.</span>
                                 </p>
 
 
                                 <button type="submit" class="myBtn app-btn orange-btn contact-btn"><i
-                                        class="fa fa-paper-plane"></i> SEND
+                                        class="fa fa-paper-plane"></i> Enviar
                                 </button>
                                 <button type="button" ng-click="contact.sendingMessages=false"
-                                        class="myBtn app-btn orange-btn contact-btn"><i class="fa fa-times"></i> Cancel
+                                        class="myBtn app-btn orange-btn contact-btn"><i class="fa fa-times"></i> Cancelar
                                 </button>
 
                             </form>
@@ -317,7 +312,7 @@
         </div>
         <div>
             <button ng-click="deal.viewMoreInfo=false" class="myBtn back-button"><img
-                    src="{{appHostPath}}/dist/images/archive_pages/back.png"> &nbsp;&nbsp;&nbsp;Close
+                    src="{{appHostPath}}/dist/images/archive_pages/back.png"> &nbsp;&nbsp;&nbsp;Cerrar
             </button>
         </div>
 

@@ -263,7 +263,7 @@
                     identityService.clearAuthorizedUserData();
                     $scope.username = "Loading...";
                     $scope.loggedIn = false;
-                    responseService.showSuccessToast("Logged Out Successfully");
+                    responseService.showSuccessToast("Desconectado correctamente");
 
                     if($scope.notificationList!=undefined){
                         $scope.notificationList.$destroy();
@@ -278,7 +278,7 @@
 
                 }
             }).catch(function (response) {
-                responseService.showErrorToast("Could not Log Out", "Sorry, Try again.");
+                responseService.showErrorToast("No se pudo cerrar la sesión", "Lo siento, inténtalo de nuevo.");
             });
         }
 

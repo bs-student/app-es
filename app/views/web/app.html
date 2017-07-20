@@ -59,12 +59,12 @@
                     <li ng-show="loggedIn && !adminUser" ng-class="{messageBoard:'active'}[activePage]"><a ui-sref="app.messageBoard" class="notification-a message-board-a"><i class="fa fa-comments-o"></i><span ng-show="messageNotificationCounter>0" class="badge bg-lightred">{{messageNotificationCounter}}</span></a>
 
                         <ul class="menu-right-position notification-ul">
-                            <li>Messages</li>
-                            <li class="text-center" ng-show="messageNotificationCounter==0">No new messages.</li>
+                            <li>Mensajes</li>
+                            <li class="text-center" ng-show="messageNotificationCounter==0">No hay mensajes nuevos.</li>
                             <li data-ng-repeat="message in messageNotifications track by $index"><a ui-sref="app.messageBoard">
                                 <dl class="dl-horizontal">
                                     <dt><i class="fa fa-phone fa-2x"></i></dt>
-                                    <dd><text class="italic">{{message.sender}}</text> has sent you a message</dd>
+                                    <dd><text class="italic">{{message.sender}}</text> te ha enviado un mensaje</dd>
                                 </dl>
                             </a></li>
 
@@ -75,12 +75,12 @@
                     <li ng-show="loggedIn && !adminUser" ><a class="notification-a"><i class="fa fa fa-bell-o"></i><span ng-show="notificationCounter>0" class="badge bg-lightred">{{notificationCounter}}</span></a>
 
                         <ul class="menu-right-position notification-ul">
-                            <li>Notifications</li>
-                            <li class="text-center" ng-show="notificationCounter==0">No new notifications.</li>
+                            <li>Notificaciones</li>
+                            <li class="text-center" ng-show="notificationCounter==0">No hay nuevas notificaciones.</li>
                             <li data-ng-repeat="notification in notifications track by $index"><a ui-sref="app.sellingBookList">
                                 <dl class="dl-horizontal">
                                     <dt><i class="fa fa-phone fa-2x"></i></dt>
-                                    <dd><text class="italic">{{notification.buyerNickName}}</text> has contacted you for <text class="italic">"{{notification.bookTitle}}"</text></dd>
+                                    <dd><text class="italic">{{notification.buyerNickName}}</text> ha contactado con usted para <text class="italic">"{{notification.bookTitle}}"</text></dd>
                                 </dl>
                             </a></li>
 
@@ -89,19 +89,19 @@
                     </li>
 
 
-                    <li ng-show="loggedIn && !adminUser" ng-class="{user:'active'}[activePage]"><a href="#">Hi, <img class="header-profile-picture" ng-src="{{imageHostPath}}{{profilePicture}}"/></a>
+                    <li ng-show="loggedIn && !adminUser" ng-class="{user:'active'}[activePage]"><a href="#">Hola, <img class="header-profile-picture" ng-src="{{imageHostPath}}{{profilePicture}}"/></a>
                         <ul  class="menu-right-position">
-                            <li><a ui-sref="app.messageBoard"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;Message Board <span ng-show="messageNotificationCounter>0" class="badge badge-primary">{{messageNotificationCounter}}</span></a></li>
-                            <li><a ui-sref="app.sellingBookList"><i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;Selling Books <span ng-show="notificationCounter>0" class="badge badge-primary">{{notificationCounter}}</span></a></li>
-                            <li><a ui-sref="app.contactedBookList"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;Buying Books</a></li>
-                            <li><a ui-sref="app.sellArchive"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;Sell Archive</a></li>
-                            <li><a ui-sref="app.buyArchive"><i class="fa fa-archive"></i>&nbsp;&nbsp;&nbsp;Buy Archive</a></li>
-                            <li><a ui-sref="app.wishList"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;&nbsp;WishList</a></li>
-                            <li><a ui-sref="app.mySellPage({username:username})"><i class="fa fa-map-o"></i>&nbsp;&nbsp;&nbsp;My Sell Page</a></li>
-                            <li><a ui-sref="app.promoteMyStore"><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Promote My Store</a></li>
-                            <li><a ui-sref="app.profile"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Profile</a></li>
-                            <li><a ui-sref="app.changePassword"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Change Password</a></li>
-                            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;Log Out</a></li>
+                            <li><a ui-sref="app.messageBoard"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;Tablón de Mensajes <span ng-show="messageNotificationCounter>0" class="badge badge-primary">{{messageNotificationCounter}}</span></a></li>
+                            <li><a ui-sref="app.sellingBookList"><i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;Vendiendo Libros <span ng-show="notificationCounter>0" class="badge badge-primary">{{notificationCounter}}</span></a></li>
+                            <li><a ui-sref="app.contactedBookList"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;Comprando Libros</a></li>
+                            <li><a ui-sref="app.sellArchive"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;Vender Archivos</a></li>
+                            <li><a ui-sref="app.buyArchive"><i class="fa fa-archive"></i>&nbsp;&nbsp;&nbsp;Comprar Archivos</a></li>
+                            <li><a ui-sref="app.wishList"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;&nbsp;Lista de favoritos</a></li>
+                            <li><a ui-sref="app.mySellPage({username:username})"><i class="fa fa-map-o"></i>&nbsp;&nbsp;&nbsp;Mi Página de Venta</a></li>
+                            <li><a ui-sref="app.promoteMyStore"><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Promocionar Mi Tienda</a></li>
+                            <li><a ui-sref="app.profile"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Perfil</a></li>
+                            <li><a ui-sref="app.changePassword"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Cambiar Contraseña</a></li>
+                            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;Desconectar</a></li>
                         </ul>
                     </li>
                     <li ng-show="loggedIn && adminUser" ng-class="{user:'active'}[activePage]"><a href="#">Hi, {{username}}</a>

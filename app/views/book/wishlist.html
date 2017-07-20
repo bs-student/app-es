@@ -2,7 +2,7 @@
     <div class="container clearfix">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="header-title"><text class="uppercase blue-text lato">My </text><text class="uppercase orange-text lato"> Wishlist</text></h1>
+                <h1 class="header-title"><text class="uppercase blue-text lato">MI LISTA</text><text class="uppercase orange-text lato"> DE DESEOS</text></h1>
 
             </div>
         </div>
@@ -23,7 +23,13 @@
         <div class="container clearfix quote-container-homepage">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p class="lato px-25 orange-text"> You have no textbooks yet on your wishlist. You can add textbooks to your wishlist buy searching for them <a ui-sref="app.bookBuy">here</a> and then clicking on the Wishlist button </p>
+                    <p class="lato px-25 orange-text">
+
+                        No hay libros en tu Lista de Deseos todavía.
+
+                        Puedes añadir Libros de texto a tu Lista de Deseos buscándolos <a ui-sref="app.bookBuy">aquí</a>.
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -66,15 +72,15 @@
                         <div class="archive-page-headers">
                             <h3 class="book-title orange-text lato uppercase"><a class="orange-link" ui-sref="app.bookComparePrice({asin:deal.bookIsbn10,isbn:deal.bookIsbn10})">{{deal.bookTitle}}</a></h3>
                             <h4 class="book-sub-title blue-text lato">{{deal.bookSubTitle}}</h4>
-                            <p class="book-description grey-text">By <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text> :: Published by {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
+                            <p class="book-description grey-text">De <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text> :: Publicado por {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
                                 <br/>ISBN-10: <text class="blue-text">{{deal.bookIsbn10}}</text> :: ISBN-13: <text class="blue-text">{{deal.bookIsbn13}}</text></p>
                         </div>
                         <div class="archive-page-deal-information">
                             <div ng-show="!deal.viewMoreInfo" class="view-more-info-btn-div hidden-xs">
-                                <button ng-click="deal.viewMoreInfo=true" class="view-more-info-btn myBtn app-btn blue-btn">View More Information</button>
+                                <button ng-click="deal.viewMoreInfo=true" class="view-more-info-btn myBtn app-btn blue-btn">Ver más información</button>
                             </div>
                             <div ng-show="deal.viewMoreInfo">
-                                <text class="box-title uppercase orange-text lato"><strong>Book Details</strong></text>
+                                <text class="box-title uppercase orange-text lato"><strong>Detalles del Libro</strong></text>
                                 <div class="deal-information-box">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -98,7 +104,7 @@
 
                             <div class="buttons">
 
-                                <button data-options="splash-2 splash-primary splash-ef-2" ng-click="showDeleteModal($event,'deleteModalContent',{book:deal})" class="myBtn app-btn orange-btn"><img src="{{appHostPath}}/dist/images/archive_pages/del.png"/> &nbsp; Delete</button>
+                                <button data-options="splash-2 splash-primary splash-ef-2" ng-click="showDeleteModal($event,'deleteModalContent',{book:deal})" class="myBtn app-btn orange-btn"><img src="{{appHostPath}}/dist/images/archive_pages/del.png"/> &nbsp; Borrar</button>
                             </div>
 
 
@@ -109,7 +115,7 @@
                 <div class="row" ng-show="deal.viewMoreInfo">
                     <div class="col-md-12">
 
-                        <div><button ng-click="deal.viewMoreInfo=false" class="myBtn back-button"><img src="{{appHostPath}}/dist/images/archive_pages/back.png"> &nbsp;&nbsp;&nbsp;Close</button></div>
+                        <div><button ng-click="deal.viewMoreInfo=false" class="myBtn back-button"><img src="{{appHostPath}}/dist/images/archive_pages/back.png"> &nbsp;&nbsp;&nbsp;Cerrar</button></div>
 
                     </div>
                 </div>
@@ -178,17 +184,17 @@
 
 <script type="text/ng-template" id="deleteModalContent">
      <div class="modal-header">
-         <h3 class="modal-title custom-font white-text">Delete this book from WishList?</h3>
+         <h3 class="modal-title custom-font white-text">¿Eliminó este libro de la lista de deseos?</h3>
      </div>
     <div class="modal-body">
 
-        <p>You Sure you want to sell this book from WishList?</p>
+        <p>¿Seguro que quiere eliminar este libro de WishList?</p>
 
 
     </div>
     <div class="modal-footer">
         <button class="btn btn-success btn-ef btn-ef-3 btn-ef-3c" ng-click="confirmModal(deleteBookFromWishList,src)" >
-            <i class="fa fa-check" ></i> Yes
+            <i class="fa fa-check" ></i> Si
         </button>
         <button class="btn btn-danger btn-ef btn-ef-3 btn-ef-3c" ng-click="closeModal()"><i
                 class="fa fa-times"></i> No

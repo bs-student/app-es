@@ -5,12 +5,12 @@
     app
         .controller('GoogleAnalyticsReportCtrl', GoogleAnalyticsReportCtrl);
 
-    GoogleAnalyticsReportCtrl.$inject = ['$moment', '$timeout', '$state', 'identityService', 'adminReportService', '$scope', '$filter', '$q', 'ngTableParams', 'responseService', 'SERVER_CONSTANT'];
+    GoogleAnalyticsReportCtrl.$inject = ['$moment', '$timeout', '$state', 'identityService', 'adminReportService', '$scope', '$filter', '$q', 'ngTableParams', 'responseService', 'SERVER_CONSTANT','GOOGLE_ANALYTICS_CONSTANT'];
 
-    function GoogleAnalyticsReportCtrl($moment, $timeout, $state, identityService, adminReportService, $scope, $filter, $q, ngTableParams, responseService, SERVER_CONSTANT) {
+    function GoogleAnalyticsReportCtrl($moment, $timeout, $state, identityService, adminReportService, $scope, $filter, $q, ngTableParams, responseService, SERVER_CONSTANT,GOOGLE_ANALYTICS_CONSTANT) {
 
         $scope.accessTokenGoogleServiceAccount = undefined;
-        $scope.gaViewId = 'ga:129850413';
+        $scope.gaViewId = GOOGLE_ANALYTICS_CONSTANT.GA_ID;
 
         $scope.imageHostPath = SERVER_CONSTANT.IMAGE_HOST_PATH;
         $scope.$parent.main.title = "Google Analytics Report";
@@ -153,19 +153,11 @@
                 'ids': $scope.gaViewId,
                 'dimensions': 'ga:region,ga:country',
                 'metrics': 'ga:users',
-                'filters': 'ga:country==United States',
+                'filters': 'ga:country==Spain',
                 'start-date': $scope.startDateGoogleFormat,
                 'end-date': $scope.endDateGoogleFormat
             });
 
-            var cityCanadaQueryData = query({
-                'ids': $scope.gaViewId,
-                'dimensions': 'ga:region,ga:country',
-                'metrics': 'ga:users',
-                'filters': 'ga:country==Canada',
-                'start-date': $scope.startDateGoogleFormat,
-                'end-date': $scope.endDateGoogleFormat
-            });
 
             Promise.all([userQueryData]).then(function (results) {
 
@@ -213,14 +205,6 @@
                 google.charts.setOnLoadCallback(drawUsaRegionsMap);
             });
 
-            Promise.all([cityCanadaQueryData]).then(function (results) {
-                $scope.canadaRegionMapData = results[0].rows.filter(function(row){ if(row[0] != "(not set)") return row;});
-                $scope.canadaRegionMapData =  $scope.canadaRegionMapData.map(function (row) {
-                    return [row[0], parseInt(row[2])];
-                });
-                $scope.canadaRegionMapData.unshift(['State', 'User Visits']);
-                google.charts.setOnLoadCallback(drawCanadaRegionsMap);
-            });
 
 
         }
@@ -232,25 +216,11 @@
             var data = google.visualization.arrayToDataTable($scope.usaRegionMapData);
 
             var options = {
-                region: 'US',
+                region: 'ES',
                 resolution: 'provinces'
             };
 
             var chart = new google.visualization.GeoChart(document.getElementById('usa_regions_div'));
-
-            chart.draw(data, options);
-        }
-
-        function drawCanadaRegionsMap() {
-
-            var data = google.visualization.arrayToDataTable($scope.canadaRegionMapData);
-
-            var options = {
-                region: 'CA',
-                resolution: 'provinces'
-            };
-
-            var chart = new google.visualization.GeoChart(document.getElementById('canada_regions_div'));
 
             chart.draw(data, options);
         }

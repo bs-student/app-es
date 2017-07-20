@@ -6,6 +6,10 @@
 /********************************************/
 /*              Header                        */
 /*********************************************/
+#main-navbar ul ul,
+#main-navbar ul li .mega-menu-content {
+    width: 220px;
+}
 img.header-profile-picture{
     height: 30px;
     width: 30px;
