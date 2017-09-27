@@ -29,7 +29,7 @@ multipleImageInput.$inject=["$parse","responseService","imageStoreService"];
                             if (file.name.match(/\.(jpg|jpeg|png|JPG|JPEG|PNG)$/) && (parseInt(file.size/1024,10)<=300)){
                                 validFiles.push(file);
                             }else{
-                                responseService.showErrorToast("Add Picture File and less than 300KB");
+                                responseService.showErrorToast("Añade archivo de imagen menos de 300KB");
                             }
 
 

@@ -98,7 +98,8 @@
                         return item;
                     });
                 }).catch(function(response){
-                    responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+//                    responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.")
                 });
 
             }

@@ -73,7 +73,8 @@
                         responseService.showErrorToast(response.data.error.errorTitle, response.data.error.errorDescription);
 
                     } else {
-                        responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+//                        responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+                        responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.")
                     }
 
                 });
@@ -128,7 +129,8 @@
                         responseService.showErrorToast(response.data.error.errorTitle, response.data.error.errorDescription);
 
                     } else {
-                        responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+//                        responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+                        responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.")
                     }
 
                 });

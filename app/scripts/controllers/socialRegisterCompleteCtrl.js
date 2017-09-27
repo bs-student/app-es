@@ -31,7 +31,8 @@
             referralService.getReferralList().then(function(response){
                 $scope.referrals = response.data.success.successData;
             }).catch(function(response){
-                responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+//                responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+                responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
             });
 
             $scope.states        = null;
@@ -75,7 +76,8 @@
                         return item;
                     });
                 }).catch(function(response){
-                    responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+//                    responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
                 });
             }
 
@@ -120,12 +122,15 @@
                     $scope.$parent.logout();
                 } else if (response.data.error_description == "The access token provided has expired.") {
                     identityService.getRefreshAccessToken(identityService.getRefreshToken()).then(setAuthorizedUserData).catch(function(){
-                        responseService.showErrorToast("Something Went Wrong", "Please try again.");
+//                        responseService.showErrorToast("Something Went Wrong", "Please try again.");
+                        responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
+
                     });
                 } else if (response.data.error != undefined) {
                     responseService.showErrorToast(response.data.error.errorTitle, response.data.error.errorDescription);
                 } else {
-                    responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+//                    responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
                 }
             });
 

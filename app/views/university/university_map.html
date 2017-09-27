@@ -8,7 +8,7 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header">University Map</p>
+                <p class="text-white mid-two-header">Mapa de la Universidad</p>
 
             </div>
 
@@ -34,10 +34,10 @@
                                     <div class="col-md-12">
                                         <div class="form-group" ng-class="{ 'has-error' : userForm.campus.$invalid && !userForm.campus.$pristine, 'has-success' : userForm.campus.$valid && !userForm.campus.$pristine}">
 
-                                            <p class="white-text">Search by any University Name, Campus Name or State Name: </p> <p class="white-text">If not found then <a ui-sref="app.addUniversity">Create a new university!</a></p>
+                                            <p class="white-text">Busca por el nombre de la universidad, campus o de la comunidad: </p> <p class="white-text">Si no se encuentra, <a ui-sref="app.addUniversity">crea la nueva universidad!</a></p>
 
                                             <input
-                                                    placeholder="Type any University/Campus/State Name"
+                                                    placeholder="Introduce cualquier universidad/campus/comunidad"
 
                                                     typeahead-on-select="onCampusSelect($item, $model, $label)"
                                                     ng-model-options="modelOptions"
@@ -50,9 +50,9 @@
                                                     class="form-control input-style"
                                                     autocomplete="off">
 
-                                            <text ng-show="loadingCampuses"  class="white-text"><i class="fa fa-cog fa-spin fa-fw"></i> Getting University Information...</text>
+                                            <text ng-show="loadingCampuses"  class="white-text"><i class="fa fa-cog fa-spin fa-fw"></i> Recolección de información de universidades...</text>
                                             <div ng-show="noResults" class="text-danger">
-                                                <i class="fa fa-times"></i> No Results Found
+                                                <i class="fa fa-times"></i> No se han encontrado resultados
                                             </div>
 
 
@@ -64,11 +64,11 @@
 
                                     <div class="col-md-12" ng-show="campusDetails" >
 
-                                        <p class="white-text"><b>University Name:</b>&nbsp; {{campusDetails.universityName}}</p>
-                                        <p class="white-text"><b>University Url:</b>&nbsp; {{campusDetails.universityUrl}}</p>
-                                        <p class="white-text"><b>University Campus:</b>&nbsp; {{campusDetails.campusName}}</p>
-                                        <p class="white-text"><b>University State:</b>&nbsp; {{campusDetails.stateName}} ( {{campusDetails.stateShortName}} )</p>
-                                        <p class="white-text"><b>University Country:</b>&nbsp; {{campusDetails.countryName}}</p>
+                                        <p class="white-text"><b>Nombre de la Universidad:</b>&nbsp; {{campusDetails.universityName}}</p>
+                                        <p class="white-text"><b>URL de la Universidad:</b>&nbsp; {{campusDetails.universityUrl}}</p>
+                                        <p class="white-text"><b>Campus universitario:</b>&nbsp; {{campusDetails.campusName}}</p>
+                                        <p class="white-text"><b>Estado universitario:</b>&nbsp; {{campusDetails.stateName}} ( {{campusDetails.stateShortName}} )</p>
+                                        <p class="white-text"><b>País Universitario:</b>&nbsp; {{campusDetails.countryName}}</p>
 
 
                                     </div>
@@ -96,14 +96,14 @@
 
                 <div class="login-page-dark-div login-page-quotation add-university-help-text white-text">
 
-                    <h4 class="white-text">What is this?</h4>
+                    <h4 class="white-text">Que es esto?</h4>
 
-                    <p>Here you can search your University if it exists on Student 2 Student.
+                    <p>Aquí puedes buscar tu universidad, si está registrada en Student2Student
                     </p>
                     <br/><br/>
-                    <h4 class="white-text">Search Type</h4>
+                    <h4 class="white-text">Tipo de búsqueda</h4>
 
-                    <p>You can use University Name, State Name, Campus Name and even Country Name to search</p><br/><br/>
+                    <p>Para buscar puedes utilizar el nombre de la universidad, del campus, de la comunidad o del país </p><br/><br/>
 
 
                 </div>

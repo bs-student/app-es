@@ -449,7 +449,7 @@
                             <div class="has-error">
                                 <p>
                                     <span class="text-danger"
-                                          ng-show="(book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)">You have to provide at least one contact information.</span>
+                                          ng-show="(book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)">Tienes que facilitar por lo menos una información de contacto.</span>
                                 </p>
                             </div>
 
@@ -586,7 +586,7 @@
                                           </span>
                             </p>
                             <p class="help-block">
-                                <span ng-show="step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine">You have to set book available date in (11-May-2016) format.</span>
+                                <span ng-show="step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine">Tienes que seleccionar la fecha disponible del libro en el siguiente formato (11-Mayo-2016).</span>
                             </p>
 
                         </div>
@@ -610,7 +610,7 @@
                             <!--<input type="number" string-to-number name="bookPriceSell" ng-model="book.bookPriceSell" ui-validate=" '$value <= {{bookPriceSellOriginal}}' " class="form-control"  required/>-->
                             <p class="help-block">
                                 <span ng-show="step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine">Debes incluir el precio de venta.</span><br/>
-                                <span ng-show="step3.bookPriceSell.$error.valSellingPrice">Your Price cannot be greater than {{bookPriceSell}}</span>
+                                <span ng-show="step3.bookPriceSell.$error.valSellingPrice">Tu precio no puede superar los {{bookPriceSell}}</span>
                                 <!--<span ng-if="step3.bookPriceSell.$error.validator">Your Price cannot be greater than {{bookPriceSell}}</span>-->
 
                             </p>
@@ -621,10 +621,9 @@
                             <text ng-show="foundCampusLowestPrice">
                                 <text class="px-16 lato uppercase"><strong>In Spain €</strong></text>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <text class="grey-text">Cheapest price on-campus: Spain {{campusLowestPrice}}</text>
+                                <text class="grey-text">El precio más barato del campus: España {{campusLowestPrice}}</text>
                             </text>
-                            <text ng-show="!foundCampusLowestPrice" class="px-16 lato grey-text">You are first who is
-                                selling this book on-campus "{{universityName}}"
+                            <text ng-show="!foundCampusLowestPrice" class="px-16 lato grey-text">Eres el primero del campus, quien pone este libro a la venta "{{universityName}}"
                             </text>
                         </div>
                     </div>
@@ -670,7 +669,7 @@
 
                                 <p class="help-block">
                                             <span ng-show=" (step3.bookPaymentMethodCashOnExchange.$invalid && !step3.bookPaymentMethodCashOnExchange.$pristine) ||
-                                                    (step3.bookPaymentMethodCheque.$invalid && !step3.bookPaymentMethodCheque.$pristine)">You have to choose at least one payment method.</span>
+                                                    (step3.bookPaymentMethodCheque.$invalid && !step3.bookPaymentMethodCheque.$pristine)">Tienes que elegir por lo menos un método de pago.</span>
 
                                 </p>
 

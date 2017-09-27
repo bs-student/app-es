@@ -65,7 +65,8 @@
             responseService.showErrorToast(response.data.error.errorTitle,response.data.error.errorDescription);
         }
         function showUnknownError(){
-            responseService.showErrorToast("Login Unsuccessful","Sorry, we couldn't log you in. Please Try again");
+//            responseService.showErrorToast("Login Unsuccessful","Sorry, we couldn't log you in. Please Try again");
+            responseService.showErrorToast("Acceso Incorrecto","Por favor inténtalo de nuevo");
         }
 
         function showDashboardPage(response) {
@@ -83,12 +84,14 @@
                     $scope.$parent.logout();
                 } else if (response.data.error_description == "The access token provided has expired.") {
                     identityService.getRefreshAccessToken(identityService.getRefreshToken()).then(setAuthorizedUserData).catch(function(){
-                        responseService.showErrorToast("Something Went Wrong", "Please try again.");
+//                        responseService.showErrorToast("Something Went Wrong", "Please try again.");
+                        responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.")
                     });
                 } else if (response.data.error != undefined) {
                     responseService.showErrorToast(response.data.error.errorTitle, response.data.error.errorDescription);
                 } else {
-                    responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+//                    responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.")
                 }
             });
 
@@ -102,7 +105,8 @@
             storageService.setValue('universityCampusValue',identityService.getAuthorizedUserData().campusId);
 
 
-            responseService.showSuccessToast("Login Successful");
+//            responseService.showSuccessToast("Login Successful");
+            responseService.showSuccessToast("Acceso Correcto");
 
             //Listen To Real Time Time Notification
             eventService.trigger("getContactNotifications",response.data.success.successData.username);

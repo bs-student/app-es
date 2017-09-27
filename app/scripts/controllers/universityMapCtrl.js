@@ -37,7 +37,9 @@
                     return item;
                 });
             }).catch(function(response){
-                responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+//                responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+                responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
+
             });
 
         }
@@ -48,7 +50,9 @@
                 campusService.getCampusDetailsWithUniversityAndState({campusId:$scope.campus.value}).then(function(response){
                     $scope.campusDetails = response.data.success.successData[0];
                 }).catch(function(response){
-                    responseService.showErrorToast("Sorry Something Went Wrong","Please Search again");
+//                    responseService.showErrorToast("Sorry Something Went Wrong","Please Search again");
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
+
                 });
             }
         }

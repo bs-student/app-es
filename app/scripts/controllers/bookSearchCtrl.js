@@ -188,7 +188,8 @@
                     $scope.$parent.searchingProgress = false;
                     $scope.$parent.searchingError=true;
 
-                    responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+//                    responseService.showErrorToast("Something Went Wrong", "Please Refresh the page again.")
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.")
                 }
 
 

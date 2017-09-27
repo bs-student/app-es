@@ -34,7 +34,8 @@
             referralService.getReferralList().then(function(response){
                 $scope.referrals = response.data.success.successData;
             }).catch(function(response){
-                responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+//                responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+                responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
             });
 
             $scope.states        = null;
@@ -78,7 +79,8 @@
                         return item;
                     });
                 }).catch(function(response){
-                    responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+//                    responseService.showErrorToast("Something Went Wrong","Please Reload Again");
+                    responseService.showErrorToast("Algo no salió bien", "Por favor actualiza la página e inténtalo de nuevo.");
                 });
             }
 
