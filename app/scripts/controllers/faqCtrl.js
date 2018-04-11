@@ -155,7 +155,7 @@
                             '4. Introduce una contraseña segura. Debe tener un mínimo de 6 caracteres.<br>' +
                             '5. Esta es la entrada más importante. Tienes que elegir el Campus Universitario donde vas a la escuela.<br>' +
                             'Encuentra la universidad escribiendo el nombre de la universidad, la ubicación, la URL de la universidad o la universidad. Cuando empieces a escribir las letras, el sistema extraerá una lista de universidades que ya existen en Student 2 Student. Elige tu Universidad.<br>' +
-                            '<b>(Ej:Se escribió en Osh y eligió la Universidad de Wisconsin Oshkosh, Oshkosh (WI), Estados Unidos)</b></<br>' +
+                            '<b>(Ej:Se escribió en Osh y eligió la Universidad de Wisconsin Oshkosh, Oshkosh (WI), Estados Unidos)</b><br>' +
                             '6. Dínos cómo has conocido de Student 2 Student. <b>(Ej: Facebook)</b><br>' +
                             '7. Completa el captcha<br><br>' +
 
