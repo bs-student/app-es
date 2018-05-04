@@ -148,7 +148,7 @@
                         book.bookPriceOnlineLowest = response.data.success.successData.bookPriceOnlineLowest;
 //                        calculateLowestPrice(book);
                     }).catch(function(response){
-                        book.bookPriceOnlineLowest = "Not Found";
+                        book.bookPriceOnlineLowest = "No Pudo Encontrar";
 
                     });
                 });
