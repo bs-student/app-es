@@ -70,8 +70,12 @@
         }
 
         function showDashboardPage(response) {
-            if (response.data.success.successTitle = "Login Successful") {
-                ($scope.loginPromise = identityService.getInitialAccessToken($scope.user)).then(getAuthorizedUserData).catch(showUnknownError);
+            if(response.data.success){
+                if(response.data.success.successData){
+                    if(response.data.success.successData.registrationStatus==="complete"){
+                        ($scope.loginPromise = identityService.getInitialAccessToken($scope.user)).then(getAuthorizedUserData).catch(showUnknownError);
+                    }
+                }
             }
         }
 
@@ -106,7 +110,7 @@
 
 
 //            responseService.showSuccessToast("Login Successful");
-            responseService.showSuccessToast("Acceso Correcto");
+            responseService.showSuccessToast("Hola, bienvenido "+identityService.getAuthorizedUserData().username,"Usted ha iniciado sesión.");
 
             //Listen To Real Time Time Notification
             eventService.trigger("getContactNotifications",response.data.success.successData.username);
