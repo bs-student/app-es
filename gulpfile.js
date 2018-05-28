@@ -299,7 +299,7 @@ gulp.task("js_app", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app-es-0.16.min.js'))
+        .pipe(plugins.concat('app-es-0.17.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 gulp.task("css_website", function (done) {
@@ -308,7 +308,7 @@ gulp.task("css_website", function (done) {
     return gulp.src(assets.css_website)
         .pipe(plugins.print())
         .pipe(plugins.cssmin())
-        .pipe(plugins.concat('app-es-0.4.min.css'))
+        .pipe(plugins.concat('app-es-0.5.min.css'))
         .pipe(gulp.dest('app/dist/css'));
 });
 
