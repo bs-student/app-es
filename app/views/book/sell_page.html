@@ -552,6 +552,7 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-4 text-right min-height-125">
                         <div class="vertical-align-middle">
+                            <text tooltip-placement="top" tooltip-class="tooltip-class" uib-tooltip="El libro se mostrará a los usuarios aunque no estén conectados o desde su universidad, pero solo los estudiantes de su campus pueden contactarlo." class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text>
                             <text class="px-16 lato uppercase"><strong>TEXTO DISPONIBLE AL PUBLICO :</strong></text>
                         </div>
                     </div>
@@ -644,7 +645,7 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-20 min-height-125">
+                    <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-10 min-height-125">
                         <div class="vertical-align-middle">
                             <text class="px-16 lato uppercase"><strong>METODO DE PAGO :</strong></text>
                         </div>
@@ -654,35 +655,23 @@
                         <div class="vertical-align-middle">
                             <div ng-class="{
 
-                                    'has-error' :   (step3.cashPaymentMethod.$invalid && !step3.cashPaymentMethod.$pristine) ||
-                                                    (step3.chequePaymentMethod.$invalid && !step3.chequePaymentMethod.$pristine),
+                                    'has-error' :   (step3.cashPaymentMethod.$invalid && !step3.cashPaymentMethod.$pristine),
 
-                                    'has-success' :   (step3.chequePaymentMethod.$valid && !step3.chequePaymentMethod.$pristine) ||
-                                                      (step3.chequePaymentMethod.$valid && !step3.chequePaymentMethod.$pristine)}">
+                                    'has-success' :   (step3.cashPaymentMethod.$valid && !step3.cashPaymentMethod.$pristine)}">
 
                                 <label class="checkbox checkbox-custom">
                                     <input type="checkbox"
                                            ng-required="
 
-                                                       !(book.paymentMethodCashOnExchange || book.paymentMethodCheque)
+                                                       !(book.paymentMethodCashOnExchange)
 
                                                        "
                                            name="cashPaymentMethod" ng-model="book.paymentMethodCashOnExchange"><i></i>
                                     Intercambio de Efectivo
                                 </label>
 
-                                <label class="checkbox checkbox-custom">
-                                    <input type="checkbox" ng-required="
-
-                                                       !(book.paymentMethodCashOnExchange || book.paymentMethodCheque)
-
-                                                       " name="chequePaymentMethod" ng-model="book.paymentMethodCheque"><i></i>
-                                    Cheque
-                                </label>
-
                                 <p class="help-block">
-                                            <span ng-show=" (step3.cashPaymentMethod.$invalid && !step3.cashPaymentMethod.$pristine) ||
-                                                    (step3.chequePaymentMethod.$invalid && !step3.chequePaymentMethod.$pristine)">Tienes que elegir por lo menos un método de pago.</span>
+                                            <span ng-show=" (step3.cashPaymentMethod.$invalid && !step3.cashPaymentMethod.$pristine)">Tienes que elegir por lo menos un método de pago.</span>
 
                                 </p>
 
