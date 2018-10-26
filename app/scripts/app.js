@@ -29,7 +29,8 @@ var app = angular
         'jkuri.slimscroll',
         'firebase',
         'ngScrollGlue',
-        'chart.js'
+        'chart.js',
+        'pascalprecht.translate'
 //        'ngTouch',
 //        'ngMessages',
 //        'FBAngular',
@@ -112,13 +113,26 @@ var app = angular
 
     //angular-language
     .config(['$translateProvider', function ($translateProvider) {
-        $translateProvider.useStaticFilesLoader({
-            prefix: 'languages/',
-            suffix: '.json'
+        // $translateProvider.useStaticFilesLoader({
+        //     prefix: 'languages/',
+        //     suffix: '.json'
+        // });
+        // $translateProvider.useLocalStorage();
+        // $translateProvider.preferredLanguage('en');
+        // $translateProvider.useSanitizeValueStrategy(null);
+
+        $translateProvider.translations('en', {
+            'TITLE': 'Hello',
+            'FOO': 'This is a paragraph'
         });
-        $translateProvider.useLocalStorage();
-        $translateProvider.preferredLanguage('en');
-        $translateProvider.useSanitizeValueStrategy(null);
+
+        $translateProvider.translations('es', {
+            'TITLE': 'Hallo',
+            'FOO': 'Dies ist ein Absatz'
+        });
+
+        $translateProvider.preferredLanguage('es');
+
     }])
 
     .config(['$authProvider', 'SOCIAL_MEDIA_INTEGRATION_CONSTANT', function ($authProvider, SOCIAL_MEDIA_INTEGRATION_CONSTANT) {
