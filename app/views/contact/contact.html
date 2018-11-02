@@ -12,7 +12,7 @@
 
                     <div ng-if="deal.bookContactMethod=='buyerToSeller'" class="col-md-10">
                         <div class="book-title-header">
-                            <h1 class="uppercase"><strong>DEBES (Comprador) DE CONTACTAR CON EL VENDEDOR({{deal.username}})
+                            <h1 class="uppercase"><strong>{{'buyBookScreenTexts.YOU_NEED_TO_CONTACT_SELLER' | translate}} ({{deal.username}})
                                 </strong></h1>
                             <hr/>
                         </div>
@@ -20,11 +20,8 @@
                             <p class="book-subtitle-header">¡Comprar libros de otros estudiantes, puede ser tan sencillo!</p>
 
                             <p>
-                                El vendedor ({{deal.username}}) de este libro de texto <b>quiere que le contactes</b>.
-
-                                Por favor, envía tu email para que podamos enviarte los datos de contacto del vendedor.
-
-                                Existe igualmente la opción para enviar un mensaje al Vendedor.
+                                {{'buyBookScreenTexts.THE_SELLER_OF_THIS_BOOK_WANTS_YOU'| translate:'{username:deal.username}'}} <b> {{'buyBookScreenTexts.YOU_TO_CONATCT'| translate}}</b>.
+                                {{'buyBookScreenTexts.PROVIDE_YOUR_EMAIL_BELOW'| translate}}
 
                             </p>
                         </div>
@@ -33,7 +30,7 @@
                     <div ng-if="deal.bookContactMethod=='sellerToBuyer'" class="col-md-10">
                         <div class="book-title-header">
                             <h1 class="uppercase"><strong>
-                                EL VENDEDOR ({{deal.username}}) SE PONDRA ENC CONTACTO CON USTED (COMPRADOR)</strong>
+                                {{'buyBookScreenTexts.SELLER' | translate}} ({{deal.username}}) {{'buyBookScreenTexts.WILL_CONTACT_YOU' | translate}}</strong>
                             </h1>
                             <hr/>
                         </div>
@@ -41,9 +38,7 @@
                             <p class="book-subtitle-header">¡Puede ser tan sencillo comprar libros de otros estudiantes!</p>
 
                             <p>
-                                El vendedor ({{deal.username}}) de este libro de texto quiere ponerse en contacto con usted.
-                                A continuación proporcione su información de contacto.
-                                Nosotros se la enviaremos al vendedor para que posteriormente se ponga en contacto con usted. También tiene la opción de enviar un mensaje al Vendedor.
+                                {{'buyBookScreenTexts.THE_SELLER' | translate}} ({{deal.username}}) {{'buyBookScreenTexts.OF_THIS_BOOK_WANTS' | translate}}
                             </p>
                         </div>
                     </div>
@@ -51,16 +46,14 @@
                     <div ng-if="deal.bookContactMethod=='student2studentBoard'" class="col-md-10">
                         <div class="book-title-header">
                             <h1 class="uppercase"><strong>
-                                ENVIAR MENSAJES A ({{deal.username}}) TRAVES DEL TABLERO DE MENSAJES DE STUDENT2STUDENT.</strong></h1>
+                                {{'buyBookScreenTexts.SEND_MESSAGE_TO_SELLER' | translate:'{userName:deal.username}'}}</strong></h1>
                             <hr/>
                         </div>
                         <div>
                             <p class="book-subtitle-header">¡Puede ser tan sencillo comprar libros de otros estudiantes!</p>
 
                             <p>
-                                Con este método, usted y el vendedor pueden enviarse mensajes reciprocamente través del tablero de mensajes de Student2Student.
-
-                                Para realizar el intercambio con el vendedor sin necesidad de proporcionar ninguna información personal como número de teléfono o dirección de correo electrónico comparta ubicación, hora, etc..
+                                {{'buyBookScreenTexts.IN_THIS_METHOD_YOU_AND_SELLER' | translate}}
 
                             </p>
                         </div>
@@ -104,7 +97,7 @@
                                      class="form-group"
                                      ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success' : contactForm.email.$valid && !contactForm.email.$pristine}">
 
-                                    <p class="" for="email">Email: </p>
+                                    <p class="" for="email">{{'placeholderTexts.EMAIL' | translate}}: </p>
                                     <input type="email" name="email" id="email" class="form-control "
                                            ng-model="contact.buyerEmail" required>
 
@@ -136,7 +129,7 @@
                                 <div class="form-group"
                                      ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine, 'has-success' : contactForm.message.$valid && !contactForm.message.$pristine}">
 
-                                    <p class="" for="message">Mensaje: </p>
+                                    <p class="" for="message">{{'placeholderTexts.MESSAGE' | translate}}: </p>
                                     <textarea rows="5" type="text" name="message" id="message" class="form-control "
                                               ng-model="contact.messages[0].messageBody" required></textarea>
 

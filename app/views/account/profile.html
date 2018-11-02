@@ -79,13 +79,13 @@
                     <img data-ng-src="{{imageHostPath}}{{user.profilePicture}}"/>
                 </div>
 
-                <text class="lato px-18">Nombre Completo :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">{{'placeholderTexts.FULL_NAME' | translate}} :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.fullName}}</text>
                 <br/>
                 <text class="lato px-18">Nombre de usuario :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.username}}</text>
                 <br/>
-                <text class="lato px-18">Email :&nbsp;&nbsp;&nbsp;</text>
+                <text class="lato px-18">{{'placeholderTexts.EMAIL' | translate}} :&nbsp;&nbsp;&nbsp;</text>
                 <text class="blue-text lato px-18">{{user.email}}</text>
                 <br/>
                 <text class="lato px-18">Notificación de email:&nbsp;&nbsp;&nbsp;</text>
@@ -186,7 +186,7 @@
 
 
             <div class="col-md-12">
-                <text class="lato px-18">Nombre Completo :</text>
+                <text class="lato px-18">{{'placeholderTexts.FULL_NAME' | translate}} :</text>
 
 
 
@@ -204,7 +204,7 @@
                             class="form-control">
 
                     <p class="help-block">
-                        <span ng-show="updateProfileForm.fullName.$invalid && !updateProfileForm.fullName.$pristine">Full Name is Required</span>
+                        <span ng-show="updateProfileForm.fullName.$invalid && !updateProfileForm.fullName.$pristine">{{'validationTexts.YOUR_NAME_IS_REQUIRED' | translate}}</span>
                     </p>
                 </div>
 
@@ -248,7 +248,7 @@
 
 
                             <p class="help-block">
-                                <span ng-show="updateProfileForm.subject.$invalid && !updateProfileForm.subject.$pristine">Campus is required.</span>
+                                <span ng-show="updateProfileForm.subject.$invalid && !updateProfileForm.subject.$pristine">{{'validationTexts.CAMPUS_IS_REQUIRED' | translate}}</span>
                             </p>
                         </div>
                         
@@ -278,7 +278,7 @@
 
 
                     <div class="col-md-12">
-                        <text class="lato px-18">Teléfono Móvil :</text>
+                        <text class="lato px-18">{{'userPanelBookDealTexts.CELL_PHONE' | translate}} :</text>
                         <br/>
 
                         <div>
@@ -352,10 +352,10 @@
         <div class="quick-links">
             <ul class="footer-useful-links-ul lato grey-text">
                 <li>
-                    <a ui-sref="app.sellBook">&nbsp;Vender Libros</a>
+                    <a ui-sref="app.sellBook">&nbsp;{{'buttonTexts.SELL_BOOK' | translate}}</a>
                 </li>
                 <li>
-                    <a ui-sref="app.bookBuy">&nbsp;Comprar Libros</a>
+                    <a ui-sref="app.bookBuy">&nbsp;{{'buyBookScreenTexts.BUY_BOOKS'| translate}}</a>
                 </li>
                 <li>
                     <a ui-sref="app.howItWorks">&nbsp;¿Cómo funciona?</a>
@@ -364,7 +364,7 @@
                     <a ui-sref="app.news">&nbsp;Novedades</a>
                 </li>
                 <li>
-                    <a ui-sref="app.faq">&nbsp;Preguntas Frecuentes</a>
+                    <a ui-sref="app.faq">&nbsp;{{'menuTexts.FAQ' | translate}}</a>
                 </li>
 
             </ul>

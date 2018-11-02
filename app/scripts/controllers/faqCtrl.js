@@ -26,11 +26,11 @@
                 active: true,
                 faqs: [
                     {
-                        question: "¿Cómo funciona Student2Student?",
+                        question: 'faqScreenTexts.HOW_STUDENT2STUDENT_WORK',
                         answer: $sce.trustAsHtml('<iframe style="border:3px solid #FF530D !important; border-radius: 4px;" width="100%" height="315" src="https://www.youtube.com/embed/uja55f5sCbA" frameborder="0" allowfullscreen></iframe>')
                     },
                     {
-                        question: "¿Es Student2Student realmente gratis?",
+                        question: 'faqScreenTexts.IS_STUDENT2STUDENT_FREE',
                         answer: "Sí, estudiante 2 El estudiante es absolutamente gratis para todos los estudiantes. Puedes comprar, vender, comparar, ponerte en contacto con otros estudiantes está disponible para ti sin ningún coste! ¡Queremos que ahorres tiempo y dinero!"
                     },
                     {

@@ -78,10 +78,10 @@
 
         <p class="book-description grey-text">De
             <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text>
-            :: Publicado por {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
-            <br/>ISBN:
+            :: {{'sellBookPageScreenTexts.PUBLISHED_BY' | translate}} {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
+            <br/>{{'buyBookScreenTexts.ISBN' | translate}}:
             <text class="blue-text">{{deal.bookIsbn}}</text>
-            &nbsp;&nbsp;&nbsp;&nbsp;ISBN-13:
+            &nbsp;&nbsp;&nbsp;&nbsp;{{'buyBookScreenTexts.ISBN' | translate}}-13:
             <text class="blue-text">{{deal.bookIsbn13}}</text>
         </p>
     </div>
@@ -94,23 +94,24 @@
         <div ng-show="deal.bookStatus=='Deactivated' && !deal.viewMoreInfo"
              class="alert alert-danger margin-top-40">
 
-            ¡El Acuerdo de Libros de Texto actualmente está <strong>desactivado</strong>!.
-            Actívelo para que los Estudiantes vuelvan a verlo.
+            <!--¡El Acuerdo de Libros de Texto actualmente está <strong>desactivado</strong>!.-->
+            <!--Actívelo para que los Estudiantes vuelvan a verlo.-->
+            {{'userPanelBookDealTexts.TEXTBOOK_IS_CURRENTLY_DEACTIVATED' | translate}}
 
         </div>
         <div ng-show="deal.viewMoreInfo">
-            <text class="box-title uppercase orange-text lato"><strong>INFORMACION DEL ACUERDO</strong></text>
+            <text class="box-title uppercase orange-text lato"><strong>{{'userPanelBookDealTexts.DEAL_INFORMATION' | translate}}</strong></text>
             <div class="deal-information-box">
                 <div class="row">
                     <div class="col-md-7">
                         <p>
-                            <text class="blue-text"><strong>Método de Contacto</strong></text>
+                            <text class="blue-text"><strong>{{'sellBookPageScreenTexts.CONTACT_METHOD' | translate}}</strong></text>
                             <text class="grey-text" ng-if="deal.bookContactMethod=='sellerToBuyer'"> : Tú (Vendedor) Contacta Comprador
                             </text>
                             <text class="grey-text" ng-if="deal.bookContactMethod=='buyerToSeller'"> : Comprador Contacta (Vendedor) Tú
                             </text>
                             <text class="grey-text" ng-if="deal.bookContactMethod=='student2studentBoard'">
-                                : Utiliza el Tablón de anuncios de  Student2Student
+                                : {{'sellBookPageScreenTexts.USE_STUDENT2STUDENT_MESSAGE_BOARD' | translate}}
                             </text>
                             <br/>
                         </p>
@@ -126,57 +127,57 @@
                             <text class="icons"><i class="fa fa-phone 2x"></i></text>
                             <text ng-show="deal.sellerCellNumber!=null"><strong>{{deal.sellerCellNumber}}</strong>
                             </text>
-                            <text ng-show="deal.sellerCellNumber==null"><strong>No facilitado por el Vendedor</strong>
+                            <text ng-show="deal.sellerCellNumber==null"><strong>{{'userPanelBookDealTexts.NOT_PROVIDED_BY_SELLER'| translate}}</strong>
                             </text>
                             <br/></p>
                         <p ng-if="deal.bookContactMethod=='buyerToSeller'">
                             <text class="icons"><i class="fa fa-phone 2x"></i></text>
                             <text ng-show="deal.sellerHomeNumber!=null"><strong>{{deal.sellerHomeNumber}}</strong>
                             </text>
-                            <text ng-show="deal.sellerHomeNumber==null"><strong>No facilitado por el Vendedor</strong>
+                            <text ng-show="deal.sellerHomeNumber==null"><strong>{{'userPanelBookDealTexts.NOT_PROVIDED_BY_SELLER'| translate}}</strong>
                             </text>
                             <br/></p>
 
                         <p>
-                            <text class="blue-text"><strong>Comentario</strong></text>
+                            <text class="blue-text"><strong>{{'userPanelBookDealTexts.COMMENTS' | translate}}</strong></text>
                             <text ng-show="deal.bookComment!=undefined" class="grey-text"> :
                                 {{deal.bookComment}}
                             </text>
-                            <text ng-show="deal.bookComment==undefined" class="grey-text"> : Sin comentarios
+                            <text ng-show="deal.bookComment==undefined" class="grey-text"> : {{'userPanelBookDealTexts.NO_COMMENTS' | translate}}
                             </text>
                             <br/></p>
                     </div>
                     <div class="col-md-5">
                         <p>
-                            <text class="blue-text"><strong>Pago</strong></text>
+                            <text class="blue-text"><strong>{{'userPanelBookDealTexts.PAYMENT' | translate}}</strong></text>
                             <text class="grey-text"> :
 
                                 <text ng-show="deal.bookPaymentMethodCashOnExchange && !deal.bookPaymentMethodCheque">
-                                    Efectivo
+                                    {{'userPanelBookDealTexts.CASH' | translate}}
                                 </text>
                                 <text ng-show="!deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
-                                    Cheque
+                                    {{'userPanelBookDealTexts.CHEQUE' | translate}}
                                 </text>
                                 <text ng-show="deal.bookPaymentMethodCashOnExchange && deal.bookPaymentMethodCheque">
-                                    Efectivo, Cheque
+                                    {{'userPanelBookDealTexts.CASH' | translate}}, {{'userPanelBookDealTexts.CHEQUE' | translate}}
                                 </text>
 
                             </text>
                             <br/></p>
                         <p>
-                            <text class="blue-text"><strong>Fecha de Disponibilidad</strong></text>
+                            <text class="blue-text"><strong>{{'userPanelBookDealTexts.AVAILABLE_DATE' | translate}}</strong></text>
                             <text class="grey-text"> : {{deal.bookAvailableDate}}</text>
                             <br/></p>
                         <p>
-                            <text class="blue-text"><strong>Disponibilidad al Público</strong></text>
+                            <text class="blue-text"><strong>{{'sellBookPageScreenTexts.AVAILABLE_TO_PUBLIC' | translate}} </strong></text>
                             <text class="grey-text"> : {{deal.bookIsAvailablePublic}}</text>
                             <br/></p>
                         <p>
-                            <text class="blue-text"><strong>El libro de Texto tiene anotaciones</strong></text>
+                            <text class="blue-text"><strong>{{'userPanelBookDealTexts.TEXTBOOK_HAS_NOTES' | translate}}</strong></text>
                             <text class="grey-text"> : {{deal.bookHasNotes}}</text>
                             <br/></p>
                         <p>
-                            <text class="blue-text"><strong>El libro de Texto está subrayado</strong></text>
+                            <text class="blue-text"><strong>{{'userPanelBookDealTexts.TEXTBOOK_IS_HIGHLIGHTED' | translate}}</strong></text>
                             <text class="grey-text"> : {{deal.bookIsHighlighted}}</text>
                             <br/></p>
                     </div>
@@ -245,7 +246,7 @@
                     ng-click="showBookDealChangeStatusModal($event,'deactivateModalContent',{deal:deal})"
                     class="myBtn app-btn orange-btn">
                 <img class="hidden-sm hidden-xs" src="{{appHostPath}}/dist/images/archive_pages/lock.png"/> &nbsp;
-                Desactivar
+                {{'userPanelBookDealTexts.DEACTIVATE' | translate}}
             </button>
 
             <button ng-show="deal.bookStatus=='Deactivated'"
@@ -253,7 +254,7 @@
                     ng-click="showBookDealChangeStatusModal($event,'activateModalContent',{deal:deal})"
                     class="myBtn app-btn green-btn">
                 <img class="hidden-sm hidden-xs" src="{{appHostPath}}/dist/images/archive_pages/lock.png"/> &nbsp;
-                Activar
+                {{'userPanelBookDealTexts.ACTIVATE' | translate}}
             </button>
 
 
@@ -262,7 +263,7 @@
                     class="myBtn app-btn orange-btn"><img class="hidden-sm hidden-xs"
                                                           src="{{appHostPath}}/dist/images/archive_pages/del.png"/>
                 &nbsp;
-                Borrar
+                {{'userPanelBookDealTexts.DELETE' | translate}}
             </button>
         </div>
         <div class="view-and-contact">
@@ -302,7 +303,7 @@
         </div>
 
         <div class="archive-page-contact-history">
-            <text class="box-title uppercase orange-text lato"><strong>HISTORIAL DE CONTACTO - </strong></text>
+            <text class="box-title uppercase orange-text lato"><strong>{{'userPanelBookDealTexts.CONTACT_HISTORY' | translate}} - </strong></text>
             <text class="box-title uppercase blue-text lato" ng-if="deal.bookContactMethod=='sellerToBuyer'"><strong>
                 Tú (Vendedor) Contacta Comprador
                 <text uib-tooltip="El comprador no está recibiendo su información. Como vendedor debes ponerte en contacto con el comprador."
@@ -314,7 +315,7 @@
                       class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text>
             </strong></text>
             <text class="box-title uppercase blue-text lato" ng-if="deal.bookContactMethod=='student2studentBoard'">
-                <strong> Utiliza el Tablón de anuncios de  Student2Student
+                <strong> {{'sellBookPageScreenTexts.USE_STUDENT2STUDENT_MESSAGE_BOARD' | translate}}
                     <text uib-tooltip="Puedes chatear con el comprador en  el Tablón de Anuncios de Student2Student."
                           class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text>
                 </strong></text>
@@ -327,9 +328,9 @@
                         <tr>
                             <th style="width: 13%;">Fecha</th>
                             <th style="width: 13%;">Usuario</th>
-                            <th ng-show="deal.bookContactMethod!=='student2studentBoard'" style="width: 15%;">Email</th>
-                            <th style="width: 20%;">Teléfono Móvil</th>
-                            <th style="width: 20%;">Teléfono Particular</th>
+                            <th ng-show="deal.bookContactMethod!=='student2studentBoard'" style="width: 15%;">{{'placeholderTexts.EMAIL' | translate}}</th>
+                            <th style="width: 20%;">{{'userPanelBookDealTexts.CELL_PHONE' | translate}}</th>
+                            <th style="width: 20%;">{{'userPanelBookDealTexts.HOME_PHONE' | translate}}</th>
                             <th style="width: 20%;">Acción</th>
                         </tr>
                         </thead>
@@ -351,13 +352,13 @@
                                 <!--<text >-->
                                 <button ng-show="!contact.showingMessages" ng-click="getMessages(contact)"
                                         class="myBtn app-btn orange-btn contact-btn"><i
-                                        class="fa fa-envelope-o"></i> Mensajes
+                                        class="fa fa-envelope-o"></i> {{'placeholderTexts.MESSAGE' | translate}}
                                 </button>
                                 <!--</text>-->
                                 <!--<text >-->
                                 <button ng-show="contact.showingMessages" ng-click="contact.showingMessages=false"
                                         class="myBtn app-btn green-btn contact-btn"><i class="fa fa-envelope-o"></i>
-                                    Mensajes
+                                    {{'placeholderTexts.MESSAGE' | translate}}
                                 </button>
                                 <!--</text>-->
 
@@ -382,7 +383,7 @@
                         <tr ng-show="contact.showingMessages" class="message-header-tr">
                             <th>Fecha</th>
                             <th>Usario</th>
-                            <th colspan="4">Mensajes</th>
+                            <th colspan="4">{{'placeholderTexts.MESSAGE' | translate}}</th>
                         </tr>
 
                         <tr ng-show="contact.showingMessages" ng-class="{'no-message':message.noMessage}"
@@ -407,7 +408,7 @@
                                               ng-model="contact.message" required></textarea>
 
                                     <p class="help-block">
-                                        <span ng-show="messageForm.message.$invalid && !messageForm.message.$pristine">Se Require Mmensaje.</span>
+                                        <span ng-show="messageForm.message.$invalid && !messageForm.message.$pristine">Se {{'validationTexts.MESSAGE_IS_REQUIRED' | translate}}.</span>
                                     </p>
 
 
@@ -489,13 +490,13 @@
 
 <script type="text/ng-template" id="sellingModalContent">
     <div class="modal-header">
-        <h3 class="modal-title custom-font white-text">Quiere Vender el Libro a "{{src.contact.buyerNickName}}"?</h3>
+        <h3 class="modal-title custom-font white-text">{{'userPanelBookDealTexts.WANT_TO_SELL_BOOK_TO_USER' | translate}} "{{src.contact.buyerNickName}}"?</h3>
     </div>
     <div class="modal-body">
 
-        <p>¿Estás seguro  que deseas vender este libro a este usuario?</p>
+        <p>{{'userPanelBookDealTexts.SURE_WANT_TO_SELL_TO_THIS_USER' | translate}}</p>
 
-        <p>Una vez Vendido puede ver el libro en la Página del Archivo de Ventas.        </p>
+        <p>{{'userPanelBookDealTexts.BOOK_WILL_BE_ON_SELL_ARCHIVE_PAGE' | translate}}</p>
 
     </div>
     <div class="modal-footer">
@@ -512,11 +513,11 @@
 
 <script type="text/ng-template" id="deactivateModalContent">
     <div class="modal-header">
-        <h3 class="modal-title custom-font white-text">¿Deseas desactivar el acuerdo  de este Libro de Texto?</h3>
+        <h3 class="modal-title custom-font white-text">{{'userPanelBookDealTexts.SURE_WANT_TO_ACTIVATE' | translate}}</h3>
     </div>
     <div class="modal-body">
 
-        <p>¿Estás seguro que deseas desactivar el acuerdo de este Libro de Texto "{{src.deal.bookTitle}}"? Ningún estudiante podrá ver más el acuerdo.</p>
+        <p>{{'userPanelBookDealTexts.SURE_WANT_TO_ACTIVATE' | translate}} "{{src.deal.bookTitle}}"? {{'userPanelBookDealTexts.NO_STUDENT_WILL_SEE' | translate}}</p>
 
 
     </div>
@@ -532,12 +533,12 @@
 
 <script type="text/ng-template" id="activateModalContent">
     <div class="modal-header">
-        <h3 class="modal-title custom-font white-text">¿Deseas activar el acuerdo de este Libro de texto?</h3>
+        <h3 class="modal-title custom-font white-text">{{'userPanelBookDealTexts.WANT_TO_DEACTIVATE' | translate}}</h3>
     </div>
     <div class="modal-body">
 
 
-        <p>¿Estás seguro que deseas activar el acuerdo de este Libro de texto "{{src.deal.bookTitle}}"? Otros estudiantes podrán ver el acuerdo y preguntar por el libro de texto.</p>
+        <p>{{'userPanelBookDealTexts.SURE_WANT_TO_DELETE' | translate}} "{{src.deal.bookTitle}}"? {{'userPanelBookDealTexts.OTHER_STUDENTS_WILL_SEE' | translate}}</p>
 
 
     </div>
@@ -553,14 +554,13 @@
 
 <script type="text/ng-template" id="deleteModalContent">
     <div class="modal-header">
-        <h3 class="modal-title custom-font white-text">¿Deseas Eliminar este Acuerdo?</h3>
+        <h3 class="modal-title custom-font white-text">{{'userPanelBookDealTexts.WANT_TO_DELETE' | translate}}?</h3>
     </div>
     <div class="modal-body">
 
-        <p>Estás seguro que deseas eliminarlo "{{src.deal.bookTitle}}" ?</p>
+        <p>{{'userPanelBookDealTexts.SURE_WANT_TO_DELETE' | translate}} "{{src.deal.bookTitle}}" ?</p>
 
-        <p>Una vez eliminado todo el contenido relacionado con este libro, el Acuerdo será borrado.
-            No será posible recuperar ningún datos relativo a este acuerdo de libros después de esta acción.
+        <p>{{'userPanelBookDealTexts.ONCE_DELETED_CANNOT_RECOVER' | translate}}
         </p>
 
 

@@ -230,7 +230,7 @@
 
     <select name="referral" id="referral" ng-model="university.referral" class="form-control mb-10 input-style"
             data-ng-options="referral.id as referral.referral_name for referral in referrals" required>
-        <option value="">---Seleccione Referencia---</option>
+        <option value="">---{{'validationTexts.SELECT_REFERRAL' | translate}}---</option>
     </select>
 
     <p class="help-block">
@@ -242,11 +242,11 @@
 <div  class="col-md-12"
      ng-class="{ 'has-error' : universityCreateForm.agree.$invalid && !universityCreateForm.agree.$pristine, 'has-success' : universityCreateForm.agree.$valid && !universityCreateForm.agree.$pristine}">
     <br/><label class="checkbox checkbox-custom white-text">
-    <input type="checkbox" name="agree" id="agree" ng-model="university.agree" required ><i></i> Acepto los <a ui-sref="app.conditionOfUse" class="text-info">términos de servicio</a>
+    <input type="checkbox" name="agree" id="agree" ng-model="university.agree" required ><i></i> {{'signUpScreenTexts.I_AGREE' | translate}} <a ui-sref="app.conditionOfUse" class="text-info">términos de servicio</a>
 </label>
 
     <p class="help-block">
-        <span ng-show="universityCreateForm.agree.$invalid && !universityCreateForm.agree.$pristine">Usted debe aceptar términos de servicio.</span>
+        <span ng-show="universityCreateForm.agree.$invalid && !universityCreateForm.agree.$pristine">{{'validationTexts.YOU_HAVE_TO_AGREE_SIGNUP' | translate}}</span>
     </p></br></br>
 
 </div>

@@ -8,7 +8,7 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header">Iniciar Sesión</p>
+                <p class="text-white mid-two-header">{{'signInScreenTexts.SIGN_IN' | translate}}</p>
 
 
             </div>
@@ -27,41 +27,41 @@
 
                         <div class="form-group"
                              ng-class="{ 'has-error' : loginForm._username.$invalid && !loginForm._username.$pristine, 'has-success' : loginForm._username.$valid && !contactForm._username.$pristine}">
-                            <p class="white-text ">Email o Usuario :</p>
+                            <p class="white-text ">{{'placeholderTexts.EMAIL_OR_USERNAME' | translate}} :</p>
 
                             <input name="_username" type="text" class="form-control input-style"
                                    placeholder="Email / Usuario" ng-model="user._username" required>
 
                             <p class="help-block">
-                                <span ng-show="loginForm._username.$invalid && !loginForm._username.$pristine">Se requiere Email o Usuario.</span>
+                                <span ng-show="loginForm._username.$invalid && !loginForm._username.$pristine">{{'validationTexts.EMAIL_OR_USERNAME_IS_REQUIRED' | translate}}</span>
                             </p>
                         </div>
 
 
                         <div class="form-group"
                              ng-class="{ 'has-error' : loginForm._password.$invalid && !loginForm._password.$pristine, 'has-success' : loginForm._password.$valid && !contactForm._password.$pristine}">
-                            <p class="white-text ">Contraseña :</p>
+                            <p class="white-text ">{{'placeholderTexts.PASSWORD' | translate}} :</p>
 
                             <input name="_password" type="password" class="form-control input-style"
                                    placeholder="Contraseña" ng-model="user._password" required>
 
                             <p class="help-block">
-                                <span ng-show="loginForm._password.$invalid && !loginForm._password.$pristine">se requiere contraseña.</span>
+                                <span ng-show="loginForm._password.$invalid && !loginForm._password.$pristine">{{'validationTexts.PASSWORD_IS_REQUIRED' | translate}}</span>
                             </p>
                         </div>
 
 
                         <div class="form-group text-left mt-20">
-                            <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Iniciar Sesión</button>
+                            <button type="submit" class="myBtn app-btn orange-btn max-large-btn">{{'signInScreenTexts.SIGN_IN' | translate}}</button>
                             <label class="checkbox checkbox-custom checkbox-custom-sm inline-block white-text">
                                 <input type="checkbox"><i></i> RECUÉRDAME
                             </label>
-                            <a ui-sref="app.forgotPassword" class="pull-right mt-10">¿Ha olvidado tu contraseña?</a>
+                            <a ui-sref="app.forgotPassword" class="pull-right mt-10">{{'signInScreenTexts.FORGOT_PASSWORD' | translate}}</a>
                         </div>
 
 
                         <div class="form-group text-left mt-20">
-                            <p class="white-text lato">Iniciar sesión con</p>
+                            <p class="white-text lato">{{'signInScreenTexts.OR_LOGIN_WITH' | translate}}</p>
 
                             <button ng-click="loginSocial('facebook')" type="button" class="myBtn orange-btn facebook-btn"><i class="fa fa-facebook"></i></button>
                             <button ng-click="loginSocial('google')" type="button" class="myBtn orange-btn google-btn"><i class="fa fa-google-plus"></i></button>
@@ -71,7 +71,7 @@
                     </form>
 
                     <div class="text-center white-text">
-                        <a ui-sref="app.signup">Regístrate ahora</a>. Aún no eres socio?
+                        <a ui-sref="app.signup">{{'signInScreenTexts.JOIN_NOW' | translate}}</a>. {{'signInScreenTexts.NOT_A_MEMBER_YET' | translate}}
 
                     </div>
                 </div>

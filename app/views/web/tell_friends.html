@@ -47,7 +47,7 @@
                                placeholder="Tu nombre completo" ng-model="user.fullName" ng-required="!$parent.loggedIn">
 
                         <p class="help-block">
-                            <span ng-show="sendEmail.fullName.$invalid && !sendEmail.fullName.$pristine">Su nombre completo es obligatorio.</span>
+                            <span ng-show="sendEmail.fullName.$invalid && !sendEmail.fullName.$pristine">Su {{'validationTexts.YOUR_NAME_IS_REQUIRED' | translate}}.</span>
                         </p>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                                        ng-model="friendEmail.email" required>
 
                                 <p class="help-block">
-                                    <span ng-show="(sendEmail.$submitted && addRowForm.email.$invalid && addRowForm.email.$pristine)||(addRowForm.email.$invalid && !addRowForm.email.$pristine)">Email es requerido.</span>
+                                    <span ng-show="(sendEmail.$submitted && addRowForm.email.$invalid && addRowForm.email.$pristine)||(addRowForm.email.$invalid && !addRowForm.email.$pristine)">{{'validationTexts.VALID_EMAIL_IS_REQUIRED' | translate}}</span>
 
                                 </p>
                             </div>
@@ -121,13 +121,13 @@
 
             <div ng-show="!$parent.loggedIn" class="form-group"
                  ng-class="{ 'has-error' : sendEmail.message.$invalid && !sendEmail.message.$pristine, 'has-success' : sendEmail.message.$valid && !contactForm.message.$pristine}">
-                <p class="white-text ">Tu mensaje:</p>
+                <p class="white-text ">{{'placeholderTexts.YOUR_MESSAGE' | translate}}:</p>
 
                 <textarea rows="5" name="message" type="text" class="form-control input-style"
                           placeholder="Tu mensaje" ng-model="user.message" ng-required="!$parent.loggedIn"></textarea>
 
                 <p class="help-block">
-                    <span ng-show="sendEmail.message.$invalid && !sendEmail.message.$pristine">Su mensaje es obligatorio.</span>
+                    <span ng-show="sendEmail.message.$invalid && !sendEmail.message.$pristine">Su {{'validationTexts.MESSAGE_IS_REQUIRED' | translate}}.</span>
                 </p>
             </div>
 
@@ -145,7 +145,7 @@
 
 
             <div class="form-group text-left mt-20">
-                <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Enviar Email</button>
+                <button type="submit" class="myBtn app-btn orange-btn max-large-btn">{{'buttonTexts.SEND_EMAIL' | translate}}</button>
 
             </div>
 

@@ -8,8 +8,8 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header search-page-big-text">BUSQUEDA DE LIBROS POR<br/>
-                    TITULO / AUTOR / ISBN / PALABRAS CLAVE</p>
+                <p class="text-white mid-two-header search-page-big-text">{{'buyBookScreenTexts.SEARCH_YOU_BOOK_BY'| translate}}<br/>
+                    {{'buyBookScreenTexts.TITLE_AUTHOR_ISBN_KEYWORDS'| translate}}</p>
             </div>
             <form name="bookSearchForm" submit-validate ng-submit="searchBook(bookSearchForm.$valid)" role="form"
                   novalidate>
@@ -116,7 +116,7 @@
 
                     </div>
                     <div class="col-md-4 text-center">
-                        <text class="orange-text lato">Páginas:</text>
+                        <text class="orange-text lato">{{'buyBookScreenTexts.PAGE' | translate}}:</text>
                         <text class="blue-text lato">{{numPages}}</text>
                         <br/>
 
@@ -127,12 +127,12 @@
                     </div>
 
                     <div class="col-md-6 text-center">
-                        <div class="search-page-options">Clasificar por:
+                        <div class="search-page-options">{{'buyBookScreenTexts.SORT_BY' | translate}}:
 
                             <select ng-model="sortType">
-                                <option value="bookTitle" ng-selected="true">Título</option>
-                                <option value="bookDirectorAuthorArtist">Autor</option>
-                                <option value="bookIsbn">ISBN</option>
+                                <option value="bookTitle" ng-selected="true">{{'buyBookScreenTexts.TITLE' | translate}}</option>
+                                <option value="bookDirectorAuthorArtist">{{'buyBookScreenTexts.AUTHOR' | translate}}</option>
+                                <option value="bookIsbn">{{'buyBookScreenTexts.ISBN' | translate}}</option>
                             </select>
 
                         </div>
@@ -183,7 +183,7 @@
             Lo siento, no se encontraron libros de texto
         </h3>
         <h4>
-            Refina tu consulta de búsqueda e inténtalo de nuevo.
+            {{'responseMessageTexts.PLEASE_REFINE_SEARCH_QUERY' | translate}}
         </h4>
     </div>
 

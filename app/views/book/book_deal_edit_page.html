@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="header-title">
-                    <text class="uppercase blue-text lato">Editar</text>
-                    <text class="uppercase orange-text lato"> oferta de libro</text>
+                    <text class="uppercase blue-text lato">{{'headerText.EDIT_' | translate}}</text>
+                    <text class="uppercase orange-text lato"> {{'headerText._BOOK_DEAL' | translate}}</text>
                 </h1>
 
             </div>
@@ -53,7 +53,7 @@
         <p class="lato">Define el estado del libro de texto. ¿Tiene anotaciones o está subrayado?</p>
 
         <p class="orange-text lato px-16">
-            Comentario
+            {{'userPanelBookDealTexts.COMMENTS' | translate}}
         </p>
 
         <p class="lato">Describe cualquier información acerca del Acuerdo o del libro de texto propiamente.</p>
@@ -76,7 +76,7 @@
             puedan proteger su Información de Contacto.</strong></p>
 
         <p class="orange-text lato px-16">
-            ¿Libro Disponible al Público?
+            ¿{{'sellBookPageScreenTexts.TEXTBOOK_AVAILABLE_TO_PUBLIC' | translate}}?
         </p>
 
         <p class="lato">
@@ -86,7 +86,7 @@
         </p>
 
         <p class="orange-text lato px-16">
-            Fecha De Disponibilidad Del Libro De Texto
+            {{'sellBookPageScreenTexts.TEXTBOOK_AVAILABLE_DATE'| translate}}
         </p>
 
         <p class="lato">¿Desea publicar el libro de texto con antelación al inicio de la clase aunque tenga previsto
@@ -96,7 +96,7 @@
         </p>
 
         <p class="orange-text lato px-16">
-            Precio de Venta
+            {{'sellBookPageScreenTexts.SELLING_PRICE' | translate}}
         </p>
 
         <p class="lato">Introduce la cantidad por la que vendes el libro.
@@ -104,7 +104,7 @@
         </p>
 
         <p class="orange-text lato px-16">
-            Método de Pago
+            {{'sellBookPageScreenTexts.PAYMENT_METHOD'| translate}}
         </p>
 
         <p class="lato">Define cómo deseas que el comprador te pague.
@@ -129,7 +129,7 @@
     <uib-tab-heading>
         <div class="tab-head-div">
             <div class="pic-div book-info-icon-div visible-md visible-lg"></div>
-            <p class="tab-head-title">Información del Libro</p>
+            <p class="tab-head-title">{{'sellBookPageScreenTexts.BOOK_INFORMATION' | translate}}</p>
         </div>
 
 
@@ -158,15 +158,15 @@
 
                                     <div class="book-description ">
                                         <p>
-                                            <text class="grey-text ">ISBN:</text>
+                                            <text class="grey-text ">{{'buyBookScreenTexts.ISBN' | translate}}:</text>
                                             <text class="blue-text">{{book.bookIsbn}}</text>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <text class="grey-text ">ISBN-13:</text>
+                                            <text class="grey-text ">{{'buyBookScreenTexts.ISBN' | translate}}-13:</text>
                                             <text class="blue-text">{{book.bookIsbn13}}</text>
                                         </p>
                                         <p class="grey-text">De
                                             <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text>
-                                            :: Publicado Por {{book.bookPublisher}} {{book.bookPublishDate}} ::
+                                            :: {{'sellBookPageScreenTexts.PUBLISHED_BY' | translate}} {{book.bookPublisher}} {{book.bookPublishDate}} ::
                                             ({{book.bookBinding}})
                                         </p>
                                     </div>
@@ -186,7 +186,7 @@
                                         <div class="row">
 
                                             <div class="col-md-4">
-                                                <text class="blue-text uppercase"><strong>ESTADO DEL LIBRO : </strong>
+                                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.CONDITION_OF_BOOK' | translate}} : </strong>
                                                 </text>
                                             </div>
                                             <div class="col-md-8">
@@ -194,24 +194,24 @@
 
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookCondition" ng-model="book.bookCondition"
-                                                               value="New" type="radio" required><i></i> Nuevo
+                                                               value="New" type="radio" required><i></i> {{'placeholderTexts.NEW' | translate}}
                                                     </label>
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookCondition" ng-model="book.bookCondition"
-                                                               value="Barely Used" type="radio" required><i></i> Apenas Usado
+                                                               value="Barely Used" type="radio" required><i></i> {{'placeholderTexts.BARELY_USED' | translate}}
                                                     </label>
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookCondition" ng-model="book.bookCondition"
-                                                               value="Used" type="radio" required><i></i> Usado
+                                                               value="Used" type="radio" required><i></i> {{'placeholderTexts.USED' | translate}}
                                                     </label>
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookCondition" ng-model="book.bookCondition"
                                                                value="Heavily Used" type="radio" required><i></i>
-                                                        Muy Usado
+                                                        {{'placeholderTexts.HEAVILY_USED' | translate}}
                                                     </label>
 
                                                     <p class="help-block">
-                                                        <span ng-show="step1.bookCondition.$invalid && !step1.bookCondition.$pristine">Se requiere el Estado del Libro.</span>
+                                                        <span ng-show="step1.bookCondition.$invalid && !step1.bookCondition.$pristine">{{'validationTexts.PLEASE_SELECT_BOOK_CONDITION' | translate}}</span>
 
                                                     </p>
                                                 </div>
@@ -221,7 +221,7 @@
 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <text class="blue-text uppercase"><strong>Texto subrayado : </strong>
+                                                <text class="blue-text uppercase"><strong>{{'buyBookScreenTexts.HIGHLIGHT_IN_TEXTBOOK' | translate}} : </strong>
                                                 </text>
                                             </div>
                                             <div class="col-md-8">
@@ -232,16 +232,16 @@
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookIsHighlighted" type="radio"
                                                                ng-model="book.bookIsHighlighted" value="Yes"
-                                                               required><i></i> Sí
+                                                               required><i></i> {{'placeholderTexts.YES' | translate}}
                                                     </label>
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookIsHighlighted" type="radio"
                                                                ng-model="book.bookIsHighlighted" value="No"
-                                                               required><i></i> No
+                                                               required><i></i> {{'placeholderTexts.NO' | translate}}
                                                     </label>
 
                                                     <p class="help-block">
-                                                        <span ng-show="step1.bookIsHighlighted.$invalid && !step1.bookIsHighlighted.$pristine">Selecciona Texto Subrayado o No.</span>
+                                                        <span ng-show="step1.bookIsHighlighted.$invalid && !step1.bookIsHighlighted.$pristine">{{'validationTexts.PLEASE_SELECT_BOOK_HIGHLIGHTED' | translate}}</span>
 
                                                     </p>
 
@@ -252,7 +252,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <text class="blue-text uppercase"><strong>ANOTACIONES DE EL LIBRO DE TEXTO :  </strong>
+                                                <text class="blue-text uppercase"><strong>{{'buyBookScreenTexts.NOTES_IN_TEXTBOOK' | translate}} :  </strong>
                                                 </text>
                                             </div>
                                             <div class="col-md-8">
@@ -261,16 +261,16 @@
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookHasNotes" type="radio"
                                                                ng-model="book.bookHasNotes" value="Yes" required><i></i>
-                                                        Sí
+                                                        {{'placeholderTexts.YES' | translate}}
                                                     </label>
                                                     <label class="checkbox-inline checkbox-custom">
                                                         <input name="bookHasNotes" type="radio"
                                                                ng-model="book.bookHasNotes" value="No" required><i></i>
-                                                        No
+                                                        {{'placeholderTexts.NO' | translate}}
                                                     </label>
 
                                                     <p class="help-block">
-                                                        <span ng-show="step1.bookHasNotes.$invalid && !step1.bookHasNotes.$pristine">Selecciona si el libro contiene anotaciones.</span>
+                                                        <span ng-show="step1.bookHasNotes.$invalid && !step1.bookHasNotes.$pristine">{{'validationTexts.PLEASE_SELECT_BOOK_HAS_NOTES' | translate}}</span>
 
                                                     </p>
 
@@ -281,7 +281,7 @@
                                         <div class="row">
 
                                             <div class="col-md-8">
-                                                <text class="blue-text uppercase"><strong>Comentario : </strong>
+                                                <text class="blue-text uppercase"><strong>{{'userPanelBookDealTexts.COMMENTS' | translate}} : </strong>
                                                     <text uib-tooltip="Medida máxima permitida 1.200 caracteres"
                                                           class="orange-text"><i class="fa fa-info-circle"
                                                                                  aria-hidden="true"></i></text>
@@ -289,10 +289,10 @@
                                             </div>
                                             <div class="col-md-4 text-right">
                                                 <text ng-show="(step1.bookComment.$valid && !step1.bookComment.$pristine) || step1.bookComment.$pristine"
-                                                      class="grey-text"><strong>Caracteres restantes:
-                                                    {{1200-book.bookComment.length}}</strong></text>
+                                                      class="grey-text"><strong>{{'sellBookPageScreenTexts.REMAINING' | translate}}:
+                                                    {{1200-book.bookComment.length}} {{'sellBookPageScreenTexts.CHARACTERS' | translate}}</strong></text>
                                                 <text ng-show="step1.bookComment.$invalid && !step1.bookComment.$pristine"
-                                                      class="text-danger"><strong>Límite de Caracteres Excedido</strong>
+                                                      class="text-danger"><strong>{{'validationTexts.CHARACTER_LIMIT_EXCEEDED' | translate}}</strong>
                                                 </text>
                                             </div>
 
@@ -310,7 +310,7 @@
 
                                                 </div>
                                                 <p class="help-block">
-                                                    <span ng-show="step1.bookComment.$error.maxlength">El Comentario debe tener menos de 1.200 caracteres.</span>
+                                                    <span ng-show="step1.bookComment.$error.maxlength">{{'validationTexts.COMMENT_MUST_BE_LESS_THEN_1200_CHAR' | translate}}</span>
                                                 </p>
                                             </div>
 
@@ -330,7 +330,7 @@
 
             <div class="row">
                 <div class="col-md-12 text-right">
-                    <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                    <button type="submit" class="myBtn step-form-next-button">{{'buttonTexts.NEXT' | translate}}</button>
                 </div>
             </div>
 
@@ -374,15 +374,13 @@
                             <label class="checkbox checkbox-custom">
                                 <input name="bookContactMethod" ng-model="book.bookContactMethod" type="radio"
                                        value="sellerToBuyer" required><i></i> <strong>
-                                <text class="uppercase px-16">VENDEDOR CONTACTA A COMPRADOR</text>
+                                <text class="uppercase px-16">{{'sellBookPageScreenTexts.SELLER_CONTACT_BUYER' | translate}}</text>
                             </strong>
                             </label>
 
-                            <text class="lato">Con este método,
-                                <text class="underline">el comprador no obtendrá tu información</text>
-                                . El comprador tiene que
-                                enviarte la información al preguntar por el libro. El sistema enviará el mensaje del
-                                comprador a la siguiente dirección de correo electrónico:
+                            <text class="lato">{{'sellBookPageScreenTexts.WITH_THIS_METHOD' | translate}},
+                                <text class="underline">{{'sellBookPageScreenTexts.BUYER_WILL_NOT_GET' | translate}}</text>
+                                {{'sellBookPageScreenTexts.THE_BUYER_NEEDS_TO_SEND' | translate}}
                                 <strong>{{email}}</strong>
 
                             </text>
@@ -392,13 +390,12 @@
                             <label class="checkbox checkbox-custom">
                                 <input name="bookContactMethod" ng-model="book.bookContactMethod" type="radio"
                                        value="buyerToSeller" required><i></i> <strong>
-                                <text class="uppercase px-16">COMPRADOR CONTACTA A VENDEDOR</text>
+                                <text class="uppercase px-16">{{'sellBookPageScreenTexts.BUYER_CONTACT_SELLER' | translate}}</text>
                             </strong>
                             </label>
 
                             <text class="lato">
-                                Con este método, el comprador obtendrá tu información a través de correo electrónico.
-                                Define que información de contacto el comprador puede solicitar.
+                                {{'sellBookPageScreenTexts.BUYER_CONTACT_SELLER_DETAILS' | translate}}
                             </text>
 
                             <div class="row lower-form">
@@ -418,7 +415,7 @@
 
                             <div class="row lower-form-other">
                                 <div class="col-md-4">
-                                    <text class=""><strong>Teléfono Móvil :</strong></text>
+                                    <text class=""><strong>{{'userPanelBookDealTexts.CELL_PHONE' | translate}} :</strong></text>
                                 </div>
                                 <div class="col-md-8">
                                     <input type="text" name="contactInfoCellPhone" ng-model="book.contactInfoCellPhone"
@@ -433,7 +430,7 @@
 
                             <div class="row lower-form-other">
                                 <div class="col-md-4">
-                                    <text class=""><strong>Email :</strong></text>
+                                    <text class=""><strong>{{'placeholderTexts.EMAIL' | translate}} :</strong></text>
                                 </div>
                                 <div class="col-md-8">
                                     <input type="email" name="contactInfoEmail" ng-model="book.contactInfoEmail"
@@ -449,7 +446,7 @@
                             <div class="has-error">
                                 <p>
                                     <span class="text-danger"
-                                          ng-show="(book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)">Tienes que facilitar por lo menos una información de contacto.</span>
+                                          ng-show="(book.bookContactMethod=='buyerToSeller') && !(book.contactInfoHomePhone.length || book.contactInfoCellPhone.length || book.contactInfoEmail.length)">{{'validationTexts.HAVE_TO_PROVIDE_AT_LEAST_ONE_CONTACT_INFO' | translate}}</span>
                                 </p>
                             </div>
 
@@ -471,12 +468,10 @@
                             </strong>
                             </label>
 
-                            <text class="lato">
+                            <text class="lato">{{'sellBookPageScreenTexts.WITH_THIS_METHOD' | translate}},
+                                <text class="underline">{{'sellBookPageScreenTexts.NEITHER_BUYER_NOR_SELLER' | translate}}</text>
+                                {{'sellBookPageScreenTexts.THEY_CAN_SEND' | translate}}
 
-                                Con este método, <text class="underline">ni el comprador ni el vendedor reciben la información de contacto de
-                                ninguno de ellos.</text>
-                                Pueden enviarse mensajes entre sí usando solamente el Tablero de Mensajes de
-                                Student2Student.
 
                             </text>
 
@@ -491,7 +486,7 @@
                 <div class="row has-error">
                     <div class="col-md-12">
                         <p class="help-block">
-                            <span ng-show="step2.bookContactMethod.$invalid && !step2.bookContactMethod.$pristine">Incluye Método de Contacto.</span>
+                            <span ng-show="step2.bookContactMethod.$invalid && !step2.bookContactMethod.$pristine">{{'validationTexts.PLEASE_SELECT_CONTACT_METHOD' | translate}}</span>
 
                         </p>
                     </div>
@@ -506,7 +501,7 @@
                     <div class="control-panel text-right">
                         <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step1')"><i
                                 class="fa fa-angle-left fa-3x"></i></button>
-                        <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                        <button type="submit" class="myBtn step-form-next-button">{{'buttonTexts.NEXT' | translate}}</button>
                     </div>
 
                 </div>
@@ -524,7 +519,7 @@
     <uib-tab-heading>
         <div class="tab-head-div">
             <div class="pic-div deal-terms-icon-div visible-md visible-lg"></div>
-            <p class="tab-head-title">Términos del Acuerdo</p>
+            <p class="tab-head-title">{{'sellBookPageScreenTexts.DEAL_TERMS' | translate}}</p>
         </div>
 
     </uib-tab-heading>
@@ -556,7 +551,7 @@
                             </label>
 
                             <p class="help-block">
-                                <span ng-show="step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine">Incluye si el libro está disponible al público o no.</span>
+                                <span ng-show="step3.publicAvailable.$invalid && !step3.publicAvailable.$pristine">{{'validationTexts.HAVE_TO_SET_IF_BOOK_IS_PUBLIC' | translate}}</span>
 
                             </p>
                         </div>
@@ -569,7 +564,7 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
                         <div class="vertical-align-middle">
-                            <text class="px-16 lato uppercase"><strong>FECHA DE DISPONIBILIDAD DEL LIBRO DE TEXTO :</strong></text>
+                            <text class="px-16 lato uppercase"><strong>{{'sellBookPageScreenTexts.TEXTBOOK_AVAILABLE_DATE'| translate}} :</strong></text>
                         </div>
                     </div>
 
@@ -587,7 +582,7 @@
                                           </span>
                             </p>
                             <p class="help-block">
-                                <span ng-show="step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine">Tienes que seleccionar la fecha disponible del libro en el siguiente formato (11-Mayo-2016).</span>
+                                <span ng-show="step3.bookAvailableDate.$invalid && !step3.bookAvailableDate.$pristine">{{'validationTexts.TEXTBOOK_AVAILABLE_DATE_REQUIRED' | translate}}</span>
                             </p>
 
                         </div>
@@ -599,7 +594,7 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-4 text-right padding-top-5 min-height-125">
                         <div class="vertical-align-middle">
-                            <text class="px-16 lato uppercase"><strong>PRECIO DE VENTA (EJ.: 15,00) :</strong></text>
+                            <text class="px-16 lato uppercase"><strong>{{'sellBookPageScreenTexts.SELLING_PRICE' | translate}} (EJ.: 15,00) :</strong></text>
                         </div>
                     </div>
 
@@ -610,8 +605,8 @@
                                    ng-model="book.bookPriceSell" class="form-control" required/>
                             <!--<input type="number" string-to-number name="bookPriceSell" ng-model="book.bookPriceSell" ui-validate=" '$value <= {{bookPriceSellOriginal}}' " class="form-control"  required/>-->
                             <p class="help-block">
-                                <span ng-show="step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine">Debes incluir el precio de venta.</span><br/>
-                                <span ng-show="step3.bookPriceSell.$error.valSellingPrice">Tu precio no puede superar los {{bookPriceSell}}</span>
+                                <span ng-show="step3.bookPriceSell.$invalid && !step3.bookPriceSell.$pristine">{{'validationTexts.SELLING_PRICE_REQUIRED' | translate}}</span><br/>
+                                <span ng-show="step3.bookPriceSell.$error.valSellingPrice">{{'validationTexts.SELLING_PRICE_CANNOT_BE_GREATER' | translate}} {{bookPriceSell}}</span>
                                 <!--<span ng-if="step3.bookPriceSell.$error.validator">Your Price cannot be greater than {{bookPriceSell}}</span>-->
 
                             </p>
@@ -654,11 +649,11 @@
 
                                                        "
                                            name="bookPaymentMethodCashOnExchange"
-                                           ng-model="book.bookPaymentMethodCashOnExchange"><i></i> Intercambio de Efectivo
+                                           ng-model="book.bookPaymentMethodCashOnExchange"><i></i> {{'userPanelBookDealTexts.CASH_ON_EXCHANGE' | translate}}
                                 </label>
 
                                 <p class="help-block">
-                                            <span ng-show=" (step3.bookPaymentMethodCashOnExchange.$invalid && !step3.bookPaymentMethodCashOnExchange.$pristine)">Tienes que elegir por lo menos un método de pago.</span>
+                                            <span ng-show=" (step3.bookPaymentMethodCashOnExchange.$invalid && !step3.bookPaymentMethodCashOnExchange.$pristine)">{{'validationTexts.HAVE_TO_SET_ONE_PAYMENT_METHOD' | translate}}</span>
 
                                 </p>
 
@@ -679,7 +674,7 @@
                 <div class="control-panel text-right">
                     <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step2')"><i
                             class="fa fa-angle-left fa-3x"></i></button>
-                    <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                    <button type="submit" class="myBtn step-form-next-button">{{'buttonTexts.NEXT' | translate}}</button>
                 </div>
 
 
@@ -699,7 +694,7 @@
             <div class="pic-div add-image-icon-div visible-md visible-lg"></div>
             <p class="tab-head-title visible-lg">Imágenes Personales del Libro</p>
 
-            <p class="tab-head-title hidden-lg">Imágenes del Libro</p>
+            <p class="tab-head-title hidden-lg">{{'sellBookPageScreenTexts.PERSONAL_BOOK_IMAGES' | translate}}</p>
         </div>
 
     </uib-tab-heading>
@@ -712,10 +707,9 @@
                 <div class="row">
 
                     <div class="col-md-12">
-                        <text class="form-information lato">  Puedes subir 3 imágenes del  libro de texto para mostrar su estado.<br/>
-                            (Tamaño de imagen recomendado: Menos de 300 KB.
-                            Dimensión de imagen recomendada: 350 píxeles / 500 píxeles).<br/>
-                            Extensiones de archivo de imagen permitidas: jpg / JPG, jpeg / JPEG, png / PNG.
+                        <text class="form-information lato">  {{'sellBookPageScreenTexts.YOU_CAN_UPLOAD_THREE_IMAGES'| translate}} <br/>
+                            {{'sellBookPageScreenTexts.RECOMMENDED_PICTURE'| translate}}<br/>
+                            {{'sellBookPageScreenTexts.ALLOWED_IMAGE_EXTENSIONS'| translate}}
                         </text>
                     </div>
 
@@ -808,7 +802,7 @@
                 <div class="col-md-12 text-right">
                     <button type="button" class="myBtn step-form-previous-button" ng-click="backToStep('Step3')"><i
                             class="fa fa-angle-left fa-3x"></i></button>
-                    <button type="submit" class="myBtn step-form-next-button">Siguiente</button>
+                    <button type="submit" class="myBtn step-form-next-button">{{'buttonTexts.NEXT' | translate}}</button>
                 </div>
             </div>
 
@@ -825,7 +819,7 @@
 <uib-tab-heading>
     <div class="tab-head-div">
         <div class="pic-div preview-confirm-icon-div visible-md visible-lg"></div>
-        <p class="tab-head-title">Previsualizar y confirmar</p>
+        <p class="tab-head-title">{{'sellBookPageScreenTexts.PREVIEW_AND_CONFIRM' | translate}}</p>
     </div>
 
 </uib-tab-heading>
@@ -844,11 +838,11 @@
 
                         <p class="book-description grey-text">De
                             <text class="blue-text">{{book.bookDirectorAuthorArtist}}</text>
-                            :: Publicado por {{book.bookPublisher}} {{book.bookPublishDate}} :: ({{book.bookBinding}})
-                            :: ISBN:
+                            :: {{'sellBookPageScreenTexts.PUBLISHED_BY' | translate}} {{book.bookPublisher}} {{book.bookPublishDate}} :: ({{book.bookBinding}})
+                            :: {{'buyBookScreenTexts.ISBN' | translate}}:
                             <text class="blue-text">{{book.bookIsbn}}</text>
                             ::
-                            <text class="grey-text ">ISBN-13:</text>
+                            <text class="grey-text ">{{'buyBookScreenTexts.ISBN' | translate}}-13:</text>
                             <text class="blue-text">{{book.bookIsbn13}}</text>
                         </p>
                     </div>
@@ -861,7 +855,7 @@
                     <div class="step-1-info">
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>ESTADO DEL LIBRO</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.CONDITION_OF_BOOK' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.bookCondition}}</strong></text>
@@ -869,7 +863,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Texto subrayado</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'buyBookScreenTexts.HIGHLIGHT_IN_TEXTBOOK' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.bookIsHighlighted}}</strong></text>
@@ -877,7 +871,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>ANOTACIONES DE EL LIBRO DE TEXTO</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'buyBookScreenTexts.NOTES_IN_TEXTBOOK' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.bookHasNotes}}</strong></text>
@@ -885,7 +879,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>COMENTARIO</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'userPanelBookDealTexts.COMMENTS' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.bookComment}}</strong></text>
@@ -898,10 +892,10 @@
 
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Método De Contacto</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.CONTACT_METHOD' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
-                                <text class="grey-text"><strong>COMPRADOR CONTACTA A VENDEDOR</strong></text>
+                                <text class="grey-text"><strong>{{'sellBookPageScreenTexts.BUYER_CONTACT_SELLER' | translate}}</strong></text>
                             </div>
                         </div>
                         <br/>
@@ -917,7 +911,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Teléfono Móvil</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'userPanelBookDealTexts.CELL_PHONE' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.contactInfoCellPhone}} &nbsp;</strong></text>
@@ -925,7 +919,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Email</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'placeholderTexts.EMAIL' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.contactInfoEmail}} &nbsp;</strong></text>
@@ -938,10 +932,10 @@
 
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Método De Contacto</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.CONTACT_METHOD' | translate}}</strong></text>
                             </div>
                             <div class="col-md-12">
-                                <text class="blue-text uppercase"><strong>VENDEDOR CONTACTA A COMPRADOR</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.SELLER_CONTACT_BUYER' | translate}}</strong></text>
                             </div>
                         </div>
 
@@ -952,7 +946,7 @@
 
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Método De Contacto</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.CONTACT_METHOD' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>UTILIZA UNICAMENTE EL TABLERO DE MENSAJES DE STUDENT2STUDENT</strong></text>
@@ -966,7 +960,7 @@
                     <div class="step-last-info">
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Libro Disponible al Público?</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.TEXTBOOK_AVAILABLE_TO_PUBLIC' | translate}}?</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.bookIsAvailablePublic}}</strong></text>
@@ -974,7 +968,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Fecha De Disponibilidad Del Libro De Texto</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.TEXTBOOK_AVAILABLE_DATE'| translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>{{book.bookAvailableDate | date:'dd-MMM-yyyy'}}</strong>
@@ -983,7 +977,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Precio de Venta</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.SELLING_PRICE' | translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text class="grey-text"><strong>€{{book.bookPriceSell}}</strong></text>
@@ -992,15 +986,15 @@
 
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <text class="blue-text uppercase"><strong>Método de Pago</strong></text>
+                                <text class="blue-text uppercase"><strong>{{'sellBookPageScreenTexts.PAYMENT_METHOD'| translate}}</strong></text>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8 border-left">
                                 <text ng-show="book.bookPaymentMethodCashOnExchange && !book.bookPaymentMethodCheque"
-                                      class="grey-text"><strong>Cash</strong></text>
+                                      class="grey-text"><strong>{{'userPanelBookDealTexts.CASH' | translate}}</strong></text>
                                 <text ng-show="!book.bookPaymentMethodCashOnExchange && book.bookPaymentMethodCheque"
-                                      class="grey-text"><strong>Cheque</strong></text>
+                                      class="grey-text"><strong>{{'userPanelBookDealTexts.CHEQUE' | translate}}</strong></text>
                                 <text ng-show="book.bookPaymentMethodCashOnExchange && book.bookPaymentMethodCheque"
-                                      class="grey-text"><strong>Cash, Cheque</strong></text>
+                                      class="grey-text"><strong>{{'userPanelBookDealTexts.CASH' | translate}}, {{'userPanelBookDealTexts.CHEQUE' | translate}}</strong></text>
                             </div>
                         </div>
                     </div>
@@ -1052,12 +1046,11 @@
                     <div ng-class="{ 'has-error' : step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine, 'has-success' : step5.agreedOnTermsAndConditions.$valid && !step5.agreedOnTermsAndConditions.$pristine}">
                         <label class="checkbox checkbox-custom checkbox-black">
                             <input type="checkbox" name="agreedOnTermsAndConditions"
-                                   ng-model="book.agreedOnTermsAndConditions" required><i></i> Por la presente juro que soy el dueño legítimo del libro que estoy vendiendo.
-                            Soy consciente de que otros estudiantes pueden obtener mi información de contacto dependiendo del método de contacto que elija.
+                                   ng-model="book.agreedOnTermsAndConditions" required><i></i> {{'sellBookPageScreenTexts.I_AGREE_TO_POLICY' | translate}}
                         </label>
 
                         <p class="help-block">
-                            <span ng-show="step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine">Debes estar de acuerdo.</span>
+                            <span ng-show="step5.agreedOnTermsAndConditions.$invalid && !step5.agreedOnTermsAndConditions.$pristine">{{'validationTexts.YOU_HAVE_TO_AGREE' | translate}}</span>
 
                         </p>
                     </div>

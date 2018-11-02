@@ -72,8 +72,8 @@
                         <div class="archive-page-headers">
                             <h3 class="book-title orange-text lato uppercase"><a class="orange-link" ui-sref="app.bookComparePrice({asin:deal.bookIsbn10,isbn:deal.bookIsbn10})">{{deal.bookTitle}}</a></h3>
                             <h4 class="book-sub-title blue-text lato">{{deal.bookSubTitle}}</h4>
-                            <p class="book-description grey-text">De <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text> :: Publicado por {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
-                                <br/>ISBN-10: <text class="blue-text">{{deal.bookIsbn10}}</text> :: ISBN-13: <text class="blue-text">{{deal.bookIsbn13}}</text></p>
+                            <p class="book-description grey-text">De <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text> :: {{'sellBookPageScreenTexts.PUBLISHED_BY' | translate}} {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
+                                <br/>{{'buyBookScreenTexts.ISBN' | translate}}-10: <text class="blue-text">{{deal.bookIsbn10}}</text> :: {{'buyBookScreenTexts.ISBN' | translate}}-13: <text class="blue-text">{{deal.bookIsbn13}}</text></p>
                         </div>
                         <div class="archive-page-deal-information">
                             <div ng-show="!deal.viewMoreInfo" class="view-more-info-btn-div hidden-xs">
@@ -104,7 +104,7 @@
 
                             <div class="buttons">
 
-                                <button data-options="splash-2 splash-primary splash-ef-2" ng-click="showDeleteModal($event,'deleteModalContent',{book:deal})" class="myBtn app-btn orange-btn"><img src="{{appHostPath}}/dist/images/archive_pages/del.png"/> &nbsp; Borrar</button>
+                                <button data-options="splash-2 splash-primary splash-ef-2" ng-click="showDeleteModal($event,'deleteModalContent',{book:deal})" class="myBtn app-btn orange-btn"><img src="{{appHostPath}}/dist/images/archive_pages/del.png"/> &nbsp;  {{'userPanelBookDealTexts.DELETE' | translate}}</button>
                             </div>
 
 
@@ -184,11 +184,11 @@
 
 <script type="text/ng-template" id="deleteModalContent">
      <div class="modal-header">
-         <h3 class="modal-title custom-font white-text">¿Eliminó este libro de la lista de deseos?</h3>
+         <h3 class="modal-title custom-font white-text">{{'userPanelBookDealTexts.WANT_TO_DELETE_FROM_WISHLIST' | translate}}</h3>
      </div>
     <div class="modal-body">
 
-        <p>¿Seguro que quiere eliminar este libro de WishList?</p>
+        <p>{{'userPanelBookDealTexts.SURE_WANT_TO_DELETE_FROM_WISHLIST' | translate}}</p>
 
 
     </div>

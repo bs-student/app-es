@@ -8,7 +8,7 @@
             <div class="col-md-12">
 
 
-                <p class="text-white mid-two-header">Regístrate</p>
+                <p class="text-white mid-two-header">{{'signInScreenTexts.JOIN' | translate}}</p>
 
             </div>
 
@@ -31,34 +31,34 @@
 
                             <div class="form-group" ng-class="{ 'has-error' : userForm.fullName.$invalid && !userForm.fullName.$pristine, 'has-success' : userForm.fullName.$valid && !userForm.fullName.$pristine}">
 
-                                <p class="white-text" for="fullName">Nombre Completo: <text uib-tooltip="El nombre completo debe tener una longitud mínima de 3 caracteres." class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
+                                <p class="white-text" for="fullName">{{'placeholderTexts.FULL_NAME' | translate}}: <text uib-tooltip={{'validationTexts.FULL_NAME_IS_REQUIRED_MIN_3_CHAR' | translate}} class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
                                 <input type="text" name="fullName" id="fullName" class="form-control input-style" ng-model="user.fullName" ng-minlength="3"  required autocomplete="off">
                                 <p class="help-block">
-                                    <span ng-show="userForm.fullName.$invalid && !userForm.fullName.$pristine">Nombre completo es obligatorio.</span>
+                                    <span ng-show="userForm.fullName.$invalid && !userForm.fullName.$pristine">{{'validationTexts.YOUR_NAME_IS_REQUIRED' | translate}}</span>
                                     <span ng-show="userForm.fullName.$error.minlength">El nombre completo es demasiado corto.</span>
                                 </p>
                             </div>
 
                             <div class="form-group" ng-class="{ 'has-error' :  userForm.username.$invalid && !userForm.username.$pristine, 'has-success' : userForm.username.$valid && !userForm.username.$pristine}">
 
-                                <p class="white-text" for="fullName">Usuario: <text uib-tooltip="El nombre de usuario debe tener una longitud mínima de 3 caracteres y un máximo de 20 caracteres. El nombre de usuario puede contener valores alfanuméricos, pero no hay caracteres especiales excepto '-' o '_'" class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
+                                <p class="white-text" for="fullName">Usuario: <text uib-tooltip={{'validationTexts.USERNAME_IS_REQUIRED_CHAR' | translate}} class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
                                 <input data-val-username val-username-special-char type="text" name="username" id="username" class="form-control input-style" ng-model="user.username" ng-minlength="3" ng-maxlength="20" required autocomplete="off">
                                 <p class="help-block">
                                     <span ng-show="userForm.username.$invalid && !userForm.username.$pristine">Se requiere nombre de usuario.</span>
                                     <span ng-show="userForm.username.$error.minlength">El nombre de usuario es demasiado corto.</span>
                                     <span ng-show="userForm.username.$error.maxlength">El nombre de usuario es demasiado largo.</span>
-                                    <span ng-show="userForm.username.$error.valUsername">El nombre de usuario ya existe.</span>
+                                    <span ng-show="userForm.username.$error.valUsername">{{'validationTexts.USERNAME_ALREADY_EXISTS' | translate}}</span>
                                     <span ng-show="userForm.username.$error.valUsernameSpecialChar">El nombre de usuario no debe contener caracteres especiales excepto '-' o '_'.</span>
                                 </p>
                             </div>
 
                             <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine, 'has-success' : userForm.email.$valid && !userForm.email.$pristine}">
 
-                                <p class="white-text" for="fullName">Email: </p>
+                                <p class="white-text" for="fullName">{{'placeholderTexts.EMAIL' | translate}}: </p>
                                 <input data-val-email type="email" name="email" id="email" class="form-control input-style" ng-model="user.email" required autocomplete="off">
                                 <p class="help-block">
-                                    <span ng-show="userForm.email.$invalid && !userForm.email.$pristine">Email es requerido.</span>
-                                    <span ng-show="userForm.email.$error.valEmail">Ya existe el Email</span>
+                                    <span ng-show="userForm.email.$invalid && !userForm.email.$pristine">{{'validationTexts.VALID_EMAIL_IS_REQUIRED' | translate}}</span>
+                                    <span ng-show="userForm.email.$error.valEmail">{{'validationTexts.EMAIL_ALREADY_EXISTS' | translate}}</span>
                                 </p>
                             </div>
 
@@ -66,10 +66,10 @@
 
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine, 'has-success' : userForm.password.$valid && !userForm.password.$pristine}">
 
-                                    <p class="white-text" for="fullName">Contraseña: <text uib-tooltip="La contraseña debe tener una longitud mínima de 6 caracteres." class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
+                                    <p class="white-text" for="fullName">Contraseña: <text uib-tooltip={{'validationTexts.PASSWORD_IS_REQUIRED_MIN_6_CHAR' | translate}} class="orange-text"><i class="fa fa-info-circle" aria-hidden="true"></i></text></p>
                                     <input type="password" name="password" id="password" class="form-control input-style" ng-model="user.password" ng-minlength="6" required autocomplete="off">
                                     <p class="help-block">
-                                        <span ng-show="userForm.password.$invalid && !userForm.password.$pristine">Se requiere contraseña.</span>
+                                        <span ng-show="userForm.password.$invalid && !userForm.password.$pristine">{{'validationTexts.PASSWORD_IS_REQUIRED' | translate}}</span>
                                         <span ng-show="userForm.password.$error.minlength">La contraseña es demasiado corta.</span>
                                     </p>
                                 </div>
@@ -79,7 +79,7 @@
                                     <p class="white-text" for="fullName">Confirmación de Contraseña: </p>
                                     <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control input-style" ng-model="user.passwordConfirm" ui-validate=" '$value==user.password' " ui-validate-watch=" 'user.password' " required autocomplete="off">
                                     <p class="help-block">
-                                        <span ng-show='userForm.passwordConfirm.$error.validator'>¡Las contraseñas no coinciden!</span>
+                                        <span ng-show='userForm.passwordConfirm.$error.validator'>{{'validationTexts.CONFIRM_PASSWORD_IS_REQUIRED' | translate}}</span>
                                     </p>
                                 </div>
 
@@ -126,7 +126,7 @@
 
 
                         <p class="help-block">
-                            <span ng-show="userForm.campus.$invalid && !userForm.campus.$pristine">Campus es necesario.</span>
+                            <span ng-show="userForm.campus.$invalid && !userForm.campus.$pristine">{{'validationTexts.CAMPUS_IS_REQUIRED' | translate}}</span>
                         </p>
                     </div>
 
@@ -138,7 +138,7 @@
 
                         <select name="referral" id="referral"  ng-model="user.referral"  class="form-control mb-10 input-style"
                                 data-ng-options="referral.id as referral.referral_name for referral in referrals" required>
-                            <option value="">---Seleccione Referencia---</option>
+                            <option value="">---{{'validationTexts.SELECT_REFERRAL' | translate}}---</option>
                         </select>
                         <p class="help-block">
                             <span ng-show="userForm.referral.$invalid && !userForm.referral.$pristine">Se requiere una derivación.</span>
@@ -152,12 +152,12 @@
 
                     <div class="checkbox reg-confirm-checkbox" ng-class="{ 'has-error' : userForm.agree.$invalid && !userForm.agree.$pristine, 'has-success' : userForm.agree.$valid && !userForm.agree.$pristine}">
                         <label  class="checkbox checkbox-custom white-text">
-                            <input type="checkbox" name="agree" id="agree" ng-model="user.agree" required><i></i> Acepto la <a ui-sref="app.privacyPolicy">Política de Privacidad :: </a>
-                            <a ui-sref="app.disclaimer"> Renuncia </a>
-                            <a ui-sref="app.conditionOfUse">:: Condición de Uso</a>
+                            <input type="checkbox" name="agree" id="agree" ng-model="user.agree" required><i></i> {{'signUpScreenTexts.I_AGREE' | translate}} <a ui-sref="app.privacyPolicy">{{'menuTexts.PRIVACY_POLICY' | translate}} :: </a>
+                            <a ui-sref="app.disclaimer"> {{'menuTexts.DISCLAIMER' | translate}} </a>
+                            <a ui-sref="app.conditionOfUse">:: {{'menuTexts.CONDITION_OF_USE' | translate}}</a>
                         </label>
                         <p class="help-block">
-                            <span ng-show="userForm.agree.$invalid && !userForm.agree.$pristine">Debe aceptar los términos del servicio.</span>
+                            <span ng-show="userForm.agree.$invalid && !userForm.agree.$pristine">{{'validationTexts.YOU_HAVE_TO_AGREE_SIGNUP' | translate}}</span>
                         </p>
                     </div>
 
@@ -177,7 +177,7 @@
 
 
                     <div class="form-group text-left mt-20 margin-top-35">
-                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">Regístrate</button>
+                        <button type="submit" class="myBtn app-btn orange-btn max-large-btn">{{'signInScreenTexts.JOIN' | translate}}</button>
 
 
                     </div>

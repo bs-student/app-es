@@ -46,17 +46,17 @@
 
                     <div class="btn-group">
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'All'"
-                               uncheckable>Todo</label>
+                               uncheckable>{{'messageBoardScreenTexts.ALL' | translate}}</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Unread'"
-                               uncheckable>No Leído</label>
+                               uncheckable>{{'messageBoardScreenTexts.UNREAD' | translate}}</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Starred'"
-                               uncheckable>Destacado</label>
-                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'SellingDeal'" uncheckable>Vendo</label>
-                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'ContactedDeal'" uncheckable>Comprado</label>
+                               uncheckable>{{'messageBoardScreenTexts.STARRED' | translate}}</label>
+                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'SellingDeal'" uncheckable>{{'messageBoardScreenTexts.SELLING' | translate}}</label>
+                        <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'ContactedDeal'" uncheckable>{{'messageBoardScreenTexts.BUYING' | translate}}</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Sold'"
-                               uncheckable>Vendido</label>
+                               uncheckable>{{'messageBoardScreenTexts.SOLD' | translate}}</label>
                         <label class="btn btn-check" ng-change="typeChange(radioModel)" ng-model="radioModel" uib-btn-radio="'Bought'"
-                               uncheckable>Comprado</label>
+                               uncheckable>{{'messageBoardScreenTexts.BOUGHT' | translate}}</label>
                     </div>
 
                 </div>
@@ -65,12 +65,12 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-                <div class="search-page-options message-board-type-options">Clasificar por:
+                <div class="search-page-options message-board-type-options">{{'buyBookScreenTexts.SORT_BY' | translate}}:
 
                     <select ng-change="changeSortType()" ng-model="sortType">
-                        <option value="bookTitle" ng-selected="true">Título</option>
-                        <option value="bookDirectorAuthorArtist">Autor</option>
-                        <option value="bookIsbn">ISBN</option>
+                        <option value="bookTitle" ng-selected="true">{{'buyBookScreenTexts.TITLE' | translate}}</option>
+                        <option value="bookDirectorAuthorArtist">{{'buyBookScreenTexts.AUTHOR' | translate}}</option>
+                        <option value="bookIsbn">{{'buyBookScreenTexts.ISBN' | translate}}</option>
                     </select>
 
                 </div>
@@ -115,7 +115,7 @@
             <div class="row">
                 <div class="col-md-3 message-board-column-header-checkbox text-center">
                     <text class="all-checkbox-text">
-                        TODO
+                        {{'messageBoardScreenTexts.ALL' | translate}}
                         <label  class="checkbox checkbox-custom-alt checkbox-white white-text">
                             <input type="checkbox" name="agree" id="agree" ng-model="user.agree"><i></i>
                         </label>
@@ -123,7 +123,7 @@
 
                 </div>
                 <div class="col-md-9 message-board-column-header text-center white-border-left-1">
-                    <text class="uppercase ">&nbsp;&nbsp; ACUERDO PARA LIBROS DE TEXTO</text>
+                    <text class="uppercase ">&nbsp;&nbsp;{{'messageBoardScreenTexts.TEXT_BOOK_DEALS' | translate}}</text>
                 </div>
             </div>
 
@@ -134,7 +134,7 @@
                         <li ng-show="bookDeals.length==0" >
                             <div class="row">
                                 <div class="col-md-12 text-center message-board-check-star-item-column">
-                                    <text>No Textbook Deal is found.</text>
+                                    <text>{{'messageBoardScreenTexts.NO_DEAL_TO_SHOW' | translate}}</text>
                                 </div>
 
                             </div>
@@ -161,11 +161,11 @@
                                             <dt><img class="" data-ng-src="{{imageHostPath}}{{deal.bookImage}}"/>
                                             </dt>
                                             <dd><text class="convert-to-white-text orange-text lato uppercase">{{deal.bookTitle}}</text> <span ng-show="deal.newMessages>0" class="badge">{{deal.newMessages}}</span><br/>
-                                                <text class="grey-text">ISBN:</text> <text class="blue-text convert-to-white-text">{{deal.bookIsbn}}</text><br/>
+                                                <text class="grey-text">{{'buyBookScreenTexts.ISBN' | translate}}:</text> <text class="blue-text convert-to-white-text">{{deal.bookIsbn}}</text><br/>
                                                 <!--{{deal.dealType}}-->
 
-                                                <button ng-show="deal.dealType=='contactedDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.contactedBookList">Ir al Acuerdo</button>
-                                                <button ng-show="deal.dealType=='sellingDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.sellingBookList">Ir al Acuerdo</button>
+                                                <button ng-show="deal.dealType=='contactedDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.contactedBookList">{{'messageBoardScreenTexts.GO_TO_DEAL' | translate}}</button>
+                                                <button ng-show="deal.dealType=='sellingDeal'" class="myBtn orange-btn message-board-btn" ui-sref="app.sellingBookList">{{'messageBoardScreenTexts.GO_TO_DEAL' | translate}}</button>
 
                                                 <text  class="price-text convert-to-white-text orange-text float-right">€{{deal.bookPriceSell}}</text>
                                             </dd>
@@ -183,7 +183,7 @@
         </div>
         <div class="col-md-8 col-sm-8">
             <div class="message-board-column-header text-center">
-                <text class="uppercase text-center "><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; Contacto</text>
+                <text class="uppercase text-center "><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; {{'messageBoardScreenTexts.CONTACT' | translate}}</text>
             </div>
 
             <div class="message-board-all-contacts">
@@ -191,7 +191,7 @@
 
                     <div class="row" ng-show="deal.contacts.length==0">
                         <div class="col-md-12 text-center">
-                            <text>No one has contacted for this textbook deal yet.</text>
+                            <text>{{'messageBoardScreenTexts.NO_ONE_HAS_CONTACTED' | translate}}</text>
                         </div>
                     </div>
 
@@ -218,7 +218,7 @@
                                     </div>
                                     <div class="col-md-2 col-sm-2 col-xs-2 no-left-padding no-right-padding book-price-message-board">
                                         <div class="item-price">
-                                            <text class="text-white lato">Precio: €{{deal.bookPriceSell}}</text>
+                                            <text class="text-white lato">{{'buyBookScreenTexts.PRICE' | translate}}: €{{deal.bookPriceSell}}</text>
                                         </div>
                                     </div>
 
@@ -230,7 +230,7 @@
                                             <div class="pull-right book-title-and-isbn">
                                                 <text uib-tooltip="{{deal.bookTitle}}" class="white-text lato uppercase">{{deal.bookTitle | limitTo:15}}<text  ng-show="deal.bookTitle.length>25">...</text></text><br/>
 
-                                                <text class="white-text">ISBN:</text> <text class="white-text ">{{deal.bookIsbn}}</text><br/>
+                                                <text class="white-text">{{'buyBookScreenTexts.ISBN' | translate}}:</text> <text class="white-text ">{{deal.bookIsbn}}</text><br/>
                                             </div>
 
                                         </div>
@@ -248,7 +248,7 @@
 
 
                                             <li  class="list-group-item" style="background: #E9E9E9">
-                                                <h5 class="lato px-18 ">Detalles de contacto</h5>
+                                                <h5 class="lato px-18 ">{{'messageBoardScreenTexts.CONTACT_DETAILS' | translate}}</h5>
                                                 <div class="row" ng-show="deal.dealType=='sellingDeal'">
                                                     <div class="col-md-4">
                                                         <span ng-show="contact.buyerEmail!=undefined"><i class="contact-details-circle fa fa-envelope-o"></i> {{contact.buyerEmail}}</span>

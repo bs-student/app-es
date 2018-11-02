@@ -30,8 +30,8 @@
             <nav id="main-navbar">
 
                 <ul>
-                    <li ng-class="{home:'active'}[activePage]"><a ui-sref="app.dashboard">Casa</a></li>
-                    <li ng-class="{howItWorks:'active'}[activePage]"><a ui-sref="app.howItWorks">Cómo funciona</a>
+                    <li ng-class="{home:'active'}[activePage]"><a ui-sref="app.dashboard">{{'menuTexts.HOME' | translate}}</a></li>
+                    <li ng-class="{howItWorks:'active'}[activePage]"><a ui-sref="app.howItWorks">Cómo funciona {{'WELCOME' | translate}}</a>
                         <ul class="menu-right-position">
                             <li><a ui-sref="app.conceptVideoSpanish"><i class="fa fa-video-camera"></i>&nbsp;&nbsp;&nbsp;Vídeo Conceptual</a></li>
                             <li ng-show="!loggedIn"><a ui-sref="app.tellFriends"><i class="fa  fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Dile a un amigo</a></li>
@@ -39,27 +39,27 @@
 
                         </ul>
                     </li>
-                    <li ng-hide="loggedIn && adminUser" ng-class="{sellBook:'active'}[activePage]"><a ui-sref="app.sellBook">Vender Libros</a>
-                    <li ng-hide="loggedIn && adminUser" ng-class="{buyBook:'active'}[activePage]"><a ui-sref="app.bookBuy">Comprar libros</a>
+                    <li ng-hide="loggedIn && adminUser" ng-class="{sellBook:'active'}[activePage]"><a ui-sref="app.sellBook">{{'buttonTexts.SELL_BOOK' | translate}}</a>
+                    <li ng-hide="loggedIn && adminUser" ng-class="{buyBook:'active'}[activePage]"><a ui-sref="app.bookBuy">{{'menuTexts.BUY_BOOK' | translate}}</a>
 
 
-                    <li ng-show="!loggedIn" ng-class="{signup:'active'}[activePage]"><a ui-sref="app.signup">Regístrate</a>
-                    <li ng-show="!loggedIn" ng-class="{login:'active'}[activePage]"><a ui-sref="app.login">iniciar sesión</a>
-                    <li ng-class="{news:'active'}[activePage]"><a ui-sref="app.news">Noticias</a></li>
+                    <li ng-show="!loggedIn" ng-class="{signup:'active'}[activePage]"><a ui-sref="app.signup">{{'signInScreenTexts.JOIN' | translate}}</a>
+                    <li ng-show="!loggedIn" ng-class="{login:'active'}[activePage]"><a ui-sref="app.login">{{'signInScreenTexts.SIGN_IN' | translate}}</a>
+                    <li ng-class="{news:'active'}[activePage]"><a ui-sref="app.news">{{'menuTexts.NOTIFICATION' | translate}}</a></li>
 
-                    <li ng-class="{helpAndSafety:'active'}[activePage]"><a ui-sref="app.safetyFirst">Ayuda y Seguridad</a>
+                    <li ng-class="{helpAndSafety:'active'}[activePage]"><a ui-sref="app.safetyFirst">{{'menuTexts.HELP_AND_SAFETY' | translate}}</a>
                         <ul class="menu-right-position">
-                            <li><a ui-sref="app.contactUs"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Contáctenos</a></li>
-                            <li><a ui-sref="app.scamAndFraud"><i class="fa  fa-user-times"></i>&nbsp;&nbsp;&nbsp;Estafa y fraude</a></li>
-                            <li><a ui-sref="app.faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;PMF</a></li>
-                            <li><a ui-sref="app.safetyFirst"><i class="fa  fa-check-square-o"></i>&nbsp;&nbsp;&nbsp;Seguridad primero</a></li>
+                            <li><a ui-sref="app.contactUs"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.CONTACT_US' | translate}}</a></li>
+                            <li><a ui-sref="app.scamAndFraud"><i class="fa  fa-user-times"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.SCAM_AND_FRAUD' | translate}}</a></li>
+                            <li><a ui-sref="app.faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.FAQ' | translate}}</a></li>
+                            <li><a ui-sref="app.safetyFirst"><i class="fa  fa-check-square-o"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.SAFETY_FIRST' | translate}}</a></li>
                         </ul>
                     </li>
 
                     <li ng-show="loggedIn && !adminUser" ng-class="{messageBoard:'active'}[activePage]"><a ui-sref="app.messageBoard" class="notification-a message-board-a"><i class="fa fa-comments-o"></i><span ng-show="messageNotificationCounter>0" class="badge bg-lightred">{{messageNotificationCounter}}</span></a>
 
                         <ul class="menu-right-position notification-ul">
-                            <li>Mensajes</li>
+                            <li>{{'placeholderTexts.MESSAGE' | translate}}</li>
                             <li class="text-center" ng-show="messageNotificationCounter==0">No hay mensajes nuevos.</li>
                             <li data-ng-repeat="message in messageNotifications track by $index"><a ui-sref="app.messageBoard">
                                 <dl class="dl-horizontal">
@@ -75,7 +75,7 @@
                     <li ng-show="loggedIn && !adminUser" ><a class="notification-a"><i class="fa fa fa-bell-o"></i><span ng-show="notificationCounter>0" class="badge bg-lightred">{{notificationCounter}}</span></a>
 
                         <ul class="menu-right-position notification-ul">
-                            <li>Notificaciones</li>
+                            <li>{{'menuTexts.NOTIFICATIONS' | translate}}</li>
                             <li class="text-center" ng-show="notificationCounter==0">No hay nuevas notificaciones.</li>
                             <li data-ng-repeat="notification in notifications track by $index"><a ui-sref="app.sellingBookList">
                                 <dl class="dl-horizontal">
@@ -91,17 +91,17 @@
 
                     <li ng-show="loggedIn && !adminUser" ng-class="{user:'active'}[activePage]"><a href="#">Hola, <img class="header-profile-picture" ng-src="{{imageHostPath}}{{profilePicture}}"/></a>
                         <ul  class="menu-right-position">
-                            <li><a ui-sref="app.messageBoard"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;Tablón de Mensajes <span ng-show="messageNotificationCounter>0" class="badge badge-primary">{{messageNotificationCounter}}</span></a></li>
+                            <li><a ui-sref="app.messageBoard"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.MESSAGE_BOARD' | translate}} <span ng-show="messageNotificationCounter>0" class="badge badge-primary">{{messageNotificationCounter}}</span></a></li>
                             <li><a ui-sref="app.sellingBookList"><i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;Vendiendo Libros <span ng-show="notificationCounter>0" class="badge badge-primary">{{notificationCounter}}</span></a></li>
                             <li><a ui-sref="app.contactedBookList"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;Comprando Libros</a></li>
-                            <li><a ui-sref="app.sellArchive"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;Vender Archivos</a></li>
-                            <li><a ui-sref="app.buyArchive"><i class="fa fa-archive"></i>&nbsp;&nbsp;&nbsp;Comprar Archivos</a></li>
-                            <li><a ui-sref="app.wishList"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;&nbsp;Lista de favoritos</a></li>
+                            <li><a ui-sref="app.sellArchive"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.SELL_ARCHIVE' | translate}}</a></li>
+                            <li><a ui-sref="app.buyArchive"><i class="fa fa-archive"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.BUY_ARCHIVE' | translate}}</a></li>
+                            <li><a ui-sref="app.wishList"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.WISHLIST' | translate}}</a></li>
                             <li><a ui-sref="app.mySellPage({username:username})"><i class="fa fa-map-o"></i>&nbsp;&nbsp;&nbsp;Mi Página de Venta</a></li>
-                            <li><a ui-sref="app.promoteMyStore"><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Promocionar Mi Tienda</a></li>
+                            <li><a ui-sref="app.promoteMyStore"><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.PROMOTE_STORE' | translate}}</a></li>
                             <li><a ui-sref="app.profile"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Perfil</a></li>
                             <li><a ui-sref="app.changePassword"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Cambiar Contraseña</a></li>
-                            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;Desconectar</a></li>
+                            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.LOGOUT' | translate}}</a></li>
                         </ul>
                     </li>
                     <li ng-show="loggedIn && adminUser" ng-class="{user:'active'}[activePage]"><a href="#">Hi, {{username}}</a>
@@ -120,7 +120,7 @@
                             <li><a ui-sref="app.log"><i class="fa fa-edit"></i>&nbsp;&nbsp;&nbsp;Logs</a></li>
                             <li><a ui-sref="app.databases"><i class="fa fa-database"></i>&nbsp;&nbsp;&nbsp;Databases</a></li>
                             <li><a ui-sref="app.changePassword"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Change Password</a></li>
-                            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;Log Out</a></li>
+                            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;{{'menuTexts.LOGOUT' | translate}}</a></li>
                         </ul>
 
                     </li>

@@ -73,7 +73,7 @@
                             <select ng-model="sortType">
                                 <option value="bookTitle" ng-selected="true">Title</option>
                                 <option value="bookDirectorAuthorArtist">Author</option>
-                                <option value="bookIsbn">ISBN</option>
+                                <option value="bookIsbn">{{'buyBookScreenTexts.ISBN' | translate}}</option>
                             </select>
 
                         </div>
@@ -163,9 +163,9 @@
                 <p class="book-description grey-text">By
                     <text class="blue-text">{{deal.bookDirectorAuthorArtist}}</text>
                     :: Published by {{deal.bookPublisher}} {{deal.bookPublishDate}} :: ({{deal.bookBinding}})
-                    <br/>ISBN:
+                    <br/>{{'buyBookScreenTexts.ISBN' | translate}}:
                     <text class="blue-text">{{deal.bookIsbn}}</text>
-                    &nbsp;&nbsp;&nbsp;&nbsp;ISBN-13:
+                    &nbsp;&nbsp;&nbsp;&nbsp;{{'buyBookScreenTexts.ISBN' | translate}}-13:
                     <text class="blue-text">{{deal.bookIsbn13}}</text>
                 </p>
             </div>

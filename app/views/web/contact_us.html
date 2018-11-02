@@ -26,14 +26,15 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="lato form-page-header">Contáctenos</h1>
-                            <h4 class="lato">Díle a Student 2 Student lo que necesita...</h4>
+                            <h1 class="lato form-page-header">{{'menuTexts.CONTACT_US' | translate}}</h1>
+                            <h4 class="lato">{{'contactUsScreenTexts.TELL_STUDENT2STUDENT' | translate}}</h4>
                         </div>
                         <div class="col-md-12">
                             <p class="grey-text lato">
-                                Student 2 Student  agradece cualquier comentario que pueda mejoras nuestro servicio.<br/>
-                                Nuestro objetivo es ayudar a los estudiantes ahorrar dinero en los libros de texto.<br/>
-                                O ayudarle a vender  aquellos libros que ya no necesite<br/>
+                                {{'contactUsScreenTexts.STUDENT2STUDENT_IS_HAPPY' | translate}}<br/>
+                                {{'contactUsScreenTexts.OUR_GOAL_IS' | translate}}<br/>
+                                {{'contactUsScreenTexts.WE_ARE_DEPENDING' | translate}}<br/>
+
 
                             </p>
 
@@ -45,7 +46,7 @@
 
 
                             <div class="col-md-6">
-                                <text class="lato px-18">Nombre Completo *</text>
+                                <text class="lato px-18">{{'placeholderTexts.FULL_NAME' | translate}} *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.fullName.$invalid && !contactUsForm.fullName.$pristine, 'has-success' : contactUsForm.fullName.$valid && !contactUsForm.fullName.$pristine}">
@@ -54,14 +55,14 @@
                                            required/>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.fullName.$invalid && !contactUsForm.fullName.$pristine">Nombre completo es obligatorio.</span>
+                                        <span ng-show="contactUsForm.fullName.$invalid && !contactUsForm.fullName.$pristine">{{'validationTexts.YOUR_NAME_IS_REQUIRED' | translate}}.</span>
 
                                     </p>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <text class="lato px-18">Email *</text>
+                                <text class="lato px-18">{{'placeholderTexts.EMAIL' | translate}} *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.email.$invalid && !contactUsForm.email.$pristine, 'has-success' : contactUsForm.email.$valid && !contactUsForm.email.$pristine}">
@@ -70,7 +71,7 @@
                                            required/>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.email.$invalid && !contactUsForm.email.$pristine">Email es requerido.</span>
+                                        <span ng-show="contactUsForm.email.$invalid && !contactUsForm.email.$pristine">{{'validationTexts.VALID_EMAIL_IS_REQUIRED' | translate}}</span>
 
                                     </p>
                                 </div>
@@ -81,7 +82,7 @@
 
 
                             <div class="col-md-12">
-                                <text class="lato px-18">Asunto *</text>
+                                <text class="lato px-18">{{'placeholderTexts.SUBJECT' | translate}} *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.subject.$invalid && !contactUsForm.subject.$pristine, 'has-success' : contactUsForm.subject.$valid && !contactUsForm.subject.$pristine}">
@@ -90,7 +91,7 @@
                                            required/>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.subject.$invalid && !contactUsForm.subject.$pristine">Se requiere Asunto.</span>
+                                        <span ng-show="contactUsForm.subject.$invalid && !contactUsForm.subject.$pristine">{{'validationTexts.SUBJECT_IS_REQUIRED' | translate}}</span>
 
                                     </p>
                                 </div>
@@ -102,7 +103,7 @@
 
 
                             <div class="col-md-12">
-                                <text class="lato px-18">Tu Mensaje *</text>
+                                <text class="lato px-18">{{'placeholderTexts.YOUR_MESSAGE' | translate}} *</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.message.$invalid && !contactUsForm.message.$pristine, 'has-success' : contactUsForm.message.$valid && !contactUsForm.message.$pristine}">
@@ -111,7 +112,7 @@
                                               ng-model="message" required></textarea>
 
                                     <p class="help-block">
-                                        <span ng-show="contactUsForm.message.$invalid && !contactUsForm.message.$pristine">Su mensaje es obligatorio.</span>
+                                        <span ng-show="contactUsForm.message.$invalid && !contactUsForm.message.$pristine">Su {{'validationTexts.MESSAGE_IS_REQUIRED' | translate}}.</span>
 
                                     </p>
                                 </div>
@@ -123,30 +124,30 @@
 
 
                             <div class="col-md-12">
-                                <text class="lato px-18">Yo quiero :</text>
+                                <text class="lato px-18">{{'placeholderTexts.I_WANT' | translate}} :</text>
                                 <br/>
 
                                 <div ng-class="{ 'has-error' : contactUsForm.want.$invalid && !contactUsForm.want.$pristine, 'has-success' : contactUsForm.want.$valid && !contactUsForm.want.$pristine}">
 
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Feedback" required><i></i> Respuesta
+                                               value="Feedback" required><i></i>  {{'contactUsScreenTexts.FEEDBACK' | translate}}
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Administrative Support" required><i></i> Ayuda Administrativa
+                                               value="Administrative Support" required><i></i> {{'contactUsScreenTexts.ADMINISTRATIVE_SUPPORT' | translate}}
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Technical Support" required><i></i> Soporte Técnico
+                                               value="Technical Support" required><i></i> {{'contactUsScreenTexts.TECHNICAL_SUPPORT' | translate}}
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Suggestion" required><i></i> Sugerencia
+                                               value="Suggestion" required><i></i> {{'contactUsScreenTexts.SUGGESTION' | translate}}
                                     </label>
                                     <label class="checkbox-inline checkbox-custom">
                                         <input name="want" ng-model="want" type="radio"
-                                               value="Question" required><i></i> Alguna otra pregunta?
+                                               value="Question" required><i></i> {{'contactUsScreenTexts.QUESTION' | translate}}
                                     </label>
 
                                     <p class="help-block">
@@ -227,16 +228,16 @@
                                 <a ui-sref="app.news">&nbsp;Noticias</a>
                             </li>
                             <li>
-                                <a ui-sref="app.signup">&nbsp;Regístrate</a>
+                                <a ui-sref="app.signup">&nbsp;{{'signInScreenTexts.JOIN' | translate}}</a>
                             </li>
                             <li>
-                                <a ui-sref="app.bookBuy">&nbsp;Comprar Libros</a>
+                                <a ui-sref="app.bookBuy">&nbsp;{{'buyBookScreenTexts.BUY_BOOKS'| translate}}</a>
                             </li>
                             <li>
                                 <a ui-sref="app.addUniversity">&nbsp;Añadir una nueva universidad</a>
                             </li>
                             <li>
-                                <a ui-sref="app.faq">&nbsp;PMF</a>
+                                <a ui-sref="app.faq">&nbsp;{{'menuTexts.FAQ' | translate}}</a>
                             </li>
 
                         </ul>

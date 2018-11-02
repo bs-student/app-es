@@ -81,7 +81,7 @@
 
                                 <uib-accordion-group ng-repeat="row in faq.faqs" is-open="row.open">
                                     <uib-accordion-heading>
-                                        {{row.question}} <i class="pull-right fa" ng-class="{'fa-minus': row.open, 'fa-plus': !row.open}"></i>
+                                        {{row.question | translate}} <i class="pull-right fa" ng-class="{'fa-minus': row.open, 'fa-plus': !row.open}"></i>
                                     </uib-accordion-heading>
                                     <div ng-bind-html="row.answer"></div>
                                 </uib-accordion-group>
