@@ -42,8 +42,6 @@ var assets = {
         "bower_components/angular-chart.js/dist/angular-chart.js",
         "bower_components/crypto-js/crypto-js.js"
 
-
-
     ],
     js_library_2: [
 
@@ -299,7 +297,7 @@ gulp.task("js_app", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app-es-0.18.min.js'))
+        .pipe(plugins.concat('app-es-0.19.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 gulp.task("css_website", function (done) {
