@@ -313,7 +313,7 @@ a.notification-a.message-board-a i{
         font-size: 50px !important;
     }
     #main-navbar ul li a{
-        padding: 0px 6px;
+        padding: 0px 3px;
     }
     .search-input-homepage.slider-form{
         width: 100%;
@@ -329,7 +329,7 @@ a.notification-a.message-board-a i{
     }
     #main-navbar ul li a{
         padding: 0px 3px;
-        font-size: 11px;
+        font-size: 10px;
     }
     .input-group .search-input-homepage{
         width: 680px;
@@ -366,7 +366,9 @@ a.notification-a.message-board-a i{
         padding-left: 0px;
     }
     #main-navbar>ul>li a{
-        padding: 0px 6px;
+        padding: 0px 3px;
+      font-size: 11px;
+
     }
 }
 
@@ -380,8 +382,8 @@ a.notification-a.message-board-a i{
         padding-left: 0px;
     }
     #main-navbar>ul>li a{
-        padding: 0px 8px;
-        font-size: 12px;
+        padding: 0px 6px;
+        font-size: 11px;
     }
 }
 @media (min-width: 1121px){
