@@ -10,9 +10,8 @@
                         <img alt="student2student" class="img-responsive footer-main-image"
                              src="{{appHostPath}}/dist/images/logo_and_text.png"/>
 
-                        <p>Compre y venda libros de texto directamente con los estudiantes de su universidad. Reunirse
-                            en el campus para el acuerdo. Sin envío, sin tarjetas de crédito, sin molestias ... ¡Todo
-                            gratis!</p>
+                        <p>{{'footerTexts.BUY_AND_SELL_DIRECTLY' | translate}}
+                            </p>
 
                         <a
                                 ui-sref="app.howItWorks">
@@ -22,7 +21,8 @@
                         <a style="float: right;"
                            ui-sref="app.conceptVideo">
                             <div class="badge"><i class="fa fa-angle-right"></i></div>
-                            Ver el Concepto</a>
+                            {{'footerTexts.WATCH_THE_CONCEPT' | translate}}
+                            </a>
 
                     </div>
 
@@ -31,14 +31,14 @@
                                                       src="{{appHostPath}}/dist/images/footer/facebook_logo.png"/></div>
                         <div class="social_connect"><a target="_blank"
                                                        href="https://www.facebook.com/student2student"><strong>
-                            Encuentranos
+                            {{'footerTexts.FIND_US' | translate}}
                             </strong><br/>
-                            en Facebook</a></div>
+                            {{'footerTexts.ON_FB' | translate}}</a></div>
                         <div class="social_icon"><img alt="student2student twitter url"
                                                       src="{{appHostPath}}/dist/images/footer/twitter_logo.png"/></div>
                         <div class="social_connect"><a target="_blank"
-                                                       href="https://www.twitter.com/St2StTextbook"><strong>Encontrarnos</strong><br/>
-                            en Twitter</a></div>
+                                                       href="https://www.twitter.com/St2StTextbook"><strong>{{'footerTexts.FIND_US' | translate}}</strong><br/>
+                            {{'footerTexts.ON_TWITTER' | translate}}</a></div>
 
 
                     </div>
@@ -47,7 +47,7 @@
 
                 <div class="col-md-4 text-center">
                     <div class="widget widget-contact mt-20-md">
-                        <h4><strong>BÚSCA ENTRE CIENTOS DE LIBRERÍAS Y OBTEN EL MEJOR PRECIO</strong></h4>
+                        <h4><strong>{{'footerTexts.SEARCH_AMONGST' | translate}}</strong></h4>
 
                         <div class="fslider" data-animation="slide" data-arrows="false">
                             <div class="flexslider reference-slider footer-silder">
@@ -78,7 +78,7 @@
                 <div class="col-md-4">
 
                     <div class="widget widget-contact mt-20-md">
-                        <h4><strong>Suscríbete a nuestro boletín</strong></h4>
+                        <h4><strong>{{'footerTexts.SUBSCRIBE_TO_OUR' | translate}}</strong></h4>
 
                         <form cg-busy="{promise:newsletterPromise}" name="newsletterForm" submit-validate
                               ng-submit="addToNewsletter(newsletterForm.$valid)" role="form"
@@ -105,17 +105,17 @@
 
                     <div class="widget widget-newsletter mb-0">
 
-                        <h4><strong>ENLACES ÚTILES</strong></h4>
+                        <h4><strong>{{'footerTexts.USEFUL_LINK' | translate}}</strong></h4>
 
                         <ul class="footer-useful-links-ul">
                             <li>
                                 &nbsp;<a ui-sref="app.howItWorks">{{'faqScreenTexts.HOW_STUDENT2STUDENT_WORK' | translate}}</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.conceptVideoSpanish">Ver el vídeo</a>
+                                &nbsp;<a ui-sref="app.conceptVideoSpanish">{{'footerTexts.WATCH_THE_VIDEO' | translate}}</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.news">Noticias</a>
+                                &nbsp;<a ui-sref="app.news">{{'footerTexts.NEWS' | translate}}</a>
                             </li>
                             <li>
                                 &nbsp;<a ui-sref="app.signup">{{'signInScreenTexts.JOIN' | translate}}</a>
@@ -124,7 +124,7 @@
                                 &nbsp;<a ui-sref="app.login">{{'signInScreenTexts.SIGN_IN' | translate}}</a>
                             </li>
                             <li>
-                                &nbsp;<a ui-sref="app.universityMap">Mapa de la Universidad</a>
+                                &nbsp;<a ui-sref="app.universityMap">{{'footerTexts.UNIVERSITY_MAP' | translate}}</a>
                             </li>
                             <li>
                                 &nbsp;<a ui-sref="app.faq">{{'menuTexts.FAQ' | translate}}</a>
@@ -149,7 +149,7 @@
             <div class="row">
 
                 <div class="col-md-5 copyright">
-                    <p class="mb-0">Copyright &copy; 2007-2018, {{'faqScreenTexts.STUDENT2STUDENT_COM' | translate}}. Todos los derechos reservados.</p>
+                    <p class="mb-0">{{'footerTexts.COPY_RIGHT_2007' | translate}} {{'faqScreenTexts.STUDENT2STUDENT_COM' | translate}}. {{'footerTexts.ALL_RIGHTS_RESERVED' | translate}}</p>
                 </div>
                 <div class="col-md-7 copyright">
                     <p>
