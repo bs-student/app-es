@@ -281,7 +281,7 @@
                     messageType:"SellerToBuyerMessage"
                 };
                 ($scope.messagePromise=contactService.sendMessages(data)).then(function(response){
-                    responseService.showSuccessToast("Message is Sent");
+                    responseService.showSuccessToast("Mensaje es enviado");
                     if(contact.messages!=undefined){
                         contact.messages.pop();
                         contact.messages.push(response.data.success.successData);
