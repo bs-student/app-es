@@ -40,7 +40,8 @@ var assets = {
         "bower_components/ngSlimscroll/src/js/ngSlimscroll.js",
         "bower_components/chart.js/dist/Chart.js",
         "bower_components/angular-chart.js/dist/angular-chart.js",
-        "bower_components/crypto-js/crypto-js.js"
+        "bower_components/crypto-js/crypto-js.js",
+        "bower_components/smart-app-banner/smart-app-banner.js"
 
     ],
     js_library_2: [
@@ -211,7 +212,8 @@ var assets = {
         "app/scripts/validators/valUsernameSpecialChar.js",
         "app/scripts/validators/valSellingPrice.js",
 
-        "app/scripts/filters/sanitizeHtml.js"
+        "app/scripts/filters/sanitizeHtml.js",
+        "app/scripts/filters/smart-banner.js"
     ],
 
     css_library: [
@@ -233,7 +235,8 @@ var assets = {
 
         "bower_components/angular-busy/dist/angular-busy.css",
         "bower_components/textAngular/dist/textAngular.css",
-        "bower_components/bootstrap-daterangepicker/daterangepicker.css"
+        "bower_components/bootstrap-daterangepicker/daterangepicker.css",
+        "bower_components/smart-app-banner/smart-app-banner.css"
 
 
     ],
@@ -272,7 +275,7 @@ gulp.task("js_library_1", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app-es.library1-0.2.min.js'))
+        .pipe(plugins.concat('app-es.library1-0.3.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 
@@ -284,7 +287,7 @@ gulp.task("js_library_2", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app-es.library2-0.2.min.js'))
+        .pipe(plugins.concat('app-es.library2-0.3.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 
@@ -297,7 +300,7 @@ gulp.task("js_app", function (done) {
         .pipe(plugins.uglify({
             mangle: true
         }))
-        .pipe(plugins.concat('app-es-0.19.min.js'))
+        .pipe(plugins.concat('app-es-0.20.min.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 gulp.task("css_website", function (done) {
@@ -306,7 +309,7 @@ gulp.task("css_website", function (done) {
     return gulp.src(assets.css_website)
         .pipe(plugins.print())
         .pipe(plugins.cssmin())
-        .pipe(plugins.concat('app-es-0.6.min.css'))
+        .pipe(plugins.concat('app-es-0.8.min.css'))
         .pipe(gulp.dest('app/dist/css'));
 });
 
@@ -316,7 +319,7 @@ gulp.task("css_library", function (done) {
     return gulp.src(assets.css_library)
         .pipe(plugins.print())
         .pipe(plugins.cssmin())
-        .pipe(plugins.concat('app-es.library-0.1.min.css'))
+        .pipe(plugins.concat('app-es.library-0.2.min.css'))
         .pipe(gulp.dest('app/dist/css'));
 });
 
