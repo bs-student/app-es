@@ -106,7 +106,7 @@
                                 <uib-slide ng-repeat="slide in book.bookImages" active="slide.active">
                                     <img class="main-pic" ng-click="viewImage($event)"
                                          data-options="splash-2 splash-primary splash-ef-2"
-                                         class="big-images img-responsive" ng-src="{{imageHostPath}}{{slide.image}}">
+                                         class="big-images img-responsive" ng-src="{{setImageUrl(slide.image,imageHostPath)}}">
 
                                 </uib-slide>
                             </uib-carousel>
