@@ -39,6 +39,7 @@
         $scope.nextPage = _nextPage;
         $scope.setActive = _setActive;
         $scope.viewImage = _viewImage;
+        $scope.setImageUrl = _setImageUrl;
 
 
         init();
@@ -343,6 +344,13 @@
         }
         function _viewImage(event, size) {
             imageModalService.showModal(event, size);
+        }
+        function  _setImageUrl(value,imageHostPath) {
+            var regx = (/^((http|https):\/\/)/);
+            if(!regx.test(value)){
+                value = imageHostPath + value;
+            }
+            return value;
         }
     }
 
