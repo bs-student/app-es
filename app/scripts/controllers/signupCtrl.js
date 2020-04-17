@@ -6,9 +6,9 @@
     app
         .controller('SignupCtrl', SignupCtrl);
 
-    SignupCtrl.$inject = ['$q','$log','$scope', 'identityService', '$state', "securityService", 'userService','referralService','universityService','responseService','$stateParams','$http'];
+    SignupCtrl.$inject = ['$q','$log','$scope', 'identityService', '$state', "securityService", 'userService','referralService','universityService','responseService', 'imageModalService','$stateParams','$http'];
 
-    function SignupCtrl($q,$log,$scope, identityService, $state, securityService, userService,referralService,universityService,responseService,$stateParams,$http) {
+    function SignupCtrl($q,$log,$scope, identityService, $state, securityService, userService,referralService,universityService,responseService,imageModalService,$stateParams,$http) {
 
         $scope.$parent.main.title = "Join";
         $scope.$parent.headerStyle = "dark";
@@ -24,7 +24,7 @@
             {id: 3, peopleName: 'John Douey', peopleType: 'Student', peopleImg: 'assets/images/avatars/random-avatar1.jpg', peopleQuote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio'}
         ];
 
-
+        $scope.viewImage = _viewImage;
         function setUpForm(){
 
             if($stateParams.email!=undefined){
@@ -140,6 +140,10 @@
             }
 
             responseService.showErrorToast(response.data.error.errorTitle,errorDescription+" "+response.data.error.errorDescription);
+        }
+        // Set View Image
+     function _viewImage() {
+           imageModalService.showStaticModal();
         }
 
 

@@ -12,7 +12,8 @@
 
         return {
             showModal : _showModal,
-            showPromptModal: _showPromptModal
+            showPromptModal: _showPromptModal,
+            showStaticModal: _showStaticModal
         }
 
         function _showModal(event, title){
@@ -29,6 +30,20 @@
                         return {src:src,title:title};
                     }
                 }
+            });
+        }
+        function _showStaticModal(){
+            var options = 'splash-2 splash-ef-2';
+            $uibModal.open({
+                templateUrl: 'myModalContent',
+                controller:'ModalInstanceCtrl',
+                backdropClass: 'splash' + ' ' + options,
+                windowClass: 'splash' + ' ' + options,
+                resolve: {
+                    src: function () {
+                        return {src:'',title:''};
+                    }
+               }
             });
         }
         function _showPromptModal(event,modalTemplate,data,scope){

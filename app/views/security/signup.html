@@ -1,6 +1,6 @@
 <div ng-parallax pattern="'dist/images/parallax/login_parallax.jpg'" offset="0"  speed="5"  class="parallax-box dark">
 
-    <div class="container clearfix">
+    <div class="container clearfix" data-ng-init="viewImage()">
 
 
         <div class="row">
@@ -211,7 +211,15 @@
 </div>
 
 
+<script type="text/ng-template" id="myModalContent">
 
+    <div class="modal-body" style="padding: 0px" ng-click="closeModal()">
+
+        <div class="modal-images">
+            <img style="width: 100%;" data-ng-src="assets/images/portfolio/Promoxiamos_sliderhome_con_caja_texto.jpg"/>
+        </div>
+    </div>
+</script>
 
 
 
